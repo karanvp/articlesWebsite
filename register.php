@@ -37,7 +37,7 @@ if(mysqli_num_rows($result)>0){
 	echo "Cookie '" . $cookie_name . "' is set!<br>";
   echo "Value is: " . $_COOKIE[$cookie_name];
   echo $_SESSION['user'];
-	header("Location: http://localhost:8888/login/homePage.php");
+	header("Location: http://localhost:8888/articlesWebsite/homePage.php");
 }
 else{
 	echo "Registration failed";

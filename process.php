@@ -31,7 +31,7 @@ if(mysqli_num_rows($result)>0){
 
 	echo "login Success!";
 	echo $user;
-	header("Location: http://localhost:8888/login/homePage.php");
+	header("Location: http://localhost:8888/articlesWebsite/homePage.php");
 }
 else{
 	echo "login failed";
