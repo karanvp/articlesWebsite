@@ -3,7 +3,7 @@
 session_start();
 
 
-$name = $_GET["dArticleName"];
+$id = $_GET["dArticleId"];
 
 
 
@@ -19,7 +19,7 @@ $conn= mysqli_connect("localhost", "root", "root", "login");
 mysqli_select_db("login");
 
 
- mysqli_query($conn, "DELETE FROM `article` WHERE name = '$name'");
+ mysqli_query($conn, "DELETE FROM `article` WHERE ID = '$id'");
 
 $result = mysqli_query($conn,"select * from article where name = '$name'");
 
