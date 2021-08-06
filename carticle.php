@@ -33,7 +33,7 @@ if(mysqli_num_rows($result)>0){
 	$alert = '<script> alert("Successful !P");</script>';  //not showing an alert box.
 echo $alert;
 	//echo "Article Entry Success!";
-	header("Location: http://localhost:8888/login/createArticle.php?");
+	header("Location: http://localhost:8888/articlesWebsite/createArticle.php?");
 
 
 }

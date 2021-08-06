@@ -38,7 +38,7 @@ else{
 	$alert = '<script> alert("Success !");</script>';  //not showing an alert box.
 echo $alert;
 
-header("Location: http://localhost:8888/login/createArticle.php?");
+header("Location: http://localhost:8888/articlesWebsite/createArticle.php?");
 
 	
 }

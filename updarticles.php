@@ -33,7 +33,7 @@ $result = mysqli_query($conn,"select * from article where name = '$name' && `aut
 if(mysqli_num_rows($result)>0){
 	$alert = '<script> alert("Success !");</script>';  //not showing an alert box.
 echo $alert;
-header("Location: http://localhost:8888/login/homePage.php");
+header("Location: http://localhost:8888/articlesWebsite/homePage.php");
 	//echo "Article Entry Success!";
 
 
