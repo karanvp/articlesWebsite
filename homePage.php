@@ -9,7 +9,7 @@
                 float:left;  
                 background:white; 
                 width:33%; 
-                height:280px; 
+                height:450px; 
                 margin-right: 20px
                 border:5px ;
                 border-style: dotted;
