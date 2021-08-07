@@ -8,11 +8,12 @@
 
                 float:left;  
                 background:white; 
-                width:33%; 
-                height:450px; 
-                margin-right: 20px
-                border:5px ;
-                border-style: dotted;
+                width:100%; 
+                height:350px; 
+               
+                border:2px ;
+                border-style: solid;
+                margin-bottom: 20px;
   border-color: black;
   border-radius: 20px;
 
@@ -38,6 +39,7 @@
                 color:black; 
                 text-align:center; 
             } 
+           
         </style>
     <script src="jquery.js"></script>
     <meta charset="utf-8">
@@ -116,9 +118,9 @@ $("#profile").append(`
  		<h4 style="margin-left:20px" >ARTICLE ID :- ${repo.ID}</h4>
     <h4 style="margin-left:20px" >AUTHOR :- ${repo.author}</h4>
        <h4 style="margin-left:20px">ARTICLE TITLE :- ${repo.name}</h4>
-       <h4 style="margin-left:20px">ARTICLE SHORT DESCRIPTION :- ${repo.shortdescription}</h4>
+       <h4 style="margin-left:20px;">ARTICLE SHORT DESCRIPTION :- ${repo.shortdescription}</h4>
 
-       <input style="margin-left:20px" type="submit" id=${repo.ID} value="VIEW DETAILS"/>
+       <input style="margin-left:20px;" type="button" id=${repo.ID} value="VIEW DETAILS"/>
 
 </div>
 
@@ -131,9 +133,7 @@ $("#profile").append(`
  })
 
  
-  $("#vButton").click(function(){
-  alert("The paragraph was clicked.");
-});
+ 
 
 
 // $("#23").click(function(){
