@@ -78,7 +78,7 @@
 <main role="main" class="container">
 
   <div class="searchContainer">
-    <h1>HOME PAGE !</h1>
+    <h1>HOME </h1>
    
  
   </div>
@@ -114,11 +114,13 @@ $("#profile").append(`
         <br>
         <br>
  		<h4 style="margin-left:20px" >ARTICLE ID :- ${repo.ID}</h4>
-       <h4 style="margin-left:20px">ARTICLE NAME :- ${repo.name}</h4>
+    <h4 style="margin-left:20px" >AUTHOR :- ${repo.author}</h4>
+       <h4 style="margin-left:20px">ARTICLE TITLE :- ${repo.name}</h4>
        <h4 style="margin-left:20px">ARTICLE SHORT DESCRIPTION :- ${repo.shortdescription}</h4>
 
        <input style="margin-left:20px" type="submit" id=${repo.ID} value="VIEW DETAILS"/>
 
+</div>
 
         `)
 
@@ -178,7 +180,7 @@ $("#profile").append(`
         <br>
  		<h4 style="margin-left:20px" >ARTICLE ID :- ${repo.ID}</h4>
        <h4 style="margin-left:20px">ARTICLE NAME :- ${repo.name}</h4>
-       <h4 style="margin-left:20px">ARTICLE SHORT DESCRIPTION :- ${repo.shortdescription}</h4>
+       <h4 style="margin-left:20px" >AUTHOR :- ${repo.author}</h4>
         <h4 style="margin-left:20px">ARTICLE DESCRIPTION :- ${repo.description}</h4>
 <a class="navbar-brand" href="homePage.php">Back</a>
       
