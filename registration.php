@@ -8,12 +8,12 @@
 <body>
 
 <div id="frm">
-<form action="register.php" >
+<form method = "post" action="register.php" >
 	
 	<label>REGISTRATION PAGE</label>
 
-<p><input type="text" name ="userr" id="userr" placeholder="Enter username" /></p>
-<p><input type="text" name="passr" id="passr" placeholder="Enter password" /></p>
+<p><input type="text" name ="userr" id="userr" placeholder="Enter username" required/></p>
+<p><input type="password" name="passr" id="passr" placeholder="Enter password" required/></p>
 <p>
 <input type="submit" id="btn" value="Sign Up"/></p>
 

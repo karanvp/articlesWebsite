@@ -1,9 +1,9 @@
 <?php
 
 
-$user = $_GET["userr"];
+$user = $_POST["userr"];
 
-$pass = $_GET['passr'];
+$pass = $_POST['passr'];
 
 
 

@@ -1,9 +1,9 @@
 <?php
 
 
-$user = $_GET["user"];
+$user = $_POST["user"];
 
-$pass = $_GET['pass'];
+$pass = $_POST['pass'];
 
 session_start();
     $_SESSION['user'] = $user;
