@@ -43,7 +43,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-    <title>Home</title>
+    <title>Main Page</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/starter-template/">
     <!-- Custom styles for this template -->
     <link href="bootstrap.min.css" rel="stylesheet">
@@ -51,14 +51,11 @@
   </head>
   <body style="background: red; background-image: url('artimg.jpeg');">
     <nav class="navbar navbar-expand-md navbar-dark bg-dark ">
-<a class="navbar-brand" href="homePage.php">View Article</a>
-  <a class="navbar-brand" href="createArticle.php">Create Article</a>
-  <a class="navbar-brand" href="updateArticles.php">Update Article</a>
-    
-      <a class="navbar-brand" href="deleteArticles.php">Delete Article</a>
 
-  
-      <a class="navbar-brand" href="mainPage.php" style="margin-left: 1000px">Signout</a>
+
+      <a class="navbar-brand" href="login.php">Login</a>
+     <a class="navbar-brand" href="registration.php">Register</a>
+     
   
   
 </nav>
