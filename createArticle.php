@@ -55,10 +55,7 @@
   
     <h1>Create Article</h1>
 
-    <br>
-    <br>
-    <br>
-    <br>
+    <br> <br><br><br>
    
  
  <form action="carticle.php">
