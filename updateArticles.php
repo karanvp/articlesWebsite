@@ -4,7 +4,7 @@
 
      <style>  
 .button {
-  background-color: red; /* Green */
+  background-color: red; 
   border: none;
   color: white;
   padding: 15px 32px;
@@ -43,7 +43,7 @@
   <a class="navbar-brand" href="updateArticles.php">Update Article</a>
     <a class="navbar-brand" href="deleteArticles.php">Delete Article</a>
 
-    <a class="navbar-brand" href="login.php" style="margin-left: 1200px">Signout</a>
+    <a class="navbar-brand" href="mainPage.php" style="margin-left: 1000px">Signout</a>
 
 </nav>
 

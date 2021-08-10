@@ -8,7 +8,15 @@ $id = $_GET["dArticleId"];
 $author =$_SESSION['user'];
 
 
+
+
 include('config.php');
+
+if($category=="admin"){
+
+}
+else{
+
 
 
  mysqli_query($conn, "DELETE FROM `article` WHERE `author` = '$author' && ID = '$id'");
@@ -32,7 +40,7 @@ else{
 	$alert = '<script> alert("Success !");</script>';  //not showing an alert box.
 echo $alert;
 
-
+}
 	
 }
 

@@ -11,6 +11,9 @@ session_start();
 
 include('config.php');
 
+$categoryFetch = mysqli_query($conn,"select * from users where username = '$user' && password = '$pass' ");
+
+
 
 $result = mysqli_query($conn,"select * from users where username = '$user' && password = '$pass' ");
 
@@ -23,7 +26,9 @@ if(mysqli_num_rows($result)>0){
 
 	echo "login Success!";
 	echo $user;
-	header("Location: http://localhost:8888/articlesWebsite/homePage.php");
+	//echo $categoryFetch;
+	//echo strval($categoryFetch)
+;	header("Location: http://localhost:8888/articlesWebsite/homePage.php");
 }
 else{
 	echo "login failed";
