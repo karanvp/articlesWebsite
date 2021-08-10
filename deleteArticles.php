@@ -6,25 +6,27 @@
      <style>  
 
     .button {
-  background-color: red; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-}
-            h1{ 
-                color:black; 
-                text-align:center; 
-            } 
+    background-color: red; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    }
+   h1{ 
+      color:black; 
+      text-align:center; 
+      } 
+
         </style>
+
     <script src="jquery.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-    <title></title>
+    <title>delete article</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/starter-template/">
 
@@ -54,10 +56,7 @@
   
     <h1>Delete Article</h1>
    
-   <br>
-    <br>
-    <br>
-    <br>
+   <br><br><br><br>
  
  <form action="darticles.php">
  	

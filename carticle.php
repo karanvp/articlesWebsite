@@ -4,7 +4,6 @@ session_start();
 
 
 $name = $_GET["ArticleName"];
-
 $desc = $_GET['ArticleDesc'];
 $shortdesc= $_GET['ArticleShort'];
 $author =$_SESSION['user'];
