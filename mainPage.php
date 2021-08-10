@@ -1,44 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-     <style>  
-            body{
-
-            }
-             main{
-             
-                height:450px; 
-                margin-left: 100px;
-                margin-right: 100px;
-                margin-bottom: 20px;
-                border-radius: 20px;
-                background: white;
-                padding: 80px;
-                
-
-            }
-
-              main a{
-              margin-left: 20px;
-              color: red;
-              height: 20px;
-              font-size: 23px;
-              text-decoration: none;
-            }
-            
-            .button {
-              background-color: red; /* Green */
-              border: none;
-              color: white;
-              padding: 15px 32px;
-              text-align: center;
-              text-decoration: none;
-              display: inline-block;
-              font-size: 16px;
-            }
- 
-           
-        </style>
+    <link rel="stylesheet" href="mystyle.css">
     <script src="jquery.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -137,7 +100,7 @@ $(".profile").append(`
        <h4 style="margin-left:20px"><b>ARTICLE NAME</b> :- ${repo.name}</h4>
        <h4 style="margin-left:20px" ><b>AUTHOR</b> :- ${repo.author}</h4>
         <h4 style="margin-left:20px"><b>ARTICLE DESCRIPTION</b> :- ${repo.description}</h4>
-<a  href="mainPage.php">Back</a>
+<a  class="button" href="mainPage.php">Back</a>
      </main> 
 
 

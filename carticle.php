@@ -8,7 +8,7 @@ $desc = $_GET['ArticleDesc'];
 $shortdesc= $_GET['ArticleShort'];
 $author =$_SESSION['user'];
 
-$category=$_SESSION['role'];
+
 
  include('config.php');
 

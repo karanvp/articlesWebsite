@@ -3,24 +3,7 @@
 <html lang="en">
   <head>
 
-     <style>  
-
-          
-            h1{ 
-                color:black; 
-                text-align:center; 
-            } 
-                .button {
-  background-color: red; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-}
-        </style>
+  <link rel="stylesheet" href="mystyle.css">
     <script src="jquery.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -37,13 +20,13 @@
     <link href="bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href=css/style.css>
   </head>
-  
+
   <body style="background: red; background-image: url('artimg.jpeg')">
     <nav class="navbar navbar-expand-md navbar-dark bg-dark ">
     	<a class="navbar-brand" href="homePage.php">View Article</a>
-  <a class="navbar-brand" href="createArticle.php">Create Article</a>
-  <a class="navbar-brand" href="updateArticles.php">Update Article</a>
-    <a class="navbar-brand" href="deleteArticles.php">Delete Article</a>
+  <a class="navbar-brand" href="formCreateArticle.php">Create Article</a>
+  <a class="navbar-brand" href="formUpdateArticles.php">Update Article</a>
+    <a class="navbar-brand" href="formDeleteArticles.php">Delete Article</a>
 
    <a class="navbar-brand" href="mainPage.php" style="margin-left: 1000px">Signout</a>
  
@@ -51,7 +34,7 @@
   
 </nav>
 
-<main role="main" class="container">
+<main>
 
   
     <h1>Create Article</h1>
