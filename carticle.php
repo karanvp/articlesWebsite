@@ -11,7 +11,7 @@ $author =$_SESSION['user'];
 $category=$_SESSION['role'];
 
  include('config.php');
- 
+
 
 
  mysqli_query($conn, "INSERT INTO `article` (`name`, `description`,`shortdescription`,`author`) VALUES ('$name', '$desc','$shortdesc','$author');");
@@ -23,10 +23,13 @@ $row = mysqli_fetch_array($result);
 
 // mysql_num_rows($result)
 if(mysqli_num_rows($result)>0){
-	$alert = '<script> alert("Successful !");</script>';  //not showing an alert box.
-echo $alert;
+	
+	echo "<SCRIPT> //not showing me this
+        alert('Success !')
+        window.location.replace('homePage.php');
+    </SCRIPT>";
 	//echo "Article Entry Success!";
-	header("Location: http://localhost:8888/articlesWebsite/createArticle.php?");
+	
 
 
 }
