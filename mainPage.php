@@ -137,7 +137,7 @@ $(".profile").append(`
        <h4 style="margin-left:20px"><b>ARTICLE NAME</b> :- ${repo.name}</h4>
        <h4 style="margin-left:20px" ><b>AUTHOR</b> :- ${repo.author}</h4>
         <h4 style="margin-left:20px"><b>ARTICLE DESCRIPTION</b> :- ${repo.description}</h4>
-<a  href="homePage.php">Back</a>
+<a  href="mainPage.php">Back</a>
      </main> 
 
 

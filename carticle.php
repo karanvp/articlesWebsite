@@ -8,8 +8,10 @@ $desc = $_GET['ArticleDesc'];
 $shortdesc= $_GET['ArticleShort'];
 $author =$_SESSION['user'];
 
+$category=$_SESSION['role'];
 
  include('config.php');
+ 
 
 
  mysqli_query($conn, "INSERT INTO `article` (`name`, `description`,`shortdescription`,`author`) VALUES ('$name', '$desc','$shortdesc','$author');");
