@@ -34,7 +34,7 @@
 
 </style>
 </head>
-<body>
+<body style="background: red; background-image: url('artimg.jpeg')">
 
 <main class="frm">
 <form method = "post" action="register.php" >

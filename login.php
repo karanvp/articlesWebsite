@@ -34,9 +34,9 @@
 
 	</style>
 </head>
-<body>
+<body style="background: red; background-image: url('artimg.jpeg')">
 
-<main class="frm">
+<main class="frm" >
 <form method = "post" action="process.php" >
 	
 	<h3>LOGIN</h3>

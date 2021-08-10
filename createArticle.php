@@ -37,7 +37,8 @@
     <link href="bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href=css/style.css>
   </head>
-  <body>
+  
+  <body style="background: red; background-image: url('artimg.jpeg')">
     <nav class="navbar navbar-expand-md navbar-dark bg-dark ">
     	<a class="navbar-brand" href="homePage.php">View Article</a>
   <a class="navbar-brand" href="createArticle.php">Create Article</a>

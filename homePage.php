@@ -2,20 +2,25 @@
 <html lang="en">
   <head>
      <style>  
-            
+            body{
+
+            }
              main{
              
-              
-               
-                height:330px; 
-               margin-left: 100px;
+                height:450px; 
+                margin-left: 100px;
                 margin-right: 100px;
                 margin-bottom: 20px;
                 border-radius: 20px;
 
+                
+  background: white;
+  padding: 80px;
+  
+
             }
 
-                 main a{
+              main a{
               margin-left: 20px;
               color: red;
               height: 20px;
@@ -24,15 +29,15 @@
             }
             
             .button {
-  background-color: red; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-}
+              background-color: red; /* Green */
+              border: none;
+              color: white;
+              padding: 15px 32px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 16px;
+            }
  
            
         </style>
@@ -46,7 +51,7 @@
     <link href="bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href=css/style.css>
   </head>
-  <body>
+  <body style="background: red; background-image: url('artimg.jpeg');">
     <nav class="navbar navbar-expand-md navbar-dark bg-dark ">
 <a class="navbar-brand" href="homePage.php">View Article</a>
   <a class="navbar-brand" href="createArticle.php">Create Article</a>
@@ -92,9 +97,6 @@ $(".profile").append(`
 </main>
 
         `)
-
-
-
 
 
  })
