@@ -5,27 +5,16 @@
 
      <style>  
 
-            #leftbox { 
-                float:left;  
-                background:white; 
-                width:25%; 
-                height:280px; 
-                margin-right: 20px
-            } 
-            #middlebox{ 
-                float:left;  
-                background:white; 
-                width:25%; 
-                height:280px; 
-                 margin-right: 20px
-            } 
-            #rightbox{ 
-                float:left; 
-                background:white; 
-                width:25%; 
-                height:280px; 
-                 margin-right: 20px
-            } 
+               .button {
+  background-color: red; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
             h1{ 
                 color:black; 
                 text-align:center; 
@@ -55,24 +44,20 @@
     <a class="navbar-brand" href="deleteArticles.php">Delete Article</a>
 
    <a class="navbar-brand" href="login.php" style="margin-left: 1200px">Signout</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+ 
 
-  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-   
-    <!-- <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-    </form> -->
-  </div>
+  
 </nav>
 
 <main role="main" class="container">
 
-  <div class="searchContainer">
-    <h1>Delete Article !</h1>
+  
+    <h1>Delete Article</h1>
    
+   <br>
+    <br>
+    <br>
+    <br>
  
  <form action="darticles.php">
  	
@@ -80,13 +65,13 @@
 
  	
 <br><br>
-<input type="submit" value="submit">
+<input class = "button" type="submit" value="submit">
 
 
  </form>
-  </div>
+  
   <br>
-  <div id="profile"></div>
+  
 
 </main><!-- /.container -->
 

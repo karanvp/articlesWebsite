@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<div id="frm">
+<div id = "frm">
 <form action="process.php" >
 	
 	<h3>LOGIN</h3>

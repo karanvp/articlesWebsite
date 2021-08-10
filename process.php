@@ -9,15 +9,7 @@ session_start();
     $_SESSION['user'] = $user;
 
 
-$conn= mysqli_connect("localhost", "root", "root", "login");
-  
-    if(mysqli_connect_error())
-        echo "Connection Error.";
-    else
-        echo "Database Connection Successfully.";
-
-
-mysqli_select_db("login");
+include('config.php');
 
 
 $result = mysqli_query($conn,"select * from users where username = '$user' && password = '$pass' ");

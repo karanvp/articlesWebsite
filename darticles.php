@@ -5,23 +5,15 @@ session_start();
 
 $id = $_GET["dArticleId"];
 
+$author =$_SESSION['user'];
 
 
-
-$conn= mysqli_connect("localhost", "root", "root", "login");
-  
-    if(mysqli_connect_error())
-        echo "Connection Error.";
-    else
-        echo "Database Connection Successfully.";
+include('config.php');
 
 
-mysqli_select_db("login");
+ mysqli_query($conn, "DELETE FROM `article` WHERE `author` = '$author' && ID = '$id'");
 
-
- mysqli_query($conn, "DELETE FROM `article` WHERE ID = '$id'");
-
-$result = mysqli_query($conn,"select * from article where name = '$name'");
+$result = mysqli_query($conn,"select * from article where ID = '$id'");
 
 $row = mysqli_fetch_array($result);
 
@@ -30,6 +22,8 @@ $row = mysqli_fetch_array($result);
 if(mysqli_num_rows($result)>0){
 	$alert = '<script> alert("failed !");</script>';  //not showing an alert box.
 echo $alert;
+
+header("Location: http://localhost:8888/articlesWebsite/homePage.php");
 	//echo "Article Entry Success!";
 
 
@@ -38,7 +32,6 @@ else{
 	$alert = '<script> alert("Success !");</script>';  //not showing an alert box.
 echo $alert;
 
-header("Location: http://localhost:8888/articlesWebsite/createArticle.php?");
 
 	
 }
