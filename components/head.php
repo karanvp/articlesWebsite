@@ -18,11 +18,12 @@
     <link rel="stylesheet" href=css/style.css>
 
     <nav class="navbar navbar-expand-md navbar-dark bg-dark ">
-      <a class="navbar-brand" href="homePage.php">View Article</a>
+      <a class="navbar-brand" href="homePage.php">Home</a>
   <a class="navbar-brand" href="formCreateArticle.php">Create Article</a>
-  <a class="navbar-brand" href="formUpdateArticles.php">Update Article</a>
-    <a class="navbar-brand" href="formDeleteArticles.php">Delete Article</a>
+  
 
+<input type="text" id="searchUser" class="form-control" placeholder="Search Article..." >
+   
   <a class="navbar-brand" href="mainPage.php" style="margin-left: 1000px">Signout</a>
  
 
