@@ -2,21 +2,11 @@
 <html lang="en">
  
  <?php require_once("components/header.php") ?>
+ <?php require_once("components/head.php") ?>
+
 
   <body style="background: red; background-image: url('artimg.jpeg');">
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark ">
-<a class="navbar-brand" href="homePage.php">View Article</a>
-  <a class="navbar-brand" href="formCreateArticle.php">Create Article</a>
-  <a class="navbar-brand" href="formUpdateArticles.php">Update Article</a>
-    
-      <a class="navbar-brand" href="formDeleteArticles.php">Delete Article</a>
-
   
-      <a class="navbar-brand" href="mainPage.php" style="margin-left: 1000px">Signout</a>
-  
-  
-</nav>
-
  
   <br>
 <div class="profile"></div><!-- /.container -->
@@ -97,8 +87,8 @@ $(".profile").append(`
         <h4 style="margin-left:20px"><b>ARTICLE DESCRIPTION</b> :- ${repo.description}</h4>
         <br><br>
         <input class="button" style="margin-left:20px;" type="button" id=${repo.ID} value="DELETE"/>
-         <button class="button" id=${b} value="UPDATE"><a  href="formUpdateArticles.php" style="color:white">Update Article</a></button>
-<a  class="button" href="homePage.php">Back</a>
+         <button style="margin-left:20px;" class="button" id=${b} value="UPDATE"><a  href="formUpdateArticles.php" style="color:white">Update Article</a></button>
+<a  class="button" href="homePage.php" style="margin-left:800px;">Back</a>
      </main> 
 
 

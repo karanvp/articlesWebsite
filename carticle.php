@@ -24,14 +24,22 @@ $row = mysqli_fetch_array($result);
 // mysql_num_rows($result)
 if(mysqli_num_rows($result)>0){
 	
-	echo "Success";
+	echo "<SCRIPT> //not showing me this
+        alert('Success !')
+        window.location.replace('homePage.php');
+    </SCRIPT>";
+
+    //header("Location: http://localhost:8888/articlesWebsite/homePage.php");
 	//echo "Article Entry Success!";
 	
 
 
 }
 else{
-	echo "Article Entry failed";
+	echo "<SCRIPT> //not showing me this
+        alert('failed !')
+        window.location.replace('homePage.php');
+    </SCRIPT>";
 	
 }
 
