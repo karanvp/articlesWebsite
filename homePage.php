@@ -15,11 +15,7 @@
 <div class="profile"></div><!-- /.container -->
 <script>$(document).ready(function(){
  
- function myfunction(param){
-  //some code
-}
-
-
+ 
   $('#searchUser').on('keypress', function(e){
    
     if(e.which == 13) {
