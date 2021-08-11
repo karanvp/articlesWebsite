@@ -1,17 +1,10 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="mystyle.css">
-    <script src="jquery.js"></script>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <title>Main Page</title>
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/starter-template/">
-    <!-- Custom styles for this template -->
-    <link href="bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href=css/style.css>
-  </head>
+
+
+<?php require_once("components/header.php") ?>
+
+
   <body style="background: red; background-image: url('artimg.jpeg');">
     <nav class="navbar navbar-expand-md navbar-dark bg-dark ">
 
@@ -133,5 +126,7 @@ $(".profile").append(`
 
 </script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<?php require_once("components/footer.php") ?>
 </body>
 </html>
