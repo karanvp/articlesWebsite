@@ -8,22 +8,19 @@
     display: inline-block;
     font-size: 16px;
     }
-   h1{ 
-      color:black; 
-      text-align:center; 
-      } 
+  
+h1{ 
+    color:black; 
+    text-align:center; 
+    } 
 
-       main{
-             
+main{
                
-                margin-left: 150px;
-                margin-right: 100px;
-                margin-bottom: 20px;
-                border-radius: 20px;
-                background: white;
-                padding: 110px;
-                
+    margin-left: 150px;
+    margin-right: 100px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    background: white;
+    padding: 110px;
+     }
 
-            }
-
-            
