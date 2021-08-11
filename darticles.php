@@ -3,7 +3,8 @@
 session_start();
 
 
-$id = $_GET["dArticleId"];
+//$id = $_GET["dArticleId"];
+$id = $_GET["q"];
 
 $author =$_SESSION['user'];
 
@@ -28,18 +29,12 @@ $row = mysqli_fetch_array($result);
 
 // mysql_num_rows($result)
 if(mysqli_num_rows($result)>0){
-	echo "<SCRIPT> //not showing me this
-        alert('Failed !')
-        window.location.replace('homePage.php');
-    </SCRIPT>";
+echo "Failed";
 
 
 }
 else{
-	echo "<SCRIPT> //not showing me this
-        alert('Success !')
-        window.location.replace('homePage.php');
-    </SCRIPT>";
+	echo "Success";
 
 }
 
@@ -60,19 +55,13 @@ $row = mysqli_fetch_array($result);
 
 // mysql_num_rows($result)
 if(mysqli_num_rows($result)>0){
-	echo "<SCRIPT> //not showing me this
-        alert('Failed !')
-        window.location.replace('homePage.php');
-    </SCRIPT>";
+	echo "Failed";
 	//echo "Article Entry Success!";
 
 
 }
 else{
-	echo "<SCRIPT> //not showing me this
-        alert('Success !')
-        window.location.replace('homePage.php');
-    </SCRIPT>";
+	echo "Success";
 
 }
 	

@@ -17,8 +17,7 @@
  
  <form action="updarticles.php">
 
- 	<input type="text" name="updArticleId" placeholder="Enter Article ID" style="padding: 20px; padding-right: 80px"><br><br>
- 	<input type="text" name="updArticleName" placeholder="Enter Article Name" style="padding: 20px; padding-right: 80px"><br><br>
+<input type="text" name="updArticleName" placeholder="Enter Article Name" style="padding: 20px; padding-right: 80px"><br><br>
 <input type="textarea" name="upArticleDesc" placeholder="Enter Details" style="padding:70px">
  	
 <br><br>

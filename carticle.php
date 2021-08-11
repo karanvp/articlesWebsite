@@ -24,10 +24,7 @@ $row = mysqli_fetch_array($result);
 // mysql_num_rows($result)
 if(mysqli_num_rows($result)>0){
 	
-	echo "<SCRIPT> //not showing me this
-        alert('Success !')
-        window.location.replace('homePage.php');
-    </SCRIPT>";
+	echo "Success";
 	//echo "Article Entry Success!";
 	
 

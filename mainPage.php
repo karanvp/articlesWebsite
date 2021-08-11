@@ -41,12 +41,13 @@ $(".profile").append(`
         <main>
         <br>
         <br>
-    <h4 style="margin-left:20px" ><b>ARTICLE ID</b>:- ${repo.ID}</h4>
+    
     <h4 style="margin-left:20px" ><b>AUTHOR</b> :- ${repo.author}</h4>
        <h4 style="margin-left:20px"><b>ARTICLE TITLE</b> :- ${repo.name}</h4>
        <h4 style="margin-left:20px;"><b>ARTICLE SHORT DESCRIPTION</b> :- ${repo.shortdescription}</h4>
        <br><br>
        <input class="button" style="margin-left:20px;" type="button" id=${repo.ID} value="VIEW DETAILS"/>
+      
 
 </main>
 
@@ -84,20 +85,25 @@ $.ajax({
  $.each(obj, function(index, repo){
   //alert(JSON.stringify(repo));
 
+//alert(b);
+
 
 $(".profile").append(`
         <main>
         <br>
         <br>
-    <h4 style="margin-left:20px" ><b>ARTICLE ID</b> :- ${repo.ID}</h4>
+    
        <h4 style="margin-left:20px"><b>ARTICLE NAME</b> :- ${repo.name}</h4>
        <h4 style="margin-left:20px" ><b>AUTHOR</b> :- ${repo.author}</h4>
         <h4 style="margin-left:20px"><b>ARTICLE DESCRIPTION</b> :- ${repo.description}</h4>
+        
+         
 <a  class="button" href="mainPage.php">Back</a>
      </main> 
 
 
         `)
+
 
 
  })
@@ -109,6 +115,10 @@ $(".profile").append(`
 
 
 });
+
+
+
+//RESULT CLICK END
 
 
 

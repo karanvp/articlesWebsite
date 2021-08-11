@@ -3,7 +3,7 @@
 
 $user = $_POST["userr"];
 
-$pass = $_POST['passr'];
+$pass = md5($_POST['passr']);
 
 
 

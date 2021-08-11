@@ -4,12 +4,15 @@ session_start();
 
 
 $name = $_GET["updArticleName"];
-$aID = $_GET["updArticleId"];
+// $aID = $_GET["updArticleId"];
+
+$aID = $_SESSION['currentArticle'];
+
 $aDesc = $_GET["upArticleDesc"];
 
 $author =$_SESSION['user'];
 
-echo $author;
+//echo $author;
 
 include('config.php');
 
