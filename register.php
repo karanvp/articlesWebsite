@@ -20,8 +20,7 @@ if($user!=null && $pass!=null){
 
 	$rs = mysqli_query($conn,"select * from users where username = '$user'");
 	if(mysqli_num_rows($rs)>0){
-$alert = '<script> alert("User already exists !");</script>';  
-echo $alert;
+		echo "user already exists";
 
 	}else{
 		mysqli_query($conn, "INSERT INTO `users` (`id`, `username`, `password`, `category`,`email`) VALUES (NULL, '$user', '$pass', 'user','$email');");
@@ -30,16 +29,13 @@ echo $alert;
 
 // mysql_num_rows($result)
 if(mysqli_num_rows($result)>0){
-
+echo "success";
 	
-	header("Location: http://localhost:8888/articlesWebsite/homePage.php");
+	//header("Location: http://localhost:8888/articlesWebsite/homePage.php");
 }
 else{
 
-echo "<SCRIPT> //not showing me this
-        alert('failed !')
-        window.location.replace('registration.php')
-    </SCRIPT>";
+echo "failed";
 
 }
 	}
