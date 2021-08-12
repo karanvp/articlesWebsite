@@ -86,7 +86,7 @@ $(".profile").append(`
         <h4 style="margin-left:20px"><b>ARTICLE DESCRIPTION</b> :- ${repo.description}</h4>
         <br><br>
         
-<a  class="button" href="homePage.php" style="margin-left:800px;">Back</a>
+<a  class="button" href="mainPage.php" style="margin-left:0px;">Back</a>
      </main> 
 
 

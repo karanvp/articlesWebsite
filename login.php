@@ -53,6 +53,9 @@
 <p><input name="submit" type="submit" class="btn" value="login"/></p>
 
 <button style="background: red ; padding-left: 50px;padding-right: 50px;padding-top: 10px;padding-bottom: 10px" class="btn"><a href="registration.php" >Register</a></button>
+<br>
+<br>
+<a href="forgotPwdForm.php">Forgot Password ?</a>
 </form>
 </main>
 
