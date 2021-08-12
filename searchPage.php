@@ -18,7 +18,7 @@ $conn= mysqli_connect("localhost", "root", "root", "login");
 mysqli_select_db("login");
 
 
-$result = mysqli_query($conn,"select * from article where `name` = '$name' ");
+$result = mysqli_query($conn,"select * from article where `name` LIKE  '$name' ");
 
 
 
