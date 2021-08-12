@@ -18,7 +18,7 @@
  
  <form action="darticles.php">
  	
- 	<input type="text" name="dArticleId" placeholder="Enter Article ID" style="padding: 20px; padding-right: 80px"><br><br>
+ 	<input type="text" name="dArticleId" id="d" placeholder="Enter Article ID" style="padding: 20px; padding-right: 80px"><br><br>
 
  	
 <br><br>
@@ -28,6 +28,8 @@
  </form>
   
   <br>
+
+  
   
 
 </main><!-- /.container -->

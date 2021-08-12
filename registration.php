@@ -32,6 +32,30 @@
 	text-align: center;
 }
 
+.alert {
+  padding: 20px;
+  background-color: #f44336; /* Red */
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
+}
+
 </style>
 </head>
 <body style="background: red; background-image: url('artimg.jpeg')">
@@ -43,6 +67,7 @@
 
 <p><input type="text" name ="userr" id="userr" placeholder="Enter username" required/></p>
 <p><input type="password" name="passr" id="passr" placeholder="Enter password" required/></p>
+<p><input type="password" name="cpassr" id="cpassr" placeholder="Confirm password" required/></p>
 
 <p><input type="text" name ="email" id="email" placeholder="Enter Email ID" required/></p>
 <p>

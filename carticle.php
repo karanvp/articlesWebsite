@@ -24,10 +24,18 @@ $row = mysqli_fetch_array($result);
 // mysql_num_rows($result)
 if(mysqli_num_rows($result)>0){
 	
-	echo "<SCRIPT> //not showing me this
-        alert('Success !')
-        window.location.replace('homePage.php');
-    </SCRIPT>";
+	// echo "<SCRIPT> 
+        
+ //        window.location.replace('homePage.php');
+ //    </SCRIPT>";
+
+ echo "success!";
+
+    // echo "<SCRIPT> //not showing me this
+        
+    //     window.location.replace('homePage.php');
+    //      </SCRIPT>";;
+    //echo "Alert.render('You look very pretty today.')";
 
     //header("Location: http://localhost:8888/articlesWebsite/homePage.php");
 	//echo "Article Entry Success!";
@@ -36,10 +44,7 @@ if(mysqli_num_rows($result)>0){
 
 }
 else{
-	echo "<SCRIPT> //not showing me this
-        alert('failed !')
-        window.location.replace('homePage.php');
-    </SCRIPT>";
+	echo "failed!";
 	
 }
 

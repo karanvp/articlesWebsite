@@ -13,20 +13,43 @@
 
     <br> <br><br><br>
    
- 
- <form action="carticle.php">
- 	
- 	<input type="text" name="ArticleName" placeholder="Enter Article Name" style="padding: 20px; padding-right: 80px"><br><br>
+ 	<input type="text" name="ArticleName" id="name" placeholder="Enter Article Name" style="padding: 20px; padding-right: 80px"><br><br>
 
- 	<input type="textarea" name="ArticleShort" placeholder="Enter Short Description " style="padding: 50px"><br><br>
+ 	<input type="textarea" name="ArticleShort" id="sdesc" placeholder="Enter Short Description " style="padding: 50px"><br><br>
 
-<input type="textarea" name="ArticleDesc" placeholder="Enter Details" style="padding: 50px">
+<input type="textarea" name="ArticleDesc" id="desc" placeholder="Enter Details" style="padding: 50px">
 <br><br>
-<input class="button" type="submit" value="submit">
 
 
- </form>
- 
+<button class="button" onclick="submit()">Submit</button>
+
+<Script>
+	function rep(){
+		 window.location.replace('homePage.php');
+	}
+	function submit(){
+
+var name= document.getElementById('name').value;
+var sdesc = document.getElementById('sdesc').value;
+var desc = document.getElementById('desc').value;
+	
+	 $.ajax({
+        url:"carticle.php?ArticleName="+name+"&ArticleShort="+sdesc+"&ArticleDesc="+desc,
+        success: function(data) {
+Alert.render(data);
+
+setTimeout(rep, 3000);
+
+
+        }
+    })
+	
+		// Alert.render(name+desc);
+		
+	}
+</Script>
+
+
   <br>
   
 
