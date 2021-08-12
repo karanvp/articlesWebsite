@@ -43,6 +43,8 @@
 
 <p><input type="text" name ="userr" id="userr" placeholder="Enter username" required/></p>
 <p><input type="password" name="passr" id="passr" placeholder="Enter password" required/></p>
+
+<p><input type="text" name ="email" id="email" placeholder="Enter Email ID" required/></p>
 <p>
 <input type="submit" class="btn" value="Sign Up"/></p>
 
