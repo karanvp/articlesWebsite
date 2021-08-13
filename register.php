@@ -13,14 +13,14 @@ session_start();
 
 include('config.php');
 
-if($user!=null && $pass!=null){
 
-	if($pass==$cpass){
+
+	
 
 
 	$rs = mysqli_query($conn,"select * from users where username = '$user'");
 	if(mysqli_num_rows($rs)>0){
-		echo "user already exists";
+		echo "userexists ";
 
 	}else{
 		mysqli_query($conn, "INSERT INTO `users` (`id`, `username`, `password`, `category`,`email`) VALUES (NULL, '$user', '$pass', 'user','$email');");
@@ -39,9 +39,13 @@ echo "failed";
 
 }
 	}
+
+
+if($pass!==$cpass){
+	echo "passwordincorrect";
 }
  
-}
+
 
 
 

@@ -1,14 +1,10 @@
 <?php
 
 
- if(isset($_POST['submit'])){
-    if(!empty($_POST['catSelect'])) {
-        $selected = $_POST['catSelect'];
-        echo 'You have chosen: ' . $selected;
-    } else {
-        echo 'Please select the value.';
-    }
-    }
+
+    
+
+$selected = $_POST['q'];
 
 $user = $_POST["user"];
 
@@ -20,6 +16,9 @@ session_start();
   $_SESSION['user'] = $user;
   $_SESSION['category'] = $selected;
 
+// echo $user;
+//   echo $pass;
+//   echo $selected;
 
 
 include('config.php');
@@ -37,16 +36,17 @@ $row = mysqli_fetch_array($result);
 // mysql_num_rows($result)
 if(mysqli_num_rows($result)>0){
 
-	echo "login Success!";
+	echo "Success ";
 	// echo $user;
 	// echo $cat;
 	//echo $categoryFetch;
 	//echo strval($categoryFetch)
-	header("Location: http://localhost:8888/articlesWebsite/homePage.php");
+	//header("Location: http://localhost:8888/articlesWebsite/homePage.php");
 }
 else{
 	//echo $cat;
-	echo "login failed";
+	echo "Failed";
+
 
 }
 ?>

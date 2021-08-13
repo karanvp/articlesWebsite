@@ -26,7 +26,7 @@
 
 	.frm{
 	border: solid red 1px;
-	width: 30%;
+	width: 50%;
 	height: 300px; 
 	border-radius: 5px;
 	margin: 100px auto;
@@ -120,17 +120,36 @@ var Alert = new CustomAlert();
 
 </head>
 <body style="background: red; background-image: url('artimg.jpeg')">
-
+<div class="profile"></div>
 <main class="frm">
 
 	
 	<label>REGISTRATION PAGE</label>
+<br><br>
+<table style="margin-left: 350px">
+	<tr>
+		<td><input type="text" name ="userr" id="userr" placeholder="Enter username"  required/></td>
+		<td><span id="u"></span></td>
+	</tr>
+	<tr>
+		<td><input  type="password" name="passr" id="passr" placeholder="Enter password" required/></td>
+		<td><span id="p"></span></td>
+	</tr>
+	<tr>
+		<td><input type="password" name="cpassr" id="cpassr" placeholder="Confirm password" required/></td>
+		<td><span id="c"></span></td>
+	</tr>
+	<tr>
+		<td><input type="text" name ="email" id="email" placeholder="Enter Email ID" required/></td>
+		<td></td>
+	</tr>
+	
+</table>
+<br>
+<p></p>
+<p></p>
 
-<p><input type="text" name ="userr" id="userr" placeholder="Enter username" required/></p>
-<p><input type="password" name="passr" id="passr" placeholder="Enter password" required/></p>
-<p><input type="password" name="cpassr" id="cpassr" placeholder="Confirm password" required/></p>
-
-<p><input type="text" name ="email" id="email" placeholder="Enter Email ID" required/></p>
+<p></p>
 <p>
 <button class="btn" onclick="submit()">Sign Up</button><br><br>
 
@@ -163,9 +182,36 @@ var e = document.getElementById('email').value;
         'email':e
       },
       success: function (response) {
-        Alert.render(response);
+        
 
-setTimeout(rep, 3000);
+        if(response.includes("success")){
+        	Alert.render(response);
+			setTimeout(rep, 3000);
+        }else{
+			//Alert.render(response);
+//alert(response);
+			
+
+
+if(response.includes("passwordincorrect")){
+	//alert("pwdInc");
+	$("#c").append(`
+       <b style="color:red;">**password dosen't match!</b>
+     
+        `)
+
+	
+document.getElementById('passr').style.borderColor = "red";
+document.getElementById('cpassr').style.borderColor = "red";
+}
+
+if(response.includes("userexists")){
+	$("#u").append(`<b style="color:red;">**username exists</b>`);
+	document.getElementById('userr').style.borderColor = "red";
+}
+
+        }
+
       },
       error: function () {
         alert("error");
