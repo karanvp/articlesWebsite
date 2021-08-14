@@ -190,12 +190,12 @@ var Alert = new CustomAlert();
       success: function (response) {
         // 
 
-Alert.render(response);
+//Alert.render(response);
 
         if(response.includes("Success")){
-        	Alert.render(response);
+        	//Alert.render(response);
         //  window.location.replace('homePage.php');
-			setTimeout(rep, 3000);
+			setTimeout(rep, 2000);
         }else{
 			//Alert.render(response);
 //alert(response);

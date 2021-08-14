@@ -185,8 +185,8 @@ var e = document.getElementById('email').value;
         
 
         if(response.includes("success")){
-        	Alert.render(response);
-			setTimeout(rep, 3000);
+        //	Alert.render(response);
+			setTimeout(rep, 2000);
         }else{
 			//Alert.render(response);
 //alert(response);
@@ -195,6 +195,7 @@ var e = document.getElementById('email').value;
 
 if(response.includes("passwordincorrect")){
 	//alert("pwdInc");
+	$("#c").empty();
 	$("#c").append(`
        <b style="color:red;">**password dosen't match!</b>
      
@@ -206,6 +207,7 @@ document.getElementById('cpassr').style.borderColor = "red";
 }
 
 if(response.includes("userexists")){
+	$("#u").empty();
 	$("#u").append(`<b style="color:red;">**username exists</b>`);
 	document.getElementById('userr').style.borderColor = "red";
 }
