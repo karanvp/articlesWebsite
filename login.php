@@ -127,12 +127,7 @@ var Alert = new CustomAlert();
 	
 	<label>LOGIN PAGE</label><br><br>
 
-  <select id="catSelect">
-        <option value="" disabled selected>Choose option</option>
-        <option value="Admin">Admin</option>
-        <option value="User">User</option>
-      
-    </select>
+ 
 <br><br>
 <table style="margin-left: 350px">
 	<tr>
@@ -173,7 +168,7 @@ var Alert = new CustomAlert();
 
  var sdesc = document.getElementById('pass').value;
   //alert(sdesc);
- var cs = document.getElementById('catSelect').value;
+
 
  //alert(catSelect);
 	
@@ -183,8 +178,8 @@ var Alert = new CustomAlert();
       url: 'process.php?',
       data: { 
         'user': name, 
-        'pass': sdesc,
-        'q':cs
+        'pass': sdesc
+        
         
       },
       success: function (response) {

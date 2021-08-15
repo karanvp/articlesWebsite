@@ -1,31 +1,29 @@
 <?php
 
 
-
+include('config.php');
     
+session_start();
 
-$selected = $_POST['q'];
 
 $user = $_POST["user"];
 
 $pass = md5($_POST['pass']);
 // $cat = $_POST['category'];
 
-session_start();
+
   
   $_SESSION['user'] = $user;
+
+
+
+  $r = mysqli_query($conn,"select category from users where username = '$user'");
+
+$row1 = mysqli_fetch_row($r);
+
+$selected =  $row1[0];
+
   $_SESSION['category'] = $selected;
-
-// echo $user;
-//   echo $pass;
-//   echo $selected;
-
-
-include('config.php');
-
-// $categoryFetch = mysqli_query($conn,"select * from users where username = '$user' && password = '$pass' && category='$selected' ");
-
-
 
 $result = mysqli_query($conn,"select * from users where username = '$user' && password = '$pass' && category='$selected' ");
 
