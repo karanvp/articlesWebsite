@@ -14,15 +14,15 @@
     <br> <br><br><br>
    
  
- <form action="validateForgotPwd.php">
+ <form action="validateForgotPwd.php" method="post">
  	
  	<input type="text" name="userName" placeholder="Enter User Name" style="padding: 20px; padding-right: 80px"><br><br>
 
  	<input type="text" name="userPwd" placeholder="Enter Password " style="padding: 50px"><br><br>
 
-<input type="text" name="userEmail" placeholder="Enter Email ID" style="padding: 50px">
+<input type="text" name="email" placeholder="Enter Email ID" style="padding: 50px">
 <br><br>
-<input class="button" type="submit" value="submit">
+<input class="button" name="password-reset-token" type="submit" value="submit">
 
 
  </form>

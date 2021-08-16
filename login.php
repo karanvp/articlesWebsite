@@ -149,8 +149,8 @@ var Alert = new CustomAlert();
 <p>
 <button class="btn" onclick="submit()">Login</button><br><br>
 
-<button style="background: red ; " class="btn"><a href="registration.php" >Register</a></button>
-
+<button style="background: red ; " class="btn"><a href="registration.php" >Register</a></button><br><br>
+<a href="forgotPwdForm.php">Forgot Password ?</a>
 </main>
 
 
