@@ -14,22 +14,10 @@
 Reset Password In PHP MySQL
 </div>
 <div class="card-body">
-<?php
-if($_GET['key'] && $_GET['token'])
-{
-include "db.php";
-$email = $_GET['key'];
-$token = $_GET['token'];
-$query = mysqli_query($conn,
-"SELECT * FROM `users` WHERE `reset_link_token`='".$token."' and `email`='".$email."';"
-);
-$curDate = date("Y-m-d H:i:s");
-if (mysqli_num_rows($query) > 0) {
-$row= mysqli_fetch_array($query);
-if($row['exp_date'] >= $curDate){ ?>
+
 <form action="update-forget-password.php" method="post">
-<input type="hidden" name="email" value="<?php echo $email;?>">
-<input type="hidden" name="reset_link_token" value="<?php echo $token;?>">
+<input type="hidden" name="email" value="<?php echo $_GET['email'] ?>">
+<input type="hidden" name="reset_link_token" value="<?php echo $_GET['token'];?>">
 <div class="form-group">
 <label for="exampleInputEmail1">Password</label>
 <input type="password" name='password' class="form-control">
@@ -40,11 +28,7 @@ if($row['exp_date'] >= $curDate){ ?>
 </div>
 <input type="submit" name="new-password" class="btn btn-primary">
 </form>
-<?php } } else{
-<p>This forget password link has been expired</p>
-}
-}
-?>
+
 </div>
 </div>
 </div>
