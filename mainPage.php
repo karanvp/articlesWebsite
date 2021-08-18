@@ -37,6 +37,9 @@ var a = <?php session_start(); echo $_SESSION['trecords'] ?>;
 
  var tpages = Math.ceil(parseInt(a)/total);
 
+for(var i=0;i<tpages;i++){
+ $(".t").append(`<button onclick="ay(${i+1})" id=${i}>${i+1}</button>`);
+}
 
 function ay(i){
 		//alert(i);
@@ -57,6 +60,7 @@ refresh();
 //   console.log( index + ": " + $( this ).text() );
 // });
 
+
 $("#prev").click(function(){
   //alert("The prev was clicked.");
 if(offset>0){
@@ -75,7 +79,7 @@ $("#next").click(function(){
 // total=5;
 
 
-if(offset>=0 && ((offset+3)<tpages)){
+if(offset>=0 && offset<a-1){
 offset+=3;
 
 $(".profile").empty();
