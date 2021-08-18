@@ -12,7 +12,7 @@
     <h1>Create Article</h1>
 
     <br> <br><br><br>
-   
+   <span id="info"></span><br><br>
  	<input type="text" name="ArticleName" id="name" placeholder="Enter Article Name" style="padding: 20px; padding-right: 80px"><br><br>
 
  	<input type="textarea" name="ArticleShort" id="sdesc" placeholder="Enter Short Description " style="padding: 50px"><br><br>
@@ -36,10 +36,28 @@ var desc = document.getElementById('desc').value;
 	 $.ajax({
         url:"carticle.php?ArticleName="+name+"&ArticleShort="+sdesc+"&ArticleDesc="+desc,
         success: function(data) {
-Alert.render(data);
 
-setTimeout(rep, 3000);
+// Alert.render(data);
 
+
+
+        if(data.includes("Success")){
+          //Alert.render(response);
+        //  window.location.replace('homePage.php');
+
+        $("#info").empty();
+  $("#info").append(`
+       <b style="color:green;">**Success!</b>
+     
+        `)
+      setTimeout(rep, 2000);
+        }else{
+        	$("#info").empty();
+  $("#info").append(`
+       <b style="color:red;">**Failed!</b>
+     
+        `)
+        }
 
         }
     })

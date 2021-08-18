@@ -4,7 +4,7 @@
 include('config.php');
     
 
-$selected = $_POST['q'];
+// $selected = $_POST['q'];
 
 
 // $cat = $_POST['category'];
@@ -21,14 +21,39 @@ $selected = $_POST['q'];
 
 
 
-$r = mysqli_query($conn,"select category from users where username = 'miranda'");
-
-$row1 = mysqli_fetch_row($r);
-
-echo $row1[0];
+$r = mysqli_query($conn,"select * from users limit  10,10");
 
 
+
+while($row = mysqli_fetch_array($r))
+  {
+  echo $row['username'];
+  echo "\n";
+
+
+  }
+
+$tr = mysqli_query($conn,"select * from article");
+$totalRecords = mysqli_num_rows($tr);
+echo $totalRecords;
 
 
 
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<button onclick="ay()"></button>
+</body>
+
+<script type="text/javascript">
+	
+	function ay(){
+		alert("hello");
+	}
+</script>
+</html>

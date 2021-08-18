@@ -1,4 +1,4 @@
-$(document).ready(function(){
+
  
   
 
@@ -143,11 +143,15 @@ var c = b-100000000000;
 
 
   })
+function refresh(){
+
+ 
 
    $.ajax({
         url:"hPage.php",
         data:{
-         
+         'offset':offset,
+         'total':total
         },
         success: function(data) {
           var obj =JSON.parse(data)
@@ -213,7 +217,7 @@ $(".profile").append(`
         <main>
         <br>
         <br>
-    
+    <span id="info"></span><br><br>
        <h4 style="margin-left:20px"><b>ARTICLE NAME</b> :- ${repo.name}</h4>
        <h4 style="margin-left:20px" ><b>AUTHOR</b> :- ${repo.author}</h4>
         <h4 style="margin-left:20px"><b>ARTICLE DESCRIPTION</b> :- ${repo.description}</h4>
@@ -235,9 +239,23 @@ $(res).click(function(){
         url:"darticles.php?q="+repo.ID,
         
         success: function(data) {
-          
+     if(data.includes("Success")){
+          //Alert.render(response);
+        //  window.location.replace('homePage.php');
 
-    alert(data); // apple
+        $("#info").empty();
+  $("#info").append(`
+       <b style="color:green;">**Success!</b>
+     
+        `)
+      setTimeout(function(){window.location.replace('homePage.php');}, 2000);
+        }      
+if(data.includes("Failed")){
+  $("#info").empty();
+  $("#info").append(`<b style="color:red;">**failed</b>`);
+  document.getElementById('userr').style.borderColor = "red";
+}
+    //alert(data); // apple
         }
       })
 })
@@ -277,6 +295,5 @@ var c = b-100000000000;
 
     })
 
-
-
-})
+}
+refresh();

@@ -19,7 +19,7 @@
  <form action="darticles.php">
  	
  	<input type="text" name="dArticleId" id="d" placeholder="Enter Article ID" style="padding: 20px; padding-right: 80px"><br><br>
-
+<div id="dDiv"></div>
  	
 <br><br>
 <input class = "button" type="submit" value="submit">

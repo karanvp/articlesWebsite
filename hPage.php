@@ -10,16 +10,19 @@ $pass = $_GET['pass'];
 
 $conn= mysqli_connect("localhost", "root", "root", "login");
   
-    
+$offset = $_GET['offset'];
+$totalPage=$_GET['total'];
 
 
 mysqli_select_db("login");
 
 
-$result = mysqli_query($conn,"select * from article order by id desc");
+$result = mysqli_query($conn,"select * from article  order by id desc  limit  {$offset},{$totalPage}");
 
 
-
+$tr = mysqli_query($conn,"select * from article");
+$totalRecords = mysqli_num_rows($tr);
+$_SESSION['trecords'] = $totalRecords;
 
 $rows = array();
 while($r = mysqli_fetch_assoc($result)) {

@@ -3,12 +3,12 @@
 session_start();
 
 
-$name = $_GET["updArticleName"];
+$name = $_POST["updArticleName"];
 // $aID = $_GET["updArticleId"];
 
 $aID = $_SESSION['currentArticle'];
 
-$aDesc = $_GET["upArticleDesc"];
+$aDesc = $_POST["upArticleDesc"];
 
 $author =$_SESSION['user'];
 
@@ -27,19 +27,13 @@ $result = mysqli_query($conn,"select * from article where name = '$name'  ");
 
 // mysql_num_rows($result)
 	if(mysqli_num_rows($result)>0){
-		echo "<SCRIPT> //not showing me this
-        alert('Success !')
-        window.location.replace('homePage.php');
-   		 </SCRIPT>";;
+		echo "Success";
 	//echo "Article Entry Success!";
 
 
 	}
 	else{
-	echo "<SCRIPT> //not showing me this
-        alert('Failed !')
-        window.location.replace('homePage.php');
-    </SCRIPT>";
+	echo "Failed";
 	
 	}
 
@@ -54,19 +48,13 @@ $result = mysqli_query($conn,"select * from article where name = '$name' && `aut
 
 // mysql_num_rows($result)
 	if(mysqli_num_rows($result)>0){
-	echo "<SCRIPT> //not showing me this
-        alert('Success !')
-        window.location.replace('homePage.php');
-    </SCRIPT>";;
+	echo "Success";
 	//echo "Article Entry Success!";
 
 
 }	
 	else{
-	echo "<SCRIPT> //not showing me this
-        alert('Failed !')
-        window.location.replace('homePage.php');
-    </SCRIPT>";
+	echo "Failed";
 	
 	}
 }

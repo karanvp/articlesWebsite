@@ -29,7 +29,7 @@ if(mysqli_num_rows($result)>0){
  //        window.location.replace('homePage.php');
  //    </SCRIPT>";
 
- echo "success!";
+ echo "Success";
 
     // echo "<SCRIPT> //not showing me this
         
@@ -44,7 +44,7 @@ if(mysqli_num_rows($result)>0){
 
 }
 else{
-	echo "failed!";
+	echo "Failed";
 	
 }
 

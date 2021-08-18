@@ -15,20 +15,88 @@
     <br>
     <br>
  
- <form action="updarticles.php">
-
-<input type="text" name="updArticleName" placeholder="Enter Article Name" style="padding: 20px; padding-right: 80px"><br><br>
-<input type="textarea" name="upArticleDesc" placeholder="Enter Details" style="padding:70px">
+<!--  <form action="updarticles.php"> -->
+ <span id="info"></span><br><br>
+<input type="text" name="updArticleName" id = "updArticleName" placeholder="Enter Article Name" style="padding: 20px; padding-right: 80px"><br><br>
+<input type="textarea" name="upArticleDesc" id = "upArticleDesc" placeholder="Enter Details" style="padding:70px">
  	
 <br><br>
-<input class="button" type="submit" value="submit">
+<button class="button" id="s">Submit</button>
 
 
- </form>
+<!--  </form> -->
   </div>
   <br>
 
 
+<Script>
+
+ $( "#s" ).click(function() {
+  submit();
+});
+  function rep(){
+     window.location.replace('homePage.php');
+  }
+  function submit(){
+
+var name= document.getElementById("updArticleName").value;
+var sdesc = document.getElementById("upArticleDesc").value;
+
+  // alert(name);
+  // alert(sdesc);
+
+  $.ajax({
+      type: 'post',
+      url: 'updarticles.php',
+      data: { 
+        'updArticleName': name, 
+        'upArticleDesc': sdesc
+        
+        
+      },
+      success: function (response) {
+        // 
+// alert(response);
+//Alert.render(response);
+
+        if(response.includes("Success")){
+          //Alert.render(response);
+        //  window.location.replace('homePage.php');
+        $("#info").empty();
+  $("#info").append(`
+       <b style="color:green;">**Success!</b>
+     
+        `)
+      setTimeout(rep, 2000);
+        }else{
+      //Alert.render(response);
+//alert(response);
+      
+
+
+if(response.includes("Failed")){
+  //alert("pwdInc");
+  $("#info").empty();
+  $("#info").append(`
+       <b style="color:red;">**Failed to Update!</b>
+     
+        `)
+
+
+}
+
+
+
+        }
+
+      },
+      error: function () {
+        alert("error");
+      }
+   });
+    
+  }
+</Script>
 </main><!-- /.container -->
 
 
