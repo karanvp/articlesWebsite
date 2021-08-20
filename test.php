@@ -52,6 +52,7 @@ echo $totalRecords;
 
 <script type="text/javascript">
 	
+	const arr[];
 	function ay(){
 		alert("hello");
 	}

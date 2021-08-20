@@ -10,7 +10,7 @@
  
   <br>
 
-<div style="margin-left: 800px;">
+<div class="pagination">
 	<button id="prev"> PREV</button><span class="t"></span>
 
 <button id="next">NEXT</button>
@@ -73,7 +73,7 @@ $("#next").click(function(){
 // total=5;
 
 
-if(offset>=0 && offset<a-1){
+if(offset>=0 && offset<tpages){
 offset+=3;
 
 $(".profile").empty();
@@ -93,6 +93,6 @@ refresh();
 
 
 </script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>

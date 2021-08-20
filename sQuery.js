@@ -25,7 +25,7 @@
 
 
 $(".profile").append(`
-        <main>
+        <div class="card">
         <br>
         <br>
     
@@ -33,9 +33,9 @@ $(".profile").append(`
        <h4 style="margin-left:20px"><b>ARTICLE TITLE</b> :- ${repo.name}</h4>
        <h4 style="margin-left:20px;"><b>ARTICLE SHORT DESCRIPTION</b> :- ${repo.shortdescription}</h4>
        <br><br>
-       <input class="button" style="margin-left:20px;" type="button" id=${repo.ID} value="VIEW DETAILS"/>
+       <button class="button" type="button" id=${repo.ID} value="VIEW DETAILS"/>VIEW DETAILS</button>
 
-</main>
+</div>
 
         `)
 
@@ -74,7 +74,7 @@ var a = parseInt(repo.ID);
 var b = a + 100000000000;
 
 $(".profile").append(`
-        <main>
+        <div class="card">
         <br>
         <br>
     
@@ -82,10 +82,18 @@ $(".profile").append(`
        <h4 style="margin-left:20px" ><b>AUTHOR</b> :- ${repo.author}</h4>
         <h4 style="margin-left:20px"><b>ARTICLE DESCRIPTION</b> :- ${repo.description}</h4>
         <br><br>
-        <input class="button" style="margin-left:20px;" type="button" id=${repo.ID} value="DELETE"/>
-         <button style="margin-left:20px;" class="button" id=${b} value="UPDATE"><a  href="formUpdateArticles.php" style="color:white">Update Article</a></button>
-<a  class="button" href="homePage.php" style="margin-left:800px;">Back</a>
-     </main> 
+
+        <table style="margin-left:20px">
+        <tr><td><button class="buttonHome" type="button" id=${repo.ID} >DELETE</button></td>
+        <td><a  href="formUpdateArticles.php" style="color:white"><button class="buttonHome" id=${b} value="UPDATE">Update Article</button></a></td>
+        <td><a  class="buttonHome" href="homePage.php" >Back</a></td></tr>
+        
+         </table>
+
+
+
+
+     </div> 
 
 
         `)
@@ -165,7 +173,7 @@ function refresh(){
 
 
 $(".profile").append(`
-        <main>
+        <div class="card">
         <br>
         <br>
     
@@ -173,9 +181,9 @@ $(".profile").append(`
        <h4 style="margin-left:20px"><b>ARTICLE TITLE</b> :- ${repo.name}</h4>
        <h4 style="margin-left:20px;"><b>ARTICLE SHORT DESCRIPTION</b> :- ${repo.shortdescription}</h4>
        <br><br>
-       <input class="button" style="margin-left:20px;" type="button" id=${repo.ID} value="VIEW DETAILS"/>
+       <button class="button"  type="button" id=${repo.ID} value="VIEW DETAILS">VIEW DETAILS</button>
 
-</main>
+</div>
 
         `)
 
@@ -214,7 +222,7 @@ var a = parseInt(repo.ID);
 var b = a + 100000000000;
 
 $(".profile").append(`
-        <main>
+        <div class="card">
         <br>
         <br>
     <span id="info"></span><br><br>
@@ -222,10 +230,15 @@ $(".profile").append(`
        <h4 style="margin-left:20px" ><b>AUTHOR</b> :- ${repo.author}</h4>
         <h4 style="margin-left:20px"><b>ARTICLE DESCRIPTION</b> :- ${repo.description}</h4>
         <br><br>
-        <input class="button" style="margin-left:20px;" type="button" id=${repo.ID} value="DELETE"/>
-         <button style="margin-left:20px;" class="button" id=${b} value="UPDATE"><a  href="formUpdateArticles.php" style="color:white">Update Article</a></button>
-<a  class="button" href="homePage.php" style="margin-left:800px;">Back</a>
-     </main> 
+
+        <table style="margin-left:20px">
+        <tr><td><button class="buttonHome" type="button" id=${repo.ID} >DELETE</button></td>
+        <td><a  href="formUpdateArticles.php" style="color:white"><button class="buttonHome" id=${b} value="UPDATE">Update Article</button></a></td>
+        <td><a  class="buttonHome" href="homePage.php" >Back</a></td></tr>
+        
+         </table>
+
+     </div> 
 
 
         `)

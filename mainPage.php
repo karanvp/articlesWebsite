@@ -11,7 +11,10 @@
     <title>Main Page</title>
  <!--    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/starter-template/"> -->
     
-    <link href="bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="bootstrap.min.css" rel="stylesheet"> --> 
+    <!-- link above -->
+
+
    <style type="text/css">
    	
    	header {
@@ -38,21 +41,94 @@ a:hover {
   color: crimson;
 }
 
+.profile .card{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+}
+
+@media(min-width: 577px){
+  .profile .card{
+    margin-top: 30px;
+  margin-bottom: 120px;
+  margin-left: 100px;
+  margin-right: 100px;
+  background-color: white;
+
+  padding-bottom: 20px;
+}
+  .profile .button{
+   
+margin-right: 50px;
+
+margin-left: 1200px;
+    
+   
+  }
+
+  .profile input{
+    margin-left: 50px;
+  }
+}
+
+.pagination{
+  margin-left: 800px;
+}
+
 @media (max-width: 576px) {
+ 
+ /*#searchUser{
+padding-left:250px; 
+
+
+ }*/
+
+ #searchUser{
+ 
+  padding-right: 250px;
+   text-align: center;
+
+ }
+
+ .pagination{
+margin-left: 200px;
+ }
+
  
 
   .profile {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    margin: 0px !important;
+    
+    
+    justify-content: space-between;
+
+
   }
 
-  .profile .card{
-  	padding-left: : 100px !important;
+ .profile .card{
+/*justify-content: space-around;*/
+  	/*padding-left: : 100px !important;*/
     flex: 1;
+    width: 100%;
+    margin-bottom: 30px;
+    
+    background-color: white;
+    padding: 10px
+
+   
   }
- 
+
+  .profile .button{
+    
+   /* padding-left: 30px;
+    padding-right: 30px;*/
+  }
+
+  .profile .card .button{
+    margin-left: 350px;
+   padding: 10px;
+  }
 }
    </style>
   <header>
@@ -90,7 +166,7 @@ a:hover {
 
  
   <br>
-  <div style="margin-left: 800px;">
+  <div class="pagination">
 	<button id="prev"> PREV</button><span class="t"></span>
 
 <button id="next">NEXT</button>
@@ -150,7 +226,7 @@ $("#next").click(function(){
 // total=5;
 
 
-if(offset>=0 && offset<a-1){
+if(offset>=0 && offset<tpages){
 offset+=3;
 
 $(".profile").empty();

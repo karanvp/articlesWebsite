@@ -14,15 +14,15 @@ h1{
     text-align:center; 
     } 
 
-main{
+/*main{
                
     margin-left: 150px;
     margin-right: 100px;
-    margin-bottom: 20px;
+ 
     border-radius: 20px;
-    background: white;
+  
     padding: 110px;
-     }
+     }*/
 
 .alert {
   padding: 20px;
@@ -63,13 +63,3 @@ header nav a {
 }
 
 
-@media (max-width: 576px) {
- 
- 
-  .profile {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
- 
-}

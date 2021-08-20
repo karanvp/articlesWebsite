@@ -5,7 +5,7 @@
 
 	<script src="jquery.js"></script>
 	<title>Login Page</title>
-	<link rel="stylesheet" href="mystyle.css">
+	<!-- <link rel="stylesheet" href="mystyle.css"> -->
 <style type="text/css">
 
 	body{
@@ -13,12 +13,14 @@
 }
 
 	.btn{
-	color:#fff;
+	/*color:#fff;
 	background: #337ab7;
 	padding: 10px;
-	padding-left: 60px;
-	padding-right: 60px;
+
 	border-radius: 20px;
+	text-align: center;*/
+
+
 
 
 }
@@ -27,12 +29,105 @@
 	.frm{
 	border: solid red 1px;
 	width: 50%;
-	height: 300px; 
+	
 	border-radius: 5px;
-	margin: 100px auto;
-	background: white;
-	padding: 50px;
+	margin-top: 150px;
+	
+background-color: white;
+	padding: 30px;
 	text-align: center;
+
+}
+
+
+
+
+@media(min-width: 577px){
+
+	
+.frm{
+	margin-left: 400px;
+	padding-bottom: 180px;
+}
+
+.frm button{
+	background-color: red;
+padding-left: 90px;
+padding-right: 90px;
+padding-top: 10px;
+padding-bottom: 10px;
+border-radius: 20px;
+}
+
+.frm input{
+		padding-top: 10px;
+		padding-bottom: 10px;
+		padding-left: 90px;
+		padding-right: 90px;
+		margin-left: 280px;
+
+
+	}
+
+}
+
+@media(max-width: 576px){
+	
+
+	.frm{
+		display: flex;
+		flex-direction: column;
+		margin-top: 0px;
+		margin-bottom: 0px;
+		padding-left: 75px;
+		padding-top: 160px;
+		padding-right: 400px;
+		padding-bottom:110px; 
+		margin-left: 0px !important;
+
+		width: 30%;
+
+
+	}
+
+	.frm label{
+		margin-left: 200px;
+	}
+
+	.frm input{
+		padding-top: 20px;
+		padding-bottom: 20px;
+		padding-left: 140px;
+		padding-right: 140px;
+		margin-right: : 500px;
+
+
+	}
+	.frm table{
+	margin-left: 0px;
+}
+	.frm button{
+		
+	
+/*padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 50px;
+padding-right: 50px;*/
+background-color: red;
+padding-left: 190px;
+padding-right: 190px;
+padding-top: 20px;
+padding-bottom: 20px;
+border-radius: 20px;
+		
+	}
+
+	.frm button a{
+		text-align: center;
+	}
+
+	
+
 }
 
 
@@ -49,18 +144,21 @@
 </head>
  <body style="background-color: rgba(160, 81, 45, 0.116);">
 <div class="profile"></div>
-<main class="frm">
+<div class="frm">
 
 
 	
-	<label>LOGIN PAGE</label><br><br>
+	<label>LOGIN</label><br><br>
 
  
 <br><br>
-<table style="margin-left: 350px">
+
+<td><span id="u"></span></td>
+<br><br>
+<table>
 	<tr>
 		<td><input type="text" name ="user" id="user" placeholder="Enter username"  required/></td>
-		<td><span id="u"></span></td>
+		
 	</tr>
 	<tr>
 		<td><input type="password" name="pass" id="pass" placeholder="Enter password" required/></td>
@@ -77,9 +175,11 @@
 <p>
 <button class="btn" onclick="submit()">Login</button><br><br>
 
-<button style="background: red ; " class="btn"><a href="registration.php" >Register</a></button><br><br>
+<a href="registration.php" ><button style="background-color: green" class="btn">Register</button></a><br><br>
 <a href="forgotPwdForm.php">Forgot Password ?</a>
-</main>
+
+
+</div>
 
 
 

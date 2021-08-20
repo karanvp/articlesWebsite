@@ -7,14 +7,13 @@
     
     <title></title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/starter-template/">
+  
 
 
 
 <style>
 
-
-    header {
+header {
   padding: 1em;
   display: flex;
 
@@ -30,8 +29,6 @@ header nav a {
   font-size: 14px;
 }
 
-
-
 a {
   text-decoration: none;
   color: #2e2e2e;
@@ -40,13 +37,78 @@ a:hover {
   color: crimson;
 }
 
+.pagination{
+  margin-left: 800px;
+}
+
+@media(max-width: 576px){
+   .pagination{
+margin-left: 200px;
+ }
+
+ .buttonHome{
+     background-color: red; /* Green */
+     padding: 15px 32px;
+
+    
+
+  
+  }
+
+}
+@media(min-width: 577px){
+  .profile .card{
+    margin-top: 30px;
+  margin-bottom: 120px;
+  margin-left: 100px;
+  margin-right: 100px;
+  background-color: white;
+  
+  padding-bottom: 20px;
+}
+  .profile .button{
+   
+
+
+margin-left: 1200px;
+margin-right: 50px;
+    
+   
+  }
+
+  .profile input{
+    margin-left: 50px;
+  }
+
+
+
+  .buttonHome{
+     background-color: red; /* Green */
+  
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+   
+  
+    font-size: 16px;
+  }
+
+
+
+  /*.profile .card .bspan{
+    flex-direction: row;
+  }*/
+}
+
+
+
 
 </style>
 
 
 
     <!-- Custom styles for this template -->
-    <link href="bootstrap.min.css" rel="stylesheet">
+ 
    <!--  <link rel="stylesheet" href=css/style.css> -->
 
   <!--   <nav class="navbar navbar-expand-md navbar-dark bg-dark ">
