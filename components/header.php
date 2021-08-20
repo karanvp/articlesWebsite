@@ -8,7 +8,7 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/starter-template/">
     
     <link href="bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href=css/style.css>
+   
 
     
   </head>

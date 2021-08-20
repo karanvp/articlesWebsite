@@ -119,7 +119,7 @@ var Alert = new CustomAlert();
 </div>
 
 </head>
-<body style="background: red; background-image: url('artimg.jpeg')">
+ <body style="background-color: rgba(160, 81, 45, 0.116);">
 <div class="profile"></div>
 <main class="frm">
 

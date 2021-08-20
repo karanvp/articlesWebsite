@@ -2,11 +2,80 @@
 <html lang="en">
 
 
-<?php require_once("components/header.php") ?>
+  <head>
+    <link rel="stylesheet" href="mystyle.css">
+    <script src="jquery.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>Main Page</title>
+ <!--    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/starter-template/"> -->
+    
+    <link href="bootstrap.min.css" rel="stylesheet">
+   <style type="text/css">
+   	
+   	header {
+  padding: 1em;
+  display: flex;
+
+  align-items: center;
+  background-color: rgba(160, 81, 45, 0.116);
+}
+
+header nav{
+flex: 1;
+}
+header nav a {
+  margin: 5px;
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+  color: #2e2e2e;
+}
+a:hover {
+  color: crimson;
+}
+
+@media (max-width: 576px) {
+ 
+
+  .profile {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0px !important;
+  }
+
+  .profile .card{
+  	padding-left: : 100px !important;
+    flex: 1;
+  }
+ 
+}
+   </style>
+  <header>
+        <!-- flex container -->
+       
+        <nav>
+            <a href="login.php">Login</a>
+            <a href="registration.php">Register</a>
+            <input type="text" id="searchUser"  placeholder="Search Article...">
+        </nav>
+        
+    </header>
+  
+
+    
+  </head>
+
+	
 
 
-  <body style="background: red; background-image: url('artimg.jpeg');">
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark ">
+
+  <body style="background-color: rgba(160, 81, 45, 0.116);">
+<!--     <nav class="navbar navbar-expand-md navbar-dark bg-dark ">
 
 
       <a class="navbar-brand" href="login.php">Login</a>
@@ -15,7 +84,9 @@
      
   
   
-</nav>
+</nav> -->
+
+
 
  
   <br>

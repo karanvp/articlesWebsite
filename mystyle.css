@@ -47,3 +47,29 @@ main{
 .closebtn:hover {
   color: black;
 }
+
+header {
+  padding: 1em;
+  display: flex;
+
+  align-items: left;
+  background-color: rgba(160, 81, 45, 0.116);
+}
+
+
+header nav a {
+  margin: 5px;
+  font-size: 14px;
+}
+
+
+@media (max-width: 576px) {
+ 
+ 
+  .profile {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+ 
+}

@@ -11,13 +11,45 @@
 
 
 
+<style>
+
+
+    header {
+  padding: 1em;
+  display: flex;
+
+  align-items: center;
+  background-color: rgba(160, 81, 45, 0.116);
+}
+
+header nav{
+flex: 1;
+}
+header nav a {
+  margin: 5px;
+  font-size: 14px;
+}
+
+
+
+a {
+  text-decoration: none;
+  color: #2e2e2e;
+}
+a:hover {
+  color: crimson;
+}
+
+
+</style>
+
 
 
     <!-- Custom styles for this template -->
     <link href="bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href=css/style.css>
+   <!--  <link rel="stylesheet" href=css/style.css> -->
 
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark ">
+  <!--   <nav class="navbar navbar-expand-md navbar-dark bg-dark ">
       <a class="navbar-brand" href="homePage.php">Home</a>
   <a class="navbar-brand" href="formCreateArticle.php">Create Article</a>
   
@@ -28,33 +60,26 @@
  
 
   
-</nav>
+</nav> -->
+
+  <header>
+        <!-- flex container -->
+       
+        <nav>
+            
+            <a href="homePage.php">Home</a>
+            <a href="formCreateArticle.php">Create Article</a>
+             
+            <input type="text" id="searchUser"  placeholder="Search Article...">
+            <a href="mainPage.php">Signout</a>
+        </nav>
+        
+    </header>
+    
 
 
-<style>
-#dialogoverlay{
-  display: none;
-  opacity: .8;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  background: #FFF;
-  width: 100%;
-  z-index: 10;
-}
-#dialogbox{
-  display: none;
-  position: fixed;
-  background: #000;
-  border-radius:7px; 
-  width:550px;
-  z-index: 10;
-}
-#dialogbox > div{ background:#FFF; margin:8px; }
-#dialogbox > div > #dialogboxhead{ background: #666; font-size:19px; padding:10px; color:#CCC; }
-#dialogbox > div > #dialogboxbody{ background:#333; padding:20px; color:#FFF; }
-#dialogbox > div > #dialogboxfoot{ background: #666; padding:10px; text-align:right; }
-</style>
+
+
 <script>
 function CustomAlert(){
     this.render = function(dialog){

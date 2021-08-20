@@ -5,7 +5,7 @@
  <?php require_once("components/head.php") ?>
 
 
-  <body style="background: red; background-image: url('artimg.jpeg');">
+   <body style="background-color: rgba(160, 81, 45, 0.116);">
   
  
   <br>

@@ -24,7 +24,7 @@
 
 
 $(".profile").append(`
-        <main>
+        <div class="card">
         <br>
         <br>
     
@@ -34,7 +34,7 @@ $(".profile").append(`
        <br><br>
        <input class="button" style="margin-left:20px;" type="button" id=${repo.ID} value="VIEW DETAILS"/>
 
-</main>
+</div>
 
         `)
 
