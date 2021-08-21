@@ -41,19 +41,48 @@ a:hover {
   margin-left: 800px;
 }
 
+  
+
 @media(max-width: 576px){
    .pagination{
 margin-left: 200px;
  }
 
  .buttonHome{
-     background-color: red; /* Green */
+     background-color: red; 
      padding: 15px 32px;
+     margin-left: 50px;
+     color: white;
 
-    
 
   
   }
+
+ 
+
+
+
+   .textContainer input{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 200px;
+    padding-right: 200px;
+    margin-right: : 500px;
+    margin-left: 10px;
+
+
+  }
+
+  .profile .card{
+background-color: white;
+margin-bottom: 50px;
+  }
+
+  .button{
+    margin-left: 350px;
+  }
+
+
 
 }
 @media(min-width: 577px){
@@ -66,6 +95,8 @@ margin-left: 200px;
   
   padding-bottom: 20px;
 }
+
+
   .profile .button{
    
 
@@ -99,6 +130,8 @@ margin-right: 50px;
     flex-direction: row;
   }*/
 }
+
+
 
 
 
@@ -143,36 +176,36 @@ margin-right: 50px;
 
 
 <script>
-function CustomAlert(){
-    this.render = function(dialog){
-        var winW = window.innerWidth;
-        var winH = window.innerHeight;
-        var dialogoverlay = document.getElementById('dialogoverlay');
-        var dialogbox = document.getElementById('dialogbox');
-        dialogoverlay.style.display = "block";
-        dialogoverlay.style.height = winH+"px";
-        dialogbox.style.left = (winW/2) - (550 * .5)+"px";
-        dialogbox.style.top = "100px";
-        dialogbox.style.display = "block";
-        document.getElementById('dialogboxhead').innerHTML = "Alert";
-        document.getElementById('dialogboxbody').innerHTML = dialog;
-        document.getElementById('dialogboxfoot').innerHTML = '<button onclick="Alert.ok()">OK</button>';
-    }
-  this.ok = function(){
-    document.getElementById('dialogbox').style.display = "none";
-    document.getElementById('dialogoverlay').style.display = "none";
-  }
-}
-var Alert = new CustomAlert();
+// function CustomAlert(){
+//     this.render = function(dialog){
+//         var winW = window.innerWidth;
+//         var winH = window.innerHeight;
+//         var dialogoverlay = document.getElementById('dialogoverlay');
+//         var dialogbox = document.getElementById('dialogbox');
+//         dialogoverlay.style.display = "block";
+//         dialogoverlay.style.height = winH+"px";
+//         dialogbox.style.left = (winW/2) - (550 * .5)+"px";
+//         dialogbox.style.top = "100px";
+//         dialogbox.style.display = "block";
+//         document.getElementById('dialogboxhead').innerHTML = "Alert";
+//         document.getElementById('dialogboxbody').innerHTML = dialog;
+//         document.getElementById('dialogboxfoot').innerHTML = '<button onclick="Alert.ok()">OK</button>';
+//     }
+//   this.ok = function(){
+//     document.getElementById('dialogbox').style.display = "none";
+//     document.getElementById('dialogoverlay').style.display = "none";
+//   }
+// }
+// var Alert = new CustomAlert();
 </script>
 
-<div id="dialogoverlay"></div>
+<!-- <div id="dialogoverlay"></div>
 <div id="dialogbox">
   <div>
     <div id="dialogboxhead"></div>
     <div id="dialogboxbody"></div>
     <div id="dialogboxfoot"></div>
   </div>
-</div>
+</div> -->
 
   </head>

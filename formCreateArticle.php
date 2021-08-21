@@ -6,22 +6,27 @@
    <body style="background-color: rgba(160, 81, 45, 0.116);">
    
 
-<main>
 
+
+<div class="textContainer">
   
     <h1>Create Article</h1>
 
-    <br> <br><br><br>
+   
    <span id="info"></span><br><br>
- 	<input type="text" name="ArticleName" id="name" placeholder="Enter Article Name" style="padding: 20px; padding-right: 80px"><br><br>
 
- 	<input type="textarea" name="ArticleShort" id="sdesc" placeholder="Enter Short Description " style="padding: 50px"><br><br>
-
-<input type="textarea" name="ArticleDesc" id="desc" placeholder="Enter Details" style="padding: 50px">
+   <div class="sub">
+ 	<input type="text" name="ArticleName" id="name" placeholder="Enter Article Name" ></div><br><br>
+<div class="sub">
+ 	<input type="textarea" name="ArticleShort" id="sdesc" placeholder="Enter Short Description " ></div><br><br>
+<div class="sub">
+<input type="textarea" name="ArticleDesc" id="desc" placeholder="Enter Details" ></div>
 <br><br>
 
 
-<button class="button" onclick="submit()">Submit</button>
+<button style="margin-left: 60px;padding-left: 180px;padding-right: 180px;padding-top: 10px;padding-bottom: 10px; background-color: red;border-radius: 40px;color: white;" onclick="submit()">Submit</button>
+
+</div>
 
 <Script>
 	function rep(){
@@ -71,10 +76,10 @@ var desc = document.getElementById('desc').value;
   <br>
   
 
-</main><!-- /.container -->
 
 
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
 </body>
 </html>
 
