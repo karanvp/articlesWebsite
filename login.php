@@ -27,14 +27,14 @@
 
 
 	.frm{
-	border: solid red 1px;
+
 	width: 50%;
 	
 	border-radius: 5px;
 	margin-top: 150px;
 	
-background-color: white;
-	padding: 30px;
+
+	padding: 20px;
 	text-align: center;
 
 }
