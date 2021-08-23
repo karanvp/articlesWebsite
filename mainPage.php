@@ -16,7 +16,19 @@
 
 
    <style type="text/css">
-   	
+   	  .buttonHome{
+     background-color: red; /* Green */
+  
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+   
+
+    font-size: 16px;
+    align-self: flex-end;
+
+  }
+  
    	header {
   padding: 1em;
   display: flex;

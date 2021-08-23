@@ -60,7 +60,7 @@ refresh();
 $("#prev").click(function(){
   //alert("The prev was clicked.");
 if(offset>0){
-offset-=3;
+offset-=total;
 
 $(".profile").empty();
 refresh();	
@@ -76,7 +76,7 @@ $("#next").click(function(){
 
 
 if(offset>=0 && offset<tpages){
-offset+=3;
+offset+=total;
 
 $(".profile").empty();
 refresh();	

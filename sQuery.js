@@ -33,7 +33,7 @@ $(".profile").append(`
        <h4 style="margin-left:20px"><b>ARTICLE TITLE</b> :- ${repo.name}</h4>
        <h4 style="margin-left:20px;"><b>ARTICLE SHORT DESCRIPTION</b> :- ${repo.shortdescription}</h4>
        <br><br>
-       <button class="button" type="button" id=${repo.ID} value="VIEW DETAILS"/>VIEW DETAILS</button>
+       <button class="buttonHome" type="button" id=${repo.ID} value="VIEW DETAILS"/>VIEW DETAILS</button>
 
 </div>
 
@@ -181,7 +181,7 @@ $(".profile").append(`
        <h4 style="margin-left:20px"><b>ARTICLE TITLE</b> :- ${repo.name}</h4>
        <h4 style="margin-left:20px;"><b>ARTICLE SHORT DESCRIPTION</b> :- ${repo.shortdescription}</h4>
        <br><br>
-       <button class="button"  type="button" id=${repo.ID} value="VIEW DETAILS">VIEW DETAILS</button>
+       <button class="buttonHome"  type="button" id=${repo.ID} value="VIEW DETAILS">VIEW DETAILS</button>
 
 </div>
 

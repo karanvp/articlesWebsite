@@ -44,9 +44,10 @@ a:hover {
     padding: 15px 32px;
     text-align: center;
    
-  
+
     font-size: 16px;
     align-self: flex-end;
+
   }
 
 .profile{
@@ -59,6 +60,7 @@ a:hover {
 .profile .card{
   background-color: white;
   margin-bottom: 20px;
+
 }
 
 @media (max-width: 650px){
@@ -66,7 +68,7 @@ a:hover {
  .buttonHome{
      background-color: red; 
      padding: 15px 32px;
-     margin-left: 50px;
+     /*margin-left: 50px;*/
      color: white;
 
 
@@ -95,10 +97,7 @@ align-self: stretch;
 flex-basis: 100%;
   }
 
-  .button{
-    margin-left: 350px;
-  }
-
+ 
 
 
 
@@ -111,9 +110,10 @@ flex-basis: 100%;
   margin-left: 400px;
 }
 .profile .card{
- width: 40%;
+ width: 45%;
  
 }
+
 
 }
 
@@ -125,20 +125,11 @@ flex-basis: 100%;
  margin-bottom: 30px;
 
 
-
-
 }
 
 
 
 
-  .profile .button{
-   
-
-
-    
-   
-  }
 
   .profile input{
     margin-left: 50px;
