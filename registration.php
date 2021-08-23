@@ -23,110 +23,17 @@
 
 }
 
-a{
-  text-decoration: none;
-  color: white;
+
+	.frm{
+	border: solid red 1px;
+	width: 50%;
+	height: 300px; 
+	border-radius: 5px;
+	margin: 100px auto;
+	background: white;
+	padding: 50px;
+	text-align: center;
 }
-@media(max-width: 576px){
-
-.frm{
-    display: flex;
-    flex-direction: column;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding-left: 75px;
-    padding-top: 160px;
-    padding-right: 400px;
-    padding-bottom:110px; 
-    margin-left: 0px !important;
-
-    width: 30%;
-
-
-  }
-
-  .frm label{
-    margin-left: 150px;
-  }
-
-  .frm input{
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 140px;
-    padding-right: 140px;
-    margin-right: : 500px;
-    margin-bottom: 10px;
-
-
-  }
-  .frm table{
-  margin-left: 0px;
-}
-  .frm button{
-    
-  
-/*padding-top: 10px;
-padding-bottom: 10px;
-padding-left: 50px;
-padding-right: 50px;*/
-background-color: red;
-padding-left: 190px;
-padding-right: 190px;
-padding-top: 20px;
-padding-bottom: 20px;
-border-radius: 20px;
-
-    
-  }
-
-  .frm button a{
-    text-align: center;
-  }
-}
-
-@media(min-width: 577px){
-.frm{
-  border: solid red 1px;
-  width: 50%;
-  height: 400px; 
-  border-radius: 5px;
-  margin: 100px auto;
-  background: white;
-  padding: 50px;
-  text-align: center;
-}
-
-
-
-.frm button{
-  background-color: red;
-padding-left: 90px;
-padding-right: 90px;
-padding-top: 10px;
-padding-bottom: 10px;
-border-radius: 20px;
-}
-
-.frm input{
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 90px;
-    padding-right: 90px;
-    margin-left: 280px;
-    margin-bottom: 10px;
-
-
-  }
-
-  table{
-    margin-left: 20px;
-  }
-
-
-}
-
-
-	
 
 .alert {
   padding: 20px;
@@ -217,9 +124,9 @@ var Alert = new CustomAlert();
 <main class="frm">
 
 	
-	<label>REGISTRATION</label>
+	<label>REGISTRATION PAGE</label>
 <br><br>
-<table>
+<table style="margin-left: 350px">
 	<tr>
 		<td><input type="text" name ="userr" id="userr" placeholder="Enter username"  required/></td>
 		<td><span id="u"></span></td>
@@ -238,13 +145,15 @@ var Alert = new CustomAlert();
 	</tr>
 	
 </table>
-
+<br>
+<p></p>
+<p></p>
 
 <p></p>
 <p>
-<button class="btn" onclick="submit()">Register</button><br><br>
+<button class="btn" onclick="submit()">Sign Up</button><br><br>
 
-<button style="background: green ; " class="btn"><a href="login.php" >Login</a></button>
+<button style="background: red ; " class="btn"><a href="login.php" >Login</a></button>
 
 </main>
 

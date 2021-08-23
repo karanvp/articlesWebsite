@@ -4,21 +4,7 @@
   <?php require_once("components/head.php") ?>
 
    <body style="background-color: rgba(160, 81, 45, 0.116);">
-   <style type="text/css">
-     @media(max-width: 576px){
-      .button{
-
-          color: white;
-          margin-left: 60px;
-          padding-left: 180px;
-          padding-right: 180px;
-          padding-top: 10px;
-          padding-bottom: 10px; 
-          background-color: red;
-          border-radius: 40px;
-        }
-     }
-   </style>
+   
 
 
 
@@ -38,7 +24,7 @@
 <br><br>
 
 
-<button  class="button" onclick="submit()">Submit</button>
+<button style="margin-left: 60px;padding-left: 180px;padding-right: 180px;padding-top: 10px;padding-bottom: 10px; background-color: red;border-radius: 40px;color: white;" onclick="submit()">Submit</button>
 
 </div>
 

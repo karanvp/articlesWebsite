@@ -115,7 +115,8 @@ margin-left: 200px;
     
     background-color: white;
     padding: 10px
-  
+
+   
   }
 
   .profile .button{

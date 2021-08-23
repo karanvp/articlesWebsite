@@ -5,25 +5,10 @@
 
    <body style="background-color: rgba(160, 81, 45, 0.116);">
    
-   <style type="text/css">
-     @media(max-width: 576px){
-      .button{
-
-          color: white;
-          margin-left: 60px;
-          padding-left: 180px;
-          padding-right: 180px;
-          padding-top: 10px;
-          padding-bottom: 10px; 
-          background-color: red;
-          border-radius: 40px;
-        }
-     }
-   </style>
 
 <main >
-<div class="textContainer">
-  <!-- <div class="searchContainer"> -->
+
+  <div class="searchContainer">
     <h1>Update Article</h1>
    <br>
     <br>
@@ -32,17 +17,15 @@
  
 <!--  <form action="updarticles.php"> -->
  <span id="info"></span><br><br>
- <div class="sub">
-<input type="text" name="updArticleName" id = "updArticleName" placeholder="Enter Article Name"></div><br><br>
-<div class="sub"><input type="textarea" name="upArticleDesc" id = "upArticleDesc" placeholder="Enter Details" ></div>
+<input type="text" name="updArticleName" id = "updArticleName" placeholder="Enter Article Name" style="padding: 20px; padding-right: 80px"><br><br>
+<input type="textarea" name="upArticleDesc" id = "upArticleDesc" placeholder="Enter Details" style="padding:70px">
  	
 <br><br>
-<button  class="button" id="s">Submit</button>
+<button class="button" id="s">Submit</button>
 
-</div>
 
 <!--  </form> -->
-<!--   </div> -->
+  </div>
   <br>
 
 
