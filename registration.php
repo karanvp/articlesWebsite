@@ -9,16 +9,12 @@
 <style type="text/css">
 
 	body{
-	background: #eee;
+	background: white;
 }
 
 	.btn{
-	color:#fff;
-	background: #337ab7;
-	padding: 10px;
-	padding-left: 60px;
-	padding-right: 60px;
-	border-radius: 20px;
+
+
 
 
 }
@@ -30,9 +26,10 @@
 	height: 300px; 
 	border-radius: 5px;
 	margin: 100px auto;
-	background: white;
+	background: #eee;
 	padding: 50px;
 	text-align: center;
+  padding-bottom: 450px;
 }
 
 .alert {
@@ -59,6 +56,77 @@
   color: black;
 }
 
+@media(min-width: 577px){
+  table{
+    margin-left: 350px;
+  }
+
+  .btn{
+    color:#fff;
+  background: #337ab7;
+  padding: 10px;
+  padding-left: 60px;
+  padding-right: 60px;
+  border-radius: 20px;
+  }
+/*  .frm input{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 70px;
+    padding-right: 70px;
+    margin-left: 0px;
+   margin-right: 150px;
+
+
+  }*/
+}
+
+@media(max-width: 576px){
+  table{
+    margin-left: 60px;
+  }
+
+  .btn{
+      color:#fff;
+  background: #337ab7;
+  padding: 10px;
+  padding-left: 160px;
+  padding-right: 160px;
+  border-radius: 20px;
+  margin-left: 40px;
+  }
+
+
+  .frm{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 45px;
+    padding-top: 160px;
+    padding-right: 300px;
+    padding-bottom:450px; 
+   
+
+    width: 30%;
+
+
+  }
+  .frm label{
+    margin-left: 150px;
+  }
+
+  .frm input{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-left: 0px;
+   margin-right: 50px;
+
+
+  }
+}
 
 #dialogoverlay{
   display: none;
@@ -120,24 +188,39 @@ var Alert = new CustomAlert();
 
 </head>
  <body style="background-color: rgba(160, 81, 45, 0.116);">
+
+
+
 <div class="profile"></div>
+
+
 <main class="frm">
 
-	
-	<label>REGISTRATION PAGE</label>
+  <label>REGISTRATION</label>
+
+  <br><br>
+
+  <span id="u"></span><br>
+<span id="p"></span><br>
+<span id="c"></span><br>
+
 <br><br>
-<table style="margin-left: 350px">
+
+	
+	
+<br><br>
+<table>
 	<tr>
 		<td><input type="text" name ="userr" id="userr" placeholder="Enter username"  required/></td>
-		<td><span id="u"></span></td>
+		<td></td>
 	</tr>
 	<tr>
 		<td><input  type="password" name="passr" id="passr" placeholder="Enter password" required/></td>
-		<td><span id="p"></span></td>
+		<td></td>
 	</tr>
 	<tr>
 		<td><input type="password" name="cpassr" id="cpassr" placeholder="Confirm password" required/></td>
-		<td><span id="c"></span></td>
+		<td></td>
 	</tr>
 	<tr>
 		<td><input type="text" name ="email" id="email" placeholder="Enter Email ID" required/></td>
@@ -151,9 +234,9 @@ var Alert = new CustomAlert();
 
 <p></p>
 <p>
-<button class="btn" onclick="submit()">Sign Up</button><br><br>
+<button class="btn" onclick="submit()">Register</button><br><br>
 
-<button style="background: red ; " class="btn"><a href="login.php" >Login</a></button>
+<button style="background: red " class="btn"><a href="login.php" >Login</a></button>
 
 </main>
 

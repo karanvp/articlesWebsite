@@ -5,27 +5,54 @@
 
    <body style="background-color: rgba(160, 81, 45, 0.116);">
    
+<style type="text/css">
+    @media(min-width: 577px){
+  .textContainer input{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 200px;
+    padding-right: 200px;
+    margin-right: : 500px;
+    margin-left: 10px;
 
+
+  }
+
+  .textContainer{
+    margin-left: 500px;
+  }
+
+  label{
+    margin-left: 100px
+  }
+}
+</style>
 <main >
 
-  <div class="searchContainer">
-    <h1>Update Article</h1>
-   <br>
-    <br>
-    <br>
-    <br>
+<div class="textContainer">
+  
  
-<!--  <form action="updarticles.php"> -->
- <span id="info"></span><br><br>
-<input type="text" name="updArticleName" id = "updArticleName" placeholder="Enter Article Name" style="padding: 20px; padding-right: 80px"><br><br>
-<input type="textarea" name="upArticleDesc" id = "upArticleDesc" placeholder="Enter Details" style="padding:70px">
- 	
+   <span id="info"></span><br><br>
+
+   <div class="sub">
+ <input class="inputtext" type="text" name="updArticleName" id = "updArticleName" placeholder="Enter Article Name" ></div><br><br>
+<div class="sub">
+  <input class="inputtext" type="textarea" name="upArticleDesc" id = "upArticleDesc" placeholder="Enter Details" style="padding-bottom: 400px"></div><br><br>
+
 <br><br>
-<button class="button" id="s">Submit</button>
+
+
+<button style="margin-left: 60px;padding-left: 180px;padding-right: 180px;padding-top: 10px;padding-bottom: 10px; background-color: red;border-radius: 40px;color: white;" class="button" id="s">Submit</button>
+
+</div>
+
+  
+
+
 
 
 <!--  </form> -->
-  </div>
+
   <br>
 
 

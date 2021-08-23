@@ -9,7 +9,7 @@
 <style type="text/css">
 
 	body{
-	background: #eee;
+	background: white;
 }
 
 	.btn{
@@ -33,7 +33,7 @@
 	border-radius: 5px;
 	margin-top: 150px;
 	
-background-color: white;
+background-color: #eee;
 	padding: 30px;
 	text-align: center;
 

@@ -6,11 +6,34 @@
    <body style="background-color: rgba(160, 81, 45, 0.116);">
    
 
+<style type="text/css">
+  
+  @media(min-width: 577px){
+  .textContainer input{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 200px;
+    padding-right: 200px;
+    margin-right: : 500px;
+    margin-left: 10px;
 
 
+  }
+
+  .textContainer{
+    margin-left: 500px;
+  }
+
+  label{
+    margin-left: 100px
+  }
+}
+
+</style>
+ 
 <div class="textContainer">
   
-    <h1>Create Article</h1>
+   
 
    
    <span id="info"></span><br><br>
@@ -20,7 +43,7 @@
 <div class="sub">
  	<input type="textarea" name="ArticleShort" id="sdesc" placeholder="Enter Short Description " ></div><br><br>
 <div class="sub">
-<input type="textarea" name="ArticleDesc" id="desc" placeholder="Enter Details" ></div>
+<input type="textarea" name="ArticleDesc" id="desc" placeholder="Enter Details" style="padding-bottom: 400px;"></div>
 <br><br>
 
 
