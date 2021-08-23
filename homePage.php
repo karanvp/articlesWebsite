@@ -22,8 +22,10 @@
 <script>
 
 
+    
+
 var offset = 0;
-var total =3;
+var total =6;
 var pageNo=1;
 
 	

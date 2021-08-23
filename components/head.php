@@ -3,7 +3,7 @@
   <link rel="stylesheet" href="mystyle.css">
     <script src="jquery.js"></script>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     
     <title></title>
 
@@ -15,14 +15,14 @@
 
 header {
   padding: 1em;
-  display: flex;
+ 
 
-  align-items: center;
+  
   background-color: rgba(160, 81, 45, 0.116);
 }
 
 header nav{
-flex: 1;
+
 }
 header nav a {
   margin: 5px;
@@ -37,17 +37,32 @@ a:hover {
   color: crimson;
 }
 
-.pagination{
-  margin-left: 800px;
+  .buttonHome{
+     background-color: red; /* Green */
+  
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+   
+  
+    font-size: 16px;
+    align-self: flex-end;
+  }
+
+.profile{
+  display: flex;
+  justify-content: space-around;
+
+  flex-wrap: wrap;
 }
 
+.profile .card{
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 650px){
   
-
-@media(max-width: 576px){
-   .pagination{
-margin-left: 200px;
- }
-
  .buttonHome{
      background-color: red; 
      padding: 15px 32px;
@@ -74,8 +89,10 @@ margin-left: 200px;
   }
 
   .profile .card{
-background-color: white;
-margin-bottom: 50px;
+
+align-self: stretch;
+
+flex-basis: 100%;
   }
 
   .button{
@@ -84,25 +101,41 @@ margin-bottom: 50px;
 
 
 
+
+
+
 }
-@media(min-width: 577px){
+
+@media(max-width: 899px){
+.pagination{
+  margin-left: 400px;
+}
+.profile .card{
+ width: 40%;
+ 
+}
+
+}
+
+
+@media(min-width: 900px){
+
   .profile .card{
-    margin-top: 30px;
-  margin-bottom: 120px;
-  margin-left: 100px;
-  margin-right: 100px;
-  background-color: white;
-  
-  padding-bottom: 20px;
+ width: 30%;
+ margin-bottom: 30px;
+
+
+
+
 }
+
+
 
 
   .profile .button{
    
 
 
-margin-left: 1200px;
-margin-right: 50px;
     
    
   }
@@ -113,16 +146,7 @@ margin-right: 50px;
 
 
 
-  .buttonHome{
-     background-color: red; /* Green */
-  
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-   
-  
-    font-size: 16px;
-  }
+
 
 
 
