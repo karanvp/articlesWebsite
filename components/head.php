@@ -37,6 +37,22 @@ a:hover {
   color: crimson;
 }
 
+  .profile .card{
+ width: 30%;
+ margin-bottom: 30px;
+
+
+}
+
+
+
+
+
+  .profile input{
+    margin-left: 50px;
+  }
+
+
   .buttonHome{
      background-color: red; /* Green */
   
@@ -63,6 +79,21 @@ a:hover {
 
 }
 
+ .textContainer input{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 200px;
+    padding-right: 200px;
+    margin-right: : 500px;
+    margin-left: 10px;
+
+
+  }
+
+  .textContainer{
+    margin-left: 600px;
+  }
+
 @media (max-width: 650px){
   
  .buttonHome{
@@ -76,19 +107,12 @@ a:hover {
   }
 
  
+.textContainer{
+  margin-left: 0px;
+}
 
 
-
-   .textContainer input{
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 200px;
-    padding-right: 200px;
-    margin-right: : 500px;
-    margin-left: 10px;
-
-
-  }
+   
 
   .profile .card{
 
@@ -105,7 +129,7 @@ flex-basis: 100%;
 
 }
 
-@media(max-width: 899px){
+@media (min-width: 651px) and (max-width: 899px){
 .pagination{
   margin-left: 400px;
 }
@@ -114,37 +138,16 @@ flex-basis: 100%;
  
 }
 
-
+.textContainer{
+  margin-left: 160px;
 }
 
-
-@media(min-width: 900px){
-
-  .profile .card{
- width: 30%;
- margin-bottom: 30px;
 
 
 }
 
 
 
-
-
-  .profile input{
-    margin-left: 50px;
-  }
-
-
-
-
-
-
-
-  /*.profile .card .bspan{
-    flex-direction: row;
-  }*/
-}
 
 
 

@@ -7,27 +7,6 @@
    
 
 <style type="text/css">
-  
-  @media(min-width: 577px){
-  .textContainer input{
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 200px;
-    padding-right: 200px;
-    margin-right: : 500px;
-    margin-left: 10px;
-
-
-  }
-
-  .textContainer{
-    margin-left: 500px;
-  }
-
-  label{
-    margin-left: 100px
-  }
-}
 
 </style>
  
