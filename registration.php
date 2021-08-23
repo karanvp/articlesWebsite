@@ -56,9 +56,15 @@
   color: black;
 }
 
-@media(min-width: 577px){
-  table{
-    margin-left: 350px;
+ table{
+    margin-left: 200px;
+  }
+
+input{
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 
   .btn{
@@ -69,6 +75,9 @@
   padding-right: 60px;
   border-radius: 20px;
   }
+
+@media(min-width: 900px){
+ 
 /*  .frm input{
     padding-top: 20px;
     padding-bottom: 20px;
@@ -81,9 +90,26 @@
   }*/
 }
 
+@media(min-width: 577px) and (max-width: 899px){
+
+ table{
+    margin-left: 50px;
+  }
+
+  input{
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+
+
+}
+
 @media(max-width: 576px){
   table{
-    margin-left: 60px;
+    margin-left: 50px;
   }
 
   .btn{

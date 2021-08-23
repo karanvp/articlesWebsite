@@ -31,7 +31,7 @@
 	width: 50%;
 	
 	border-radius: 5px;
-	margin-top: 150px;
+	margin-top: 50px;
 	
 background-color: #eee;
 	padding: 30px;
@@ -40,15 +40,6 @@ background-color: #eee;
 }
 
 
-
-
-@media(min-width: 577px){
-
-	
-.frm{
-	margin-left: 400px;
-	padding-bottom: 180px;
-}
 
 .frm button{
 	background-color: red;
@@ -59,9 +50,24 @@ padding-bottom: 10px;
 border-radius: 20px;
 }
 
-.frm input{
-		padding-top: 10px;
-		padding-bottom: 10px;
+/*.frm input{
+	
+		padding-left: 90px;
+		padding-right: 90px;
+		margin-left: 280px;
+
+
+	}*/
+
+
+@media(min-width: 900px){
+.frm{
+	margin-left: 400px;
+	padding-bottom: 250px;
+	padding-top: 250px
+}
+	.frm input{
+	
 		padding-left: 90px;
 		padding-right: 90px;
 		margin-left: 280px;
@@ -69,6 +75,25 @@ border-radius: 20px;
 
 	}
 
+
+}
+
+@media(min-width: 577px) and (max-width: 899px){
+		.frm input{
+	
+		padding-bottom: 10px;
+		padding-top: 10px;
+		padding-left: 90px;
+		padding-right: 90px;
+		margin-left: 50px;
+
+
+	}
+	.frm{
+		padding-top: 30px;
+	margin-left: 200px;
+	padding-bottom: 300px;
+}
 }
 
 @media(max-width: 576px){
