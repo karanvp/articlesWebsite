@@ -26,8 +26,28 @@ header {
 }
 
  
+.navDesktop{
+  visibility: visible;
+}
 
+.navDesktop a{
+  text-decoration: none;
+  color: black;
+  margin-right: 10px;
+  margin-bottom: 30px;
+}
 
+.navDesktop a:hover{
+  color: crimson;
+  padding: 10px;
+
+}
+
+#searchUser{
+  padding-right: 1100px;
+  padding-bottom: 10px;
+
+}
   #menu{
       width: 35px;
       height: 30px;
@@ -142,11 +162,19 @@ header {
   .textContainer{
     margin-left: 600px;
   }
-
+#menu{
+  display: none;
+}
 @media (max-width: 650px){
   
+.navDesktop{
+  visibility: hidden;
 
+}
 
+#menu{
+  display: block;
+}
  
 .textContainer{
   margin-left: 0px;
@@ -168,7 +196,9 @@ flex-basis: 100%;
   padding-right: 350px;
 }
 
-
+.pagination{
+  margin-left: 200px;
+}
 
 }
 
@@ -185,7 +215,9 @@ flex-basis: 100%;
   margin-left: 160px;
 }
 
-
+#menu{
+  display: none;
+}
 
 }
 
@@ -238,6 +270,17 @@ flex-basis: 100%;
 </div>
 
 <input type="text" id="searchUser" class="form-control" placeholder="Search Article..." >
+
+        <nav class="navDesktop">    
+            <a href="homePage.php" style="margin-left: 1300px;">Home</a>
+            <a href="formCreateArticle.php">Create Article</a>
+             
+            
+            <a href="mainPage.php">Signout</a>
+        </nav>
+
+
+
 </header>
 <script type="text/javascript">
 

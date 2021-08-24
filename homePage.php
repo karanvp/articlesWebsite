@@ -33,7 +33,7 @@ var pageNo=1;
 
 	
 
-var a = 6;
+var a = <?php include('config.php'); echo mysqli_num_rows(mysqli_query($conn,"select * from article")); ?>;
 
  var tpages = Math.ceil(parseInt(a)/total);
 

@@ -33,9 +33,9 @@ include('config.php');
 
 //   }
 
-$tr = mysqli_query($conn,"select * from article");
-$totalRecords = mysqli_num_rows($tr);
-echo $totalRecords;
+// $tr = mysqli_query($conn,"select * from article");
+// $totalRecords = mysqli_num_rows($tr);
+// echo $totalRecords;
 
 
 
@@ -47,14 +47,14 @@ echo $totalRecords;
 	<title></title>
 </head>
 <body>
+
+
 <button onclick="ay()"></button>
 </body>
 
 <script type="text/javascript">
 	
-	const arr[];
-	function ay(){
-		alert("hello");
-	}
+	var a = <?php session_start(); echo $_SESSION['trecords']; ?>;
+	alert(a);
 </script>
 </html>
