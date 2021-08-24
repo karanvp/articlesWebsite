@@ -15,6 +15,9 @@ $pass = md5($_POST['pass']);
   
   $_SESSION['user'] = $user;
 
+$tr = mysqli_query($conn,"select * from article");
+$totalRecords = mysqli_num_rows($tr);
+$_SESSION['trecords'] = $totalRecords;
 
 
   $r = mysqli_query($conn,"select category from users where username = '$user'");

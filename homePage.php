@@ -1,7 +1,10 @@
 <!doctype html>
 <html lang="en">
  
+<style type="text/css">
 
+
+</style>
  <?php require_once("components/head.php") ?>
 
 
@@ -10,7 +13,7 @@
  
   <br>
 
-<div class="pagination">
+<div class="pagination" id="pag">
 	<button id="prev"> PREV</button><span class="t"></span>
 
 <button id="next">NEXT</button>
@@ -18,7 +21,7 @@
 
   
 
-<div class="profile"></div><!-- /.container -->
+<div class="profile" id="prof"></div><!-- /.container -->
 <script>
 
 
@@ -30,7 +33,7 @@ var pageNo=1;
 
 	
 
-var a = <?php session_start(); echo $_SESSION['trecords'] ?>;
+var a = 6;
 
  var tpages = Math.ceil(parseInt(a)/total);
 

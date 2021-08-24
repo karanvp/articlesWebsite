@@ -21,17 +21,17 @@ include('config.php');
 
 
 
-$r = mysqli_query($conn,"select * from users limit  10,10");
+// $r = mysqli_query($conn,"select * from users limit  10,10");
 
 
 
-while($row = mysqli_fetch_array($r))
-  {
-  echo $row['username'];
-  echo "\n";
+// while($row = mysqli_fetch_array($r))
+//   {
+//   echo $row['username'];
+//   echo "\n";
 
 
-  }
+//   }
 
 $tr = mysqli_query($conn,"select * from article");
 $totalRecords = mysqli_num_rows($tr);

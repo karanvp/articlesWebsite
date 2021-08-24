@@ -12,59 +12,108 @@
 
 
 <style>
-
 header {
   padding: 1em;
  
-
-  
   background-color: rgba(160, 81, 45, 0.116);
 }
 
-header nav{
-
-}
-header nav a {
-  margin: 5px;
-  font-size: 14px;
-}
-
-a {
-  text-decoration: none;
-  color: #2e2e2e;
-}
-a:hover {
-  color: crimson;
-}
-
-  .profile .card{
- width: 30%;
+     .profile .card{
+ width: 100%;
  margin-bottom: 30px;
 
 
 }
 
+ 
+
+
+  #menu{
+      width: 35px;
+      height: 30px;
+      cursor: pointer;
+
+
+    }
+
+
+    .bar{
+      height: 5px;
+      width: 100%;
+      background-color: #b81568;
+      transition: 0.7s ease;
+    }
+
+    #bar1{
+      transform: translateY(-4px);
+
+    }
+
+    #bar3{
+      transform: translateY(4px);
+      
+    }
+
+    .change .bar{
+      background-color: #b81568;
+    }
+
+
+    .change #bar1{
+      transform: translateY(4px) rotateZ(-45deg);
+    }
+
+    .change #bar3{
+      transform: translateY(-6px) rotateZ(45deg);
+    }
+
+    .change #bar2{
+
+      opacity: 0;
+    }
 
 
 
+    .nav li a{
+      color: black;
+      text-decoration: none;
 
-  .profile input{
-    margin-left: 50px;
-  }
+    }
 
+    .nav li a:hover{
+      font-weight: bold;
+    }
+
+    .nav li{
+      list-style: none;
+      padding: 16px 0px;
+    }
+
+    .nav{
+      padding: 0;
+      margin: 0 20px;
+      transition: 0.7s ease;
+      display: none;
+
+    }
+
+    .change{
+      display: block;
+    }
 
   .buttonHome{
-     background-color: red; /* Green */
+     background-color: red; 
+     padding: 15px 32px;
+     /*margin-left: 50px;*/
+     color: white;
+
+
   
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-   
-
-    font-size: 16px;
-    align-self: flex-end;
-
   }
+ .pagination{
+  margin-left: 800px;
+}
+
 
 .profile{
   display: flex;
@@ -96,15 +145,7 @@ a:hover {
 
 @media (max-width: 650px){
   
- .buttonHome{
-     background-color: red; 
-     padding: 15px 32px;
-     /*margin-left: 50px;*/
-     color: white;
 
-
-  
-  }
 
  
 .textContainer{
@@ -123,7 +164,9 @@ flex-basis: 100%;
 
  
 
-
+#searchUser{
+  padding-right: 350px;
+}
 
 
 
@@ -150,10 +193,6 @@ flex-basis: 100%;
 
 
 
-
-
-
-
 </style>
 
 
@@ -175,25 +214,44 @@ flex-basis: 100%;
   
 </nav> -->
 
-  <header>
-        <!-- flex container -->
-       
-        <nav>
-            
-            <a href="homePage.php">Home</a>
-            <a href="formCreateArticle.php">Create Article</a>
-             
-            <input type="text" id="searchUser"  placeholder="Search Article...">
-            <a href="mainPage.php">Signout</a>
-        </nav>
-        
-    </header>
+<header>
+    
+<div id="menu-barb">
+<div id="menu" onclick="onClickMenu()">
+    
+    <div id="bar1" class="bar"></div>
+     <div id="bar2" class="bar"></div>
+ <div id="bar3" class="bar"></div>
+  </div>
+
+ <ul class="nav" id="nav">
+    <li><a href="homePage.php">Home</a></li>
+    <li><a href="formCreateArticle.php">Create Articles</a></li>
+    <li><a href="mainPage.php">Sign out</a></li>
+   
+
     
 
 
 
+  </ul>
+</div>
 
+<input type="text" id="searchUser" class="form-control" placeholder="Search Article..." >
+</header>
+<script type="text/javascript">
+
+
+  function onClickMenu(){
+    document.getElementById("nav").classList.toggle("change");
+    document.getElementById("menu").classList.toggle("change");
+
+    // document.getElementById("nav").style.display = "block";
+  }
+</script>
 <script>
+
+  
 // function CustomAlert(){
 //     this.render = function(dialog){
 //         var winW = window.innerWidth;
