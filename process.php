@@ -1,10 +1,11 @@
 <?php
-
+session_start();
 
 include('config.php');
     
-session_start();
 
+
+$_SESSION['mbk'] = 'true';
 
 $user = $_POST["user"];
 

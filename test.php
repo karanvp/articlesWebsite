@@ -37,24 +37,44 @@ include('config.php');
 // $totalRecords = mysqli_num_rows($tr);
 // echo $totalRecords;
 
+// mysqli_num_rows(mysqli_query($conn,"select * from article
+
+
+session_start();
+$_SESSION['mbk']='false';
 
 
 ?>
-
+<!-- 
 <!DOCTYPE html>
 <html>
 <head>
+	<script src="jquery.js"></script>
 	<title></title>
 </head>
 <body>
 
+<div id="testdiv"></div>
 
 <button onclick="ay()"></button>
 </body>
 
 <script type="text/javascript">
 	
-	var a = <?php session_start(); echo $_SESSION['trecords']; ?>;
-	alert(a);
+	
+
+
+
+if(a.includes('true')){
+	//alert("true");
+$('#testdiv').append(`hello`);
+
+
+}else{
+	$('#testdiv').append(`bye`);
+}
+
+
+
 </script>
-</html>
+</html> -->

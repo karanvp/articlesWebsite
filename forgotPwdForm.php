@@ -1,9 +1,9 @@
 
 <!doctype html>
 <html lang="en">
-  <?php require_once("components/header.php") ?>
+  <?php require_once("components/head.php") ?>
 
-  <body style="background: red; background-image: url('artimg.jpeg')">
+  <body>
    
 
 <main>
@@ -17,14 +17,15 @@
  <form action="validateForgotPwd.php" method="post">
  	
  	
-
-<input type="text" name="email" placeholder="Enter Email ID" style="padding: 50px">
+<div class='textContainer'>
+<input type="text" name="email" placeholder="Enter Email ID">
 <br><br>
-<input class="button" name="password-reset-token" type="submit" value="submit">
+<input class="buttonHome" name="password-reset-token" type="submit" value="submit" style="margin-left: 50px">
 
-
+ </div>
  </form>
  
+
   <br>
   
 

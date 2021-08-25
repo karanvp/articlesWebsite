@@ -10,7 +10,7 @@
 
    <body style="background-color: rgba(160, 81, 45, 0.116);">
   
- 
+ <div id="logs"></div>
   <br>
 
 <div class="pagination" id="pag">

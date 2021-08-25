@@ -2,6 +2,9 @@
 
   
     <script src="jquery.js"></script>
+
+
+
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     
@@ -257,33 +260,75 @@ flex-basis: 100%;
   </div>
 
  <ul class="nav" id="nav">
-    <li><a href="homePage.php">Home</a></li>
-    <li><a href="formCreateArticle.php">Create Articles</a></li>
-    <li><a href="mainPage.php">Sign out</a></li>
+  <div id="td">
    
-
-    
-
-
-
+</div>
   </ul>
 </div>
 
 <input type="text" id="searchUser" class="form-control" placeholder="Search Article..." >
 
         <nav class="navDesktop">    
-            <a href="homePage.php" style="margin-left: 1300px;">Home</a>
-            <a href="formCreateArticle.php">Create Article</a>
-             
-            
-            <a href="mainPage.php">Signout</a>
+          <div id="tdRight">
+
+             </div>
         </nav>
 
+     
+
+</header><script>
+
+    
 
 
-</header>
+
+var a = String(<?php session_start(); echo $_SESSION['mbk']; ?>);
+
+if(a.includes('true')){
+  //alert("true");
+$('#td').append(`
+
+
+ <li><a href="homePage.php">Home</a></li>
+    <li><a href="formCreateArticle.php">Create Articles</a></li>
+   
+   
+<li><a onclick="signOut()">Sign out</a><li>
+  `);
+
+$('#tdRight').append(`
+
+<a href="homePage.php" style="margin-left: 1300px;">Home</a>
+            <a href="formCreateArticle.php">Create Article</a>
+             
+            <a onclick="signOut()">Sign out</a>
+  `);
+
+
+}
+
+else{
+  $('#td').append(` <li><a href="login.php">Login</a></li>
+    <li><a href="registration.php">Register</a></li>`);
+
+
+$('#tdRight').append(`
+
+<a href="login.php" style="margin-left: 1300px;">Login</a>
+            <a href="registration.php">Register</a>
+             
+            
+      
+  `);
+}
+
+
+
+</script>
 <script type="text/javascript">
 
+
+  
 
   function onClickMenu(){
     document.getElementById("nav").classList.toggle("change");
@@ -291,32 +336,31 @@ flex-basis: 100%;
 
     // document.getElementById("nav").style.display = "block";
   }
-</script>
-<script>
 
-  
-// function CustomAlert(){
-//     this.render = function(dialog){
-//         var winW = window.innerWidth;
-//         var winH = window.innerHeight;
-//         var dialogoverlay = document.getElementById('dialogoverlay');
-//         var dialogbox = document.getElementById('dialogbox');
-//         dialogoverlay.style.display = "block";
-//         dialogoverlay.style.height = winH+"px";
-//         dialogbox.style.left = (winW/2) - (550 * .5)+"px";
-//         dialogbox.style.top = "100px";
-//         dialogbox.style.display = "block";
-//         document.getElementById('dialogboxhead').innerHTML = "Alert";
-//         document.getElementById('dialogboxbody').innerHTML = dialog;
-//         document.getElementById('dialogboxfoot').innerHTML = '<button onclick="Alert.ok()">OK</button>';
-//     }
-//   this.ok = function(){
-//     document.getElementById('dialogbox').style.display = "none";
-//     document.getElementById('dialogoverlay').style.display = "none";
-//   }
-// }
-// var Alert = new CustomAlert();
+
+  function signOut(){
+
+
+
+   // $('#td').empty();
+$("#td").empty();
+$('#td').append(` <li><a href="login.php">Login</a></li>
+    <li><a href="registration.php">Register</a></li>`);
+
+
+
+$.ajax( "test.php" )
+  .done(function() {
+    //alert( "success" );
+  })
+
+document.location.href = 'HomePage.php';
+
+}
+
+
 </script>
+
 
 <!-- <div id="dialogoverlay"></div>
 <div id="dialogbox">
