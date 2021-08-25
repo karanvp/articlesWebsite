@@ -1,6 +1,6 @@
  <head>
 
-  
+  <!-- this is a comment -->
     <script src="jquery.js"></script>
 
 
