@@ -3,7 +3,7 @@
 <html lang="en">
   <?php require_once("components/head.php") ?>
 
-   <body style="background-color: rgba(160, 81, 45, 0.116);">
+   <body>
    
 
 <style type="text/css">
