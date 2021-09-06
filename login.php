@@ -4,156 +4,10 @@
 <head>
 
 	<script src="jquery.js"></script>
+	<?php require_once("components/head.php") ?>
 	<title>Login Page</title>
 	<!-- <link rel="stylesheet" href="mystyle.css"> -->
 <style type="text/css">
-
-	body{
-	background: white;
-}
-
-	.btn{
-	/*color:#fff;
-	background: #337ab7;
-	padding: 10px;
-
-	border-radius: 20px;
-	text-align: center;*/
-
-
-
-
-}
-
-
-	.frm{
-	border: solid red 1px;
-	width: 50%;
-	
-	border-radius: 5px;
-	margin-top: 50px;
-	
-background-color: #eee;
-	padding: 30px;
-	text-align: center;
-
-}
-
-
-
-.frm button{
-	background-color: red;
-padding-left: 90px;
-padding-right: 90px;
-padding-top: 10px;
-padding-bottom: 10px;
-border-radius: 20px;
-}
-
-/*.frm input{
-	
-		padding-left: 90px;
-		padding-right: 90px;
-		margin-left: 280px;
-
-
-	}*/
-
-
-@media(min-width: 900px){
-.frm{
-	margin-left: 400px;
-	padding-bottom: 250px;
-	padding-top: 250px
-}
-	.frm input{
-	
-		padding-left: 90px;
-		padding-right: 90px;
-		margin-left: 280px;
-
-
-	}
-
-
-}
-
-@media(min-width: 577px) and (max-width: 899px){
-		.frm input{
-	
-		padding-bottom: 10px;
-		padding-top: 10px;
-		padding-left: 90px;
-		padding-right: 90px;
-		margin-left: 50px;
-
-
-	}
-	.frm{
-		padding-top: 30px;
-	margin-left: 200px;
-	padding-bottom: 300px;
-}
-}
-
-@media(max-width: 576px){
-	
-
-	.frm{
-		display: flex;
-		flex-direction: column;
-		margin-top: 0px;
-		margin-bottom: 0px;
-		padding-left: 75px;
-		padding-top: 160px;
-		padding-right: 400px;
-		padding-bottom:110px; 
-		margin-left: 0px !important;
-
-		width: 30%;
-
-
-	}
-
-	.frm label{
-		margin-left: 200px;
-	}
-
-	.frm input{
-		padding-top: 20px;
-		padding-bottom: 20px;
-		padding-left: 140px;
-		padding-right: 140px;
-		margin-right: : 500px;
-
-
-	}
-	.frm table{
-	margin-left: 0px;
-}
-	.frm button{
-		
-	
-/*padding-top: 10px;
-padding-bottom: 10px;
-padding-left: 50px;
-padding-right: 50px;*/
-background-color: red;
-padding-left: 190px;
-padding-right: 190px;
-padding-top: 20px;
-padding-bottom: 20px;
-border-radius: 20px;
-		
-	}
-
-	.frm button a{
-		text-align: center;
-	}
-
-	
-
-}
 
 
 
@@ -198,9 +52,9 @@ border-radius: 20px;
 
 <p></p>
 <p>
-<button class="btn" onclick="submit()">Login</button><br><br>
+<button class="loginBtn" onclick="submit()">Login</button><br><br>
 
-<a href="registration.php" ><button style="background-color: green" class="btn">Register</button></a><br><br>
+<a href="registration.php" ><button  class="registerBtn">Register</button></a><br><br>
 <a href="forgotPwdForm.php">Forgot Password ?</a>
 
 

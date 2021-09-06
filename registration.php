@@ -4,157 +4,13 @@
 <head>
 
 	<script src="jquery.js"></script>
-	<title>Login Page</title>
+  <?php require_once("components/head.php") ?>
+	<title>Registeration Page</title>
 	<link rel="stylesheet" href="mystyle.css">
 <style type="text/css">
 
-	body{
-	background: white;
-}
 
-	.btn{
-
-
-
-
-}
-
-
-	.frm{
-	border: solid red 1px;
-	width: 50%;
-	height: 300px; 
-	border-radius: 5px;
-	margin: 100px auto;
-	background: #eee;
-	padding: 50px;
-	text-align: center;
-  padding-bottom: 450px;
-}
-
-.alert {
-  padding: 20px;
-  background-color: #f44336; /* Red */
-  color: white;
-  margin-bottom: 15px;
-}
-
-/* The close button */
-.closebtn {
-  margin-left: 15px;
-  color: white;
-  font-weight: bold;
-  float: right;
-  font-size: 22px;
-  line-height: 20px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-/* When moving the mouse over the close button */
-.closebtn:hover {
-  color: black;
-}
-
- table{
-    margin-left: 200px;
-  }
-
-input{
-    padding-left: 100px;
-    padding-right: 100px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-
-  .btn{
-    color:#fff;
-  background: #337ab7;
-  padding: 10px;
-  padding-left: 60px;
-  padding-right: 60px;
-  border-radius: 20px;
-  }
-
-@media(min-width: 900px){
- 
-/*  .frm input{
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 70px;
-    padding-right: 70px;
-    margin-left: 0px;
-   margin-right: 150px;
-
-
-  }*/
-}
-
-@media(min-width: 577px) and (max-width: 899px){
-
- table{
-    margin-left: 50px;
-  }
-
-  input{
-    padding-left: 100px;
-    padding-right: 100px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-
-
-
-}
-
-@media(max-width: 576px){
-  table{
-    margin-left: 50px;
-  }
-
-  .btn{
-      color:#fff;
-  background: #337ab7;
-  padding: 10px;
-  padding-left: 160px;
-  padding-right: 160px;
-  border-radius: 20px;
-  margin-left: 40px;
-  }
-
-
-  .frm{
-    display: flex;
-    flex-direction: column;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding-left: 45px;
-    padding-top: 160px;
-    padding-right: 300px;
-    padding-bottom:450px; 
-   
-
-    width: 30%;
-
-
-  }
-  .frm label{
-    margin-left: 150px;
-  }
-
-  .frm input{
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 100px;
-    padding-right: 100px;
-    margin-left: 0px;
-   margin-right: 50px;
-
-
-  }
-}
-
-#dialogoverlay{
+/* #dialogoverlay{
   display: none;
   opacity: .8;
   position: fixed;
@@ -175,7 +31,7 @@ input{
 #dialogbox > div{ background:#FFF; margin:8px; }
 #dialogbox > div > #dialogboxhead{ background: #666; font-size:19px; padding:10px; color:#CCC; }
 #dialogbox > div > #dialogboxbody{ background:#333; padding:20px; color:#FFF; }
-#dialogbox > div > #dialogboxfoot{ background: #666; padding:10px; text-align:right; }
+#dialogbox > div > #dialogboxfoot{ background: #666; padding:10px; text-align:right; } */
 
 </style>
 
@@ -213,7 +69,7 @@ var Alert = new CustomAlert();
 </div>
 
 </head>
- <body style="background-color: rgba(160, 81, 45, 0.116);">
+ <body>
 
 
 
@@ -260,9 +116,9 @@ var Alert = new CustomAlert();
 
 <p></p>
 <p>
-<button class="btn" onclick="submit()">Register</button><br><br>
+<button class="registerBtn" onclick="submit()">Register</button><br><br>
 
-<button style="background: red " class="btn"><a href="login.php" >Login</a></button>
+<button  class="loginBtn"><a href="login.php" >Login</a></button>
 
 </main>
 

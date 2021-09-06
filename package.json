@@ -1,0 +1,23 @@
+{
+  "name": "articleswebsite",
+  "version": "1.0.0",
+  "description": "articles",
+  "main": "jquery.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karanvp/articlesWebsite.git"
+  },
+  "author": "karan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karanvp/articlesWebsite/issues"
+  },
+  "homepage": "https://github.com/karanvp/articlesWebsite#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.0.0"
+  }
+}
