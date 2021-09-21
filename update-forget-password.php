@@ -1,4 +1,6 @@
 <?php
+
+session_start();
 if(isset($_POST['password']))
 {
 include "config.php";
@@ -10,11 +12,15 @@ $cpassword = md5($_POST['password']);
 // echo "string";
 // echo $email;
 // echo $token;
+include "./classes/query.php";
 
+$q = new q\Query();
 if($password==$cpassword){
 
-
- mysqli_query($conn,"UPDATE users set  password='" . $password . "' WHERE email='" . $email . "'");
+	$q->updatePassword($password,$email);
+	
+	$_SESSION['mbk'] = 'true';
+//  mysqli_query($conn,"UPDATE users set  password='" . $password . "' WHERE email='" . $email . "'");
  echo '<p>Congratulations! Your password has been updated successfully.</p>';
 header("Location: http://localhost:8888/articlesWebsite/homePage.php");
 }

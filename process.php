@@ -1,9 +1,17 @@
 <?php
+
+// include "./classes/query.php";
+//namespace q;
+
+ include "./classes/Login.php";
+
+
+
 session_start();
 
 include('config.php');
     
-
+$q = new Login();
 
 $_SESSION['mbk'] = 'true';
 
@@ -16,12 +24,12 @@ $pass = md5($_POST['pass']);
   
   $_SESSION['user'] = $user;
 
-$tr = mysqli_query($conn,"select * from article");
+$tr = $q->findTotalRecords();
 $totalRecords = mysqli_num_rows($tr);
 $_SESSION['trecords'] = $totalRecords;
 
 
-  $r = mysqli_query($conn,"select category from users where username = '$user'");
+  $r = $q->findCategory($user);
 
 $row1 = mysqli_fetch_row($r);
 
@@ -29,14 +37,18 @@ $selected =  $row1[0];
 
   $_SESSION['category'] = $selected;
 
-$result = mysqli_query($conn,"select * from users where username = '$user' && password = '$pass' && category='$selected' ");
+  //$result = mysqli_query($conn,"select * from users where username = '$user' && password = '$pass' && category='$selected' ");
+  
+  
+  
 
-
-$row = mysqli_fetch_array($result);
+//   $p = md5("Winner2022");
+ $result1 = $q->validateUser($user,$pass,$selected);
+// $row = mysqli_fetch_array($result);
 
 
 // mysql_num_rows($result)
-if(mysqli_num_rows($result)>0){
+if(mysqli_num_rows($result1)>0){
 
 	echo "Success ";
 	// echo $user;
@@ -51,4 +63,5 @@ else{
 
 
 }
+
 ?>
