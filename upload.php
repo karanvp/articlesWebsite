@@ -1,4 +1,7 @@
 <?php 
+
+include "./classes/Image.php";
+
 session_start();
 if (isset($_POST['submit']) && isset($_FILES['my_image'])) {
 	include "db_conn.php";
@@ -16,7 +19,7 @@ if (isset($_POST['submit']) && isset($_FILES['my_image'])) {
 	$imgID = $_POST['imgID'];
 
 	
-	
+	$query = new Image();
 		
 	
 	if ($error === 0) {
@@ -34,18 +37,13 @@ if (isset($_POST['submit']) && isset($_FILES['my_image'])) {
 				// Insert into Database
 				if($imgID){
 		
-					$sql = "UPDATE images
-					SET  image_url='$new_img_name',image_title= '$title',author='$user'
-					WHERE image_url = '$imgID';";
-					mysqli_query($conn, $sql);
+					$query->updateImages($new_img_name,$title,$user,$imgID);
 			
 				}else{
-					$sql = "INSERT INTO images(image_url,image_title,author) 
-				        VALUES('$new_img_name','$title','$user')";
-				mysqli_query($conn, $sql);
+					$query->insertNewImages($new_img_name,$title,$user);
 
-				$sql2 = "INSERT INTO Carousel(heading,user) values('$heading','{$_SESSION['user']}')";
-				mysqli_query($conn, $sql2);
+				// $sql2 = "INSERT INTO Carousel(heading,user) values('$heading','{$_SESSION['user']}')";
+				// mysqli_query($conn, $sql2);
 
 				}
 				

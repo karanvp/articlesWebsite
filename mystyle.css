@@ -1,23 +1,25 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
 header {
   padding: 1em;
-  background-color: rgba(160, 81, 45, 0.116);
+  background-color: #fbfbfd;
 }
 
 body {
-  background-color: rgba(160, 81, 45, 0.116);
+  background-color: #fbfbfd;
   font-family: "Open Sans", sans-serif;
 }
 
 .navDesktop {
   visibility: visible;
 }
+
 .navDesktop a {
   text-decoration: none;
   color: black;
   margin-right: 10px;
   margin-bottom: 30px;
 }
+
 .navDesktop a:hover {
   color: crimson;
   padding: 10px;
@@ -38,26 +40,34 @@ body {
   height: 5px;
   width: 100%;
   background-color: #b81568;
+  -webkit-transition: 0.7s ease;
   transition: 0.7s ease;
 }
 
 #bar1 {
-  transform: translateY(-4px);
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
 }
 
 #bar3 {
-  transform: translateY(4px);
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
 }
 
 .change .bar {
   background-color: #b81568;
 }
+
 .change #bar1 {
-  transform: translateY(4px) rotateZ(-45deg);
+  -webkit-transform: translateY(4px) rotateZ(-45deg);
+          transform: translateY(4px) rotateZ(-45deg);
 }
+
 .change #bar3 {
-  transform: translateY(-6px) rotateZ(45deg);
+  -webkit-transform: translateY(-6px) rotateZ(45deg);
+          transform: translateY(-6px) rotateZ(45deg);
 }
+
 .change #bar2 {
   opacity: 0;
 }
@@ -65,16 +75,20 @@ body {
 .nav {
   padding: 0;
   margin: 0 20px;
+  -webkit-transition: 0.7s ease;
   transition: 0.7s ease;
   display: none;
 }
+
 .nav li {
   list-style: none;
   padding: 16px 0px;
 }
+
 .nav li a:hover {
   font-weight: bold;
 }
+
 .nav li a {
   color: black;
   text-decoration: none;
@@ -117,10 +131,15 @@ body {
 }
 
 .profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
+
 .profile .card {
   background-color: white;
   margin-bottom: 20px;
@@ -130,6 +149,7 @@ body {
 .textContainer {
   margin-left: 600px;
 }
+
 .textContainer input {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -147,59 +167,55 @@ body {
   .navDesktop {
     visibility: hidden;
   }
-
   #menu {
     display: block;
   }
-
   .textContainer {
     margin-left: 0px;
   }
-
   .profile .card {
-    align-self: stretch;
-    flex-basis: 100%;
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
-
   #searchUser {
     padding-right: 350px;
   }
-
   .pagination {
     margin-left: 200px;
   }
 }
+
 @media (min-width: 651px) and (max-width: 899px) {
   .pagination {
     margin-left: 400px;
   }
-
   .profile .card {
     width: 45%;
   }
-
   .textContainer {
     margin-left: 160px;
   }
-
   #menu {
     display: none;
   }
 }
+
 @media (min-width: 900px) {
   .profile .card {
     margin-left: 200px;
     margin-right: 200px;
   }
-
   #searchUser {
     margin-left: 1350px;
   }
-
   .form {
     margin-left: 650px;
   }
 }
+
 /* body{
 	background: white;
 } */
@@ -213,13 +229,13 @@ body {
 }
 
 /*.frm input{
-
-    padding-left: 90px;
-    padding-right: 90px;
-    margin-left: 280px;
-
-
-  }*/
+    
+      padding-left: 90px;
+      padding-right: 90px;
+      margin-left: 280px;
+  
+  
+    }*/
 .loginBtn a {
   text-decoration: none;
   color: white;
@@ -231,13 +247,13 @@ body {
     padding-bottom: 250px;
     padding-top: 250px;
   }
-
   .frm input {
     padding-left: 90px;
     padding-right: 90px;
     margin-left: 280px;
   }
 }
+
 @media (min-width: 577px) and (max-width: 899px) {
   .frm input {
     padding-bottom: 10px;
@@ -246,17 +262,22 @@ body {
     padding-right: 90px;
     margin-left: 50px;
   }
-
   .frm {
     padding-top: 30px;
     margin-left: 200px;
     padding-bottom: 300px;
   }
 }
+
 @media (max-width: 576px) {
   .frm {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin-top: 0px;
     margin-bottom: 0px;
     padding-left: 75px;
@@ -266,11 +287,9 @@ body {
     margin-left: 0px !important;
     width: 30%;
   }
-
   .frm label {
     margin-left: 200px;
   }
-
   .frm input {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -278,12 +297,11 @@ body {
     padding-right: 140px;
     margin-right: 500px;
   }
-
   .frm table {
     margin-left: 0px;
   }
-
   .frm button a {
     text-align: center;
   }
 }
+/*# sourceMappingURL=mystyle.css.map */

@@ -1,64 +1,42 @@
 <?php
 
-session_start();
+include "./classes/Article.php";
+
+        session_start();
 
 
-$name = $_POST["updArticleName"];
-// $aID = $_GET["updArticleId"];
+        $name = $_POST["updArticleName"];
+        $aID = $_SESSION['currentArticle'];
+        $aDesc = $_POST["upArticleDesc"];
+        $author =$_SESSION['user'];
+        $query = new Article();
 
-$aID = $_SESSION['currentArticle'];
+        if($_SESSION['category']=="Admin"){
 
-$aDesc = $_POST["upArticleDesc"];
+        $query->updateArticlesByAdmin($name,$aDesc,$aID);
 
-$author =$_SESSION['user'];
+        $result = $query->findArticleByName($name);
 
-//echo $author;
+            if(mysqli_num_rows($result)>0){
+                echo "Success";
+            }
+            else{
+            echo "Failed";
+            }
 
-include('config.php');
+        }
+        else{
+        $query->updateArticlesByUser($name,$aDesc,$author,$aID);
+        $result = $query->findArticleByNameAndAuthor($name,$author);
 
-if($_SESSION['category']=="Admin"){
+            if(mysqli_num_rows($result)>0){
+            echo "Success";
+            }	
+            else{
+            echo "Failed";
+            }
+        }
 
-mysqli_query($conn, "UPDATE `article` SET `name`='$name', `description`='$aDesc' WHERE  `ID` = '$aID'");
-
-$result = mysqli_query($conn,"select * from article where name = '$name'  ");
-
-
-
-
-// mysql_num_rows($result)
-	if(mysqli_num_rows($result)>0){
-		echo "Success";
-	//echo "Article Entry Success!";
-
-
-	}
-	else{
-	echo "Failed";
-	
-	}
-
-}
-else{
-	mysqli_query($conn, "UPDATE `article` SET `name`='$name', `description`='$aDesc' WHERE `author` = '$author' && `ID` = '$aID'");
-
-$result = mysqli_query($conn,"select * from article where name = '$name' && `author` = '$author'  ");
-
-
-
-
-// mysql_num_rows($result)
-	if(mysqli_num_rows($result)>0){
-	echo "Success";
-	//echo "Article Entry Success!";
-
-
-}	
-	else{
-	echo "Failed";
-	
-	}
-}
-
- 
+        
 
 ?>

@@ -102,11 +102,21 @@
 </div>
 
 <?php 
-	include "db_conn.php";
-  session_start();
-          $sql = "SELECT * FROM images where author = '{$_SESSION['user']}' ORDER BY id DESC";
-          $res = mysqli_query($conn,  $sql);
 
+	include "db_conn.php";
+  include "./classes/Query.php";
+  session_start();
+$q = new q\Query();
+$currentUser = $_SESSION['user'];
+  
+          
+          $res = $q->findImagesByAuthor($currentUser);
+          if (mysqli_num_rows($res) < 1) {?>
+            <script>
+              $('#owl').append(`<h1>You have no Content yet !</h1>`);
+                 
+            </script>
+        <?php  }
           if (mysqli_num_rows($res) > 0) {
           	while ($images = mysqli_fetch_assoc($res)) {  ?>
              
@@ -122,7 +132,9 @@
                
                 
                  </script>
-    <?php } }?>
+    <?php } }
+    
+    ?>
 <script>
 // $('#owl').append(`<div class="item"><img src="3.jpg" alt=""></div>`);
 

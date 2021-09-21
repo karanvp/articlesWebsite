@@ -1,4 +1,6 @@
 <?php
+
+include "./classes/Query.php";
 session_start();
 
 //$user = $_SESSION['user'] ;
@@ -16,11 +18,13 @@ $totalPage=$_GET['total'];
 
 mysqli_select_db("login");
 
+$us = $_SESSION['user'];
 
-$result = mysqli_query($conn,"select * from article where author ='{$_SESSION['user']}' order by id desc   limit  {$offset},{$totalPage} ");
+$query = new q\Query();
+$result = $query->findProfileArticles($us,$offset,$totalPage);
 
 
-$tr = mysqli_query($conn,"select * from article");
+$tr = $query->findArticles();
 $totalRecords = mysqli_num_rows($tr);
 $_SESSION['trecords'] = $totalRecords;
 

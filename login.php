@@ -21,7 +21,7 @@
 
 
 </head>
- <body style="background-color: rgba(160, 81, 45, 0.116);">
+ <body>
 <div class="profile"></div>
 <div class="frm">
 

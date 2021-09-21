@@ -38,8 +38,16 @@
 	
      <a href="carousels.php">&#8592;</a>
      <?php 
-          $sql = "SELECT * FROM images ORDER BY id DESC";
-          $res = mysqli_query($conn,  $sql);
+
+include "./classes/Query.php";
+session_start();
+$q = new q\Query();
+$currentUser = $_SESSION['user'];
+
+		
+		$res = $q->findImagesByAuthor($currentUser);
+        //   $sql = "SELECT * FROM images ORDER BY id DESC";
+        //   $res = mysqli_query($conn,  $sql);
 
           if (mysqli_num_rows($res) > 0) {
           	while ($images = mysqli_fetch_assoc($res)) {  ?>

@@ -96,7 +96,8 @@ var pageNo=1;
 
 
 
-var a = <?php include('config.php'); echo mysqli_num_rows(mysqli_query($conn,"select * from article")); ?>;
+// var a = <?php include('config.php'); echo mysqli_num_rows(mysqli_query($conn,"select * from article")); ?>;
+var a = <?php include "./classes/Query.php"; $query = new q\Query(); echo mysqli_num_rows($query->findArticles()); ?>;
 
  var tpages = Math.ceil(parseInt(a)/total);
 
@@ -496,6 +497,6 @@ refresh();
 
 
 </script>
-
+<?php require_once("components/footer.php") ?>
 </body>
 </html>

@@ -1,57 +1,53 @@
 <?php
-session_start();
 
-//$user = $_SESSION['user'] ;
+include "./classes/Query.php";
+class HomePage extends q\Query
+{
 
-
-
-$pass = $_GET['pass'];
-
-
-$conn= mysqli_connect("localhost", "root", "root", "login");
   
-$offset = $_GET['offset'];
-$totalPage=$_GET['total'];
+    function __construct()
+    {
+        $this->connection = mysqli_connect(
+            "localhost", "root", "root", "login"
+        );
+    }
 
+    function findAllArticles()
+    {
+        $this->results = ($this->connection ?
+            mysqli_query($this->connection, "select * from article")
+            : false);
+        return $this->results;
+    }
 
-mysqli_select_db("login");
+    function findAllArticlesByOffset($offset,$totalPage)
+    {
+        $this->results = ($this->connection ?
+            mysqli_query($this->connection, "select * from article  order by id desc  limit  {$offset},{$totalPage}")
+            : false);
+        return $this->results;
+    }
 
+};
 
-$result = mysqli_query($conn,"select * from article  order by id desc  limit  {$offset},{$totalPage}");
+        session_start();
+        //$user = $_SESSION['user'] ;
+        $pass = $_GET['pass'];
+        $query = new HomePage();
+        $offset = $_GET['offset'];
+        $totalPage=$_GET['total'];
+        $result = $query->findAllArticlesByOffset($offset,$totalPage);
+        $tr = $query->findAllArticles();
+        $totalRecords = mysqli_num_rows($tr);
+        $_SESSION['trecords'] = $totalRecords;
 
+        $rows = array();
+        while($r = mysqli_fetch_assoc($result)) {
+            $rows[] = $r;
+        }
+        $a =  json_encode($rows);
+        echo $a;
+        $_SESSION['jsonQ'] = $a;
 
-$tr = mysqli_query($conn,"select * from article");
-$totalRecords = mysqli_num_rows($tr);
-$_SESSION['trecords'] = $totalRecords;
-
-$rows = array();
-while($r = mysqli_fetch_assoc($result)) {
-    $rows[] = $r;
-}
-$a =  json_encode($rows);
-echo $a;
-$_SESSION['jsonQ'] = $a;
-
-// mysql_num_rows($result)
-if(mysqli_num_rows($result)>0){
-
-	
-
-// 	echo "<table border='1'>";
-// while ($row = mysqli_fetch_assoc($result)) { // Important line !!! Check summary get row on array ..
-//     echo "<tr>";
-//     foreach ($row as $field => $value) { // I you want you can right this line like this: foreach($row as $value) {
-//         echo "<td>" . $value . "</td>"; // I just did not use "htmlspecialchars()" function. 
-//     }
-//     echo "</tr>";
-// }
-// echo "</table>";
-
-
-
-}
-else{
-	echo " failed";
-}
 
 ?>

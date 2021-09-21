@@ -1,70 +1,49 @@
 <?php
+include "./classes/Article.php";
 
-session_start();
+        session_start();
 
+        $id = $_GET["q"];
+        $author =$_SESSION['user'];
 
-//$id = $_GET["dArticleId"];
-$id = $_GET["q"];
+        $query = new Article();
 
-$author =$_SESSION['user'];
+        if($_SESSION['category']=="Admin"){
 
-//echo $_SESSION['category'];
+        $query->deleteAdmin($id);
 
+        $result = $query->findArticleById($id);
 
-include('config.php');
-
-if($_SESSION['category']=="Admin"){
-
-// echo "<SCRIPT> //not showing me this
-//         alert('alert')
-//         window.location.replace('homePage.php');
-//     </SCRIPT>";
-
-mysqli_query($conn, "DELETE FROM `article` WHERE ID = '$id'");
-
-$result = mysqli_query($conn,"select * from article where ID = '$id'");
-
-$row = mysqli_fetch_array($result);
+        $row = mysqli_fetch_array($result);
 
 
-// mysql_num_rows($result)
-if(mysqli_num_rows($result)>0){
-echo "Failed";
+        if(mysqli_num_rows($result)>0){
+        echo "Failed";
+        }
+        else{
+            echo "Success";
+        }
 
+        }
 
-}
-else{
-	echo "Success";
-
-}
+        else{
 
 
 
-}
+        $query->deleteUser($author,$id);
 
-else{
+        $result = $query->findArticleById($id);
 
-
-
- mysqli_query($conn, "DELETE FROM `article` WHERE `author` = '$author' && ID = '$id'");
-
-$result = mysqli_query($conn,"select * from article where ID = '$id'");
-
-$row = mysqli_fetch_array($result);
+        $row = mysqli_fetch_array($result);
 
 
-// mysql_num_rows($result)
-if(mysqli_num_rows($result)>0){
-	echo "Failed";
-	//echo "Article Entry Success!";
-
-
-}
-else{
-	echo "Success";
-
-}
-	
-}
+        if(mysqli_num_rows($result)>0){
+            echo "Failed";
+        }
+        else{
+            echo "Success";
+        }
+            
+        }
 
 ?>
