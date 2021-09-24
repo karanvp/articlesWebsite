@@ -75,20 +75,20 @@ if(a.includes('true')){
 $('#td').append(`
 
 
- <li><a href="homePage.php">Home</a></li>
-    <li><a href="formCreateArticle.php">Create Articles</a></li>
-    <li><a href="owlCarousel.php">My Profile</a></li>
-    <li><a href="carousels.php">Create Carousels</a></li>
+ <li><a href="home-page">Home</a></li>
+    <li><a href="form-create-article">Create Articles</a></li>
+    <li><a href="my-profile">My Profile</a></li>
+    <li><a href="carousels">Create Carousel</a></li>
    
 <li><a onclick="signOut()">Sign out</a><li>
   `);
 
 $('#tdRight').append(`
 
-<a href="homePage.php" style="margin-left: 650px;">Home</a>
-            <a href="formCreateArticle.php">Create Article</a>
-            <a href="owlCarousel.php">My Profile</a>
-            <a href="carousels.php">Create Carousels</a>
+<a href="home-page" style="margin-left: 650px;">Home</a>
+            <a href="form-create-article">Create Article</a>
+            <a href="my-profile">My Profile</a>
+            <a href="carousels">Create Carousel</a>
             <a onclick="signOut()">Sign out</a>
   `);
 
@@ -96,14 +96,14 @@ $('#tdRight').append(`
 }
 
 else{
-  $('#td').append(` <li><a href="login.php">Login</a></li>
-    <li><a href="registration.php">Register</a></li>`);
+  $('#td').append(` <li><a href="login">Login</a></li>
+    <li><a href="registration">Register</a></li>`);
 
 
 $('#tdRight').append(`
 
-<a href="login.php" style="margin-left: 800px;">Login</a>
-            <a href="registration.php">Register</a>
+<a href="login-page" style="margin-left: 800px;">Login</a>
+            <a href="registration-page">Register</a>
              
             
       
@@ -132,8 +132,8 @@ $('#tdRight').append(`
 
    // $('#td').empty();
 $("#td").empty();
-$('#td').append(` <li><a href="login.php">Login</a></li>
-    <li><a href="registration.php">Register</a></li>`);
+$('#td').append(` <li><a href="login-page">Login</a></li>
+    <li><a href="registration">Register</a></li>`);
 
 
 
@@ -142,7 +142,7 @@ $.ajax( "logout.php" )
     //alert( "success" );
   })
 
-document.location.href = 'HomePage.php';
+document.location.href = 'home-page';
 
 }
 

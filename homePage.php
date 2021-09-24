@@ -235,8 +235,8 @@ $(".profile").append(`
 
        <table style="margin-left:20px">
        <tr><td><button class="buttonHome" type="button" id=${repo.ID} >DELETE</button></td>
-       <td><a  href="formUpdateArticles.php" style="color:white"><button class="buttonHome" id=${b} value="UPDATE">Update Article</button></a></td>
-       <td><a  class="buttonHome" href="homePage.php" >Back</a></td></tr>
+       <td><a  href="update-article" style="color:white"><button class="buttonHome" id=${b} value="UPDATE">Update Article</button></a></td>
+       <td><a  class="buttonHome" href="home-page" >Back</a></td></tr>
        
         </table>
 
@@ -387,8 +387,8 @@ $(".profile").append(`
 
        <table style="margin-left:20px">
        <tr><td><button class="buttonHome" type="button" id=${repo.ID} >DELETE</button></td>
-       <td><a  href="formUpdateArticles.php" style="color:white"><button class="buttonHome" id=${b} value="UPDATE">Update Article</button></a></td>
-       <td><a  class="buttonHome" href="homePage.php" >Back</a></td></tr>
+       <td><a  href="update-article" style="color:white"><button class="buttonHome" id=${b} value="UPDATE">Update Article</button></a></td>
+       <td><a  class="buttonHome" href="home-page" >Back</a></td></tr>
        
         </table>
 
@@ -409,7 +409,7 @@ $(".profile").append(`
 
        <table style="margin-left:20px">
        
-       <td><a  class="buttonHome" href="homePage.php" >Back</a></td></tr>
+       <td><a  class="buttonHome" href="home-page" >Back</a></td></tr>
        
         </table>
 
@@ -437,7 +437,7 @@ $(res).click(function(){
       <b style="color:green;">**Success!</b>
     
        `)
-     setTimeout(function(){window.location.replace('homePage.php');}, 2000);
+     setTimeout(function(){window.location.replace('home-page');}, 2000);
        }      
 if(data.includes("Failed")){
  $("#info").empty();

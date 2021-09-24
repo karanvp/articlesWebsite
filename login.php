@@ -54,8 +54,8 @@
 <p>
 <button class="loginBtn" onclick="submit()">Login</button><br><br>
 
-<a href="registration.php" ><button  class="registerBtn">Register</button></a><br><br>
-<a href="forgotPwdForm.php">Forgot Password ?</a>
+<a href="registration-page" ><button  class="registerBtn">Register</button></a><br><br>
+<a href="forgot-password">Forgot Password ?</a>
 
 
 </div>
@@ -66,7 +66,7 @@
 <Script>
   
 	function rep(){
-		 window.location.replace('homePage.php');
+		 window.location.replace('home-page');
 	}
 	function submit(){
 
