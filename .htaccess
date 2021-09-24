@@ -1,0 +1,21 @@
+DirectoryIndex homePage.php
+
+ErrorDocument 404 /articlesWebsite/error_404.html
+
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+RewriteRule ^home-page$ homePage.php [NC,L]
+RewriteRule ^login-page$ login.php [NC,L]
+RewriteRule ^registration-page$ registration.php [NC,L]
+RewriteRule ^form-create-article$ formCreateArticle.php [NC,L]
+RewriteRule ^update-article$ formUpdateArticles.php [NC,L]
+RewriteRule ^my-profile$ owlCarousel.php [NC,L]
+RewriteRule ^carousels$ carousels.php [NC,L]
+RewriteRule ^forgot-password$ forgotPwdForm.php [NC,L]
+
+
+

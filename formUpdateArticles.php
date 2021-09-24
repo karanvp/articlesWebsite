@@ -43,7 +43,7 @@
   submit();
 });
   function rep(){
-     window.location.replace('homePage.php');
+     window.location.replace('home-page');
   }
   function submit(){
 

@@ -118,7 +118,7 @@ var Alert = new CustomAlert();
 <p>
 <button class="registerBtn" onclick="submit()">Register</button><br><br>
 
-<button  class="loginBtn"><a href="login.php" >Login</a></button>
+<button  class="loginBtn"><a href="login-page" >Login</a></button>
 
 </main>
 
@@ -127,7 +127,7 @@ var Alert = new CustomAlert();
 
 <Script>
 	function rep(){
-		 window.location.replace('homePage.php');
+		 window.location.replace('home-page');
 	}
 	function submit(){
 
