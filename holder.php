@@ -91,6 +91,12 @@ $('.owl-carousel').owlCarousel({
 var offset = 0;
 var total =6;
 var pageNo=1;
+
+	 
+
+
+
+// var a = <?php include('config.php'); echo mysqli_num_rows(mysqli_query($conn,"select * from article")); ?>;
 var a = <?php include "./classes/Query.php"; $query = new q\Query(); echo mysqli_num_rows($query->findArticles()); ?>;
 
  var tpages = Math.ceil(parseInt(a)/total);
@@ -158,7 +164,7 @@ $('#searchUser').on('keypress', function(e){
 
          //alert(data);
 
-         var obj =JSON.parse(data)
+        var obj =JSON.parse(data)
          const myJSON = JSON.stringify(obj);
 
 
@@ -177,7 +183,7 @@ $(".profile").append(`
       <h4 style="margin-left:20px"><b>ARTICLE TITLE</b> :- ${repo.name}</h4>
       <h4 style="margin-left:20px;"><b>ARTICLE SHORT DESCRIPTION</b> :- ${repo.shortdescription}</h4>
       <br><br>
-      <a  href="retreiveDesc.php?q=${repo.ID}" style="color:white"><button class="buttonHome"  type="button" id=${repo.ID} value="VIEW DETAILS">VIEW DETAILS</button></a>
+      <button class="buttonHome" type="button" id=${repo.ID} value="VIEW DETAILS"/>VIEW DETAILS</button>
 
 </div>
 
@@ -188,7 +194,104 @@ $(".profile").append(`
 
 
 
-  
+$.each(obj, function(index, repo){
+ let str1 = "#";
+let str2 = repo.ID.toString();
+
+let res = str1.concat(str2)
+
+//alert(res);
+
+$(res).click(function(){
+// alert("The no was clicked."+str2);
+
+
+$(".profile").empty();
+
+$.ajax({
+       url:"retreiveDesc.php?q="+repo.ID,
+       
+       success: function(data) {
+         // alert(data);
+
+       var obj =JSON.parse(data)
+         const myJSON = JSON.stringify(obj);
+
+   //alert(myJSON); // apple
+$.each(obj, function(index, repo){
+ //alert(JSON.stringify(repo));
+var a = parseInt(repo.ID);
+var b = a + 100000000000;
+
+$(".profile").append(`
+       <div class="card">
+       <br>
+       <br>
+   
+      <h4 style="margin-left:20px"><b>ARTICLE NAME</b> :- ${repo.name}</h4>
+      <h4 style="margin-left:20px" ><b>AUTHOR</b> :- ${repo.author}</h4>
+       <h4 style="margin-left:20px"><b>ARTICLE DESCRIPTION</b> :- ${repo.description}</h4>
+       <br><br>
+
+       <table style="margin-left:20px">
+       <tr><td><button class="buttonHome" type="button" id=${repo.ID} >DELETE</button></td>
+       <td><a  href="update-article" style="color:white"><button class="buttonHome" id=${b} value="UPDATE">Update Article</button></a></td>
+       <td><a  class="buttonHome" href="home-page" >Back</a></td></tr>
+       
+        </table>
+
+
+
+
+    </div> 
+
+
+       `)
+
+$(res).click(function(){
+
+
+// alert(document.getElementById(repo.ID).value);
+//alert("."+repo.ID);
+ $.ajax({
+       url:"darticles.php?q="+repo.ID,
+       
+       success: function(data) {
+         
+
+   alert(data); // apple
+       }
+     })
+})
+
+$("#"+b).click(function(){
+
+
+//alert("inside update");
+var c = b-100000000000;
+$.ajax({
+       url:"sessionSetter.php?q="+c,
+       
+     
+     })
+ //alert(c);
+
+})
+
+
+})
+
+
+       }
+
+   })
+
+
+});
+
+
+
+})
    
        }
 
@@ -228,7 +331,7 @@ $(".profile").append(`
       <h4 style="margin-left:20px"><b>ARTICLE TITLE</b> :- ${repo.name}</h4>
       <h4 style="margin-left:20px;"><b>ARTICLE SHORT DESCRIPTION</b> :- ${repo.shortdescription}</h4>
       <br><br>
-      <a  href="retreiveDesc.php?q=${repo.ID}" style="color:white"><button class="buttonHome"  type="button" id=${repo.ID} value="VIEW DETAILS">VIEW DETAILS</button></a>
+      <button class="buttonHome"  type="button" id=${repo.ID} value="VIEW DETAILS">VIEW DETAILS</button>
 
 </div>
 
@@ -239,6 +342,141 @@ $(".profile").append(`
 
 
 
+$.each(obj, function(index, repo){
+ let str1 = "#";
+let str2 = repo.ID.toString();
+
+let res = str1.concat(str2)
+
+//alert(res);
+
+$(res).click(function(){
+// alert("The no was clicked."+str2);
+
+
+$(".profile").empty();
+
+$.ajax({
+       url:"retreiveDesc.php?q="+repo.ID,
+       
+       success: function(data) {
+         // alert(data);
+
+       var obj =JSON.parse(data)
+         const myJSON = JSON.stringify(obj);
+
+   //alert(myJSON); // apple
+$.each(obj, function(index, repo){
+ //alert(JSON.stringify(repo));
+var a = parseInt(repo.ID);
+var b = a + 100000000000;
+
+var checker = String(<?php session_start(); echo $_SESSION['mbk'] ;?>);
+if(checker.includes('true')){
+  
+
+$(".profile").append(`
+       <div class="card">
+       <br>
+       <br>
+   <span id="info"></span><br><br>
+      <h4 style="margin-left:20px"><b>ARTICLE NAME</b> :- ${repo.name}</h4>
+      <h4 style="margin-left:20px" ><b>AUTHOR</b> :- ${repo.author}</h4>
+       <h4 style="margin-left:20px"><b>ARTICLE DESCRIPTION</b> :- ${repo.description}</h4>
+       <br><br>
+
+       <table style="margin-left:20px">
+       <tr><td><button class="buttonHome" type="button" id=${repo.ID} >DELETE</button></td>
+       <td><a  href="update-article" style="color:white"><button class="buttonHome" id=${b} value="UPDATE">Update Article</button></a></td>
+       <td><a  class="buttonHome" href="home-page" >Back</a></td></tr>
+       
+        </table>
+
+    </div> 
+
+
+       `)}
+       else{
+        $(".profile").append(`
+       <div class="card">
+       <br>
+       <br>
+   <span id="info"></span><br><br>
+      <h4 style="margin-left:20px"><b>ARTICLE NAME</b> :- ${repo.name}</h4>
+      <h4 style="margin-left:20px" ><b>AUTHOR</b> :- ${repo.author}</h4>
+       <h4 style="margin-left:20px"><b>ARTICLE DESCRIPTION</b> :- ${repo.description}</h4>
+       <br><br>
+
+       <table style="margin-left:20px">
+       
+       <td><a  class="buttonHome" href="home-page" >Back</a></td></tr>
+       
+        </table>
+
+    </div> 
+
+
+       `)
+       }
+
+$(res).click(function(){
+
+
+// alert(document.getElementById(repo.ID).value);
+//alert("."+repo.ID);
+ $.ajax({
+       url:"darticles.php?q="+repo.ID,
+       
+       success: function(data) {
+    if(data.includes("Success")){
+         //Alert.render(response);
+       //  window.location.replace('homePage.php');
+
+       $("#info").empty();
+ $("#info").append(`
+      <b style="color:green;">**Success!</b>
+    
+       `)
+     setTimeout(function(){window.location.replace('home-page');}, 2000);
+       }      
+if(data.includes("Failed")){
+ $("#info").empty();
+ $("#info").append(`<b style="color:red;">**failed</b>`);
+ document.getElementById('userr').style.borderColor = "red";
+}
+   //alert(data); // apple
+       }
+     })
+})
+
+$("#"+b).click(function(){
+
+
+//alert("inside update");
+var c = b-100000000000;
+$.ajax({
+       url:"sessionSetter.php?q="+c,
+       
+     
+     })
+ //alert(c);
+
+})
+
+
+})
+
+
+       }
+
+   })
+
+
+});
+
+
+
+})
  
 
 } // success ends here

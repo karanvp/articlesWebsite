@@ -25,6 +25,10 @@ body {
   padding: 10px;
 }
 
+.cardz {
+  margin-left: 100px;
+}
+
 #searchUser {
   padding-right: 200px;
   padding-bottom: 10px;

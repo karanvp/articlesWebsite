@@ -23,6 +23,7 @@ $pass = md5($_POST['pass']);
 
   
   $_SESSION['user'] = $user;
+  $_SESSION['tracker'] = "true";
 
 $tr = $q->findTotalRecords();
 $totalRecords = mysqli_num_rows($tr);
