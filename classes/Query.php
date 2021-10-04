@@ -25,6 +25,48 @@ class Query
         return $this->results;
     }
 
+    function checkSubscriptionStatus($email)
+    {
+        $this->results = ($this->connection ?
+        mysqli_query($this->connection, "select * from subscribers where email ='{$email}' ")
+        : false);
+    return $this->results;
+    }
+  
+
+    function insertEmailIntoSubs($new_img_name)
+    {
+        $this->results = ($this->connection ?
+            mysqli_query($this->connection, "INSERT INTO subscribers(email) 
+			VALUES('$new_img_name')")
+            : false);
+        return $this->results;
+    }
+
+    function fetchSubscriberEmails()
+    {
+        $this->results = ($this->connection ?
+            mysqli_query($this->connection, "select * from subscribers")
+            : false);
+        return $this->results;
+    }
+
+    function DeleteSubscriber($email)
+    {
+        $this->results = ($this->connection ?
+            mysqli_query($this->connection, "DELETE FROM `subscribers` WHERE email = '$email'")
+            : false);
+        return $this->results;
+    }
+
+    function findRecentArticles()
+    {
+        $this->results = ($this->connection ?
+            mysqli_query($this->connection, "select * from article ORDER BY id desc limit 10   ")
+            : false);
+        return $this->results;
+    }
+
     function findArticles()
     {
         $this->results = ($this->connection ?

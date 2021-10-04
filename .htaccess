@@ -6,8 +6,12 @@ RewriteEngine on
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
+
+
 #RewriteRule ^([^\.]+)$ $1.php [NC,L]
 
+#RewriteRule ^a$ homePage.php [NC,L]
+#RewriteRule ^art/(.*) articlesWebsite/$1
 RewriteRule ^home-page$ homePage.php [NC,L]
 RewriteRule ^login-page$ login.php [NC,L]
 RewriteRule ^registration-page$ registration.php [NC,L]
@@ -16,6 +20,7 @@ RewriteRule ^update-article$ formUpdateArticles.php [NC,L]
 RewriteRule ^my-profile$ owlCarousel.php [NC,L]
 RewriteRule ^carousels$ carousels.php [NC,L]
 RewriteRule ^forgot-password$ forgotPwdForm.php [NC,L]
+
 
 
 

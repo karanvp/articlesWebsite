@@ -1,4 +1,4 @@
-
+<script src="jquery.js"></script>
 <style>
 
 /* body {
@@ -214,14 +214,96 @@ h1, h2, h3, h4, h5, h6 {
                     <div class="row">
                         <div class="col-lg-3 col-md-6" style="margin-left:30px;">
                             <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
-                                <h3 class="f-title f_600 t_color f_size_18">Get in Touch</h3>
-                                <p>Don’t miss any updates of our new templates and extensions.!</p>
-                                <form action="#" class="f_subscribe_two mailchimp" method="post" novalidate="true" _lpchecked="1">
+                                
+                                
+                                <div class='subscription'>
+
+
+
+                                </div>
+                                <script>
+                                var a = String(<?php session_start(); echo $_SESSION['mbk']; ?>);
+                                
+
+                                    if(a.includes('true')){
+                                        
+                                        <?php
+                                      
+                                      $con=mysqli_connect("localhost","root","root","login");
+                                       $sql1="select * from users where username ='{$_SESSION['user']}' ";
+
+                                       $query1=mysqli_query($con,$sql1);
+                                       
+                                       while ($row = $query1 -> fetch_row()) {
+                                        $e = $row[4];
+                                      }
+                                       
+                                    //   $row = mysql_fetch_array($query1, MYSQL_ASSOC);
+                                     // $e = 'karanvpagare@gmail.com';
+
+                                    $_SESSION['EMAIL']=$e;
+                                      $sql="select * from subscribers where email ='$e' ";
+                                     
+                                     
+                                      $query=mysqli_query($con,$sql);
+                                         
+                                        
+                                        ?>
+                                        var count = <?php echo mysqli_num_rows($query) ?>;
+                                        
+                                        if(count>0){
+                                            
+                                            $(".subscription").append(`
+                                            <p>Click to unsubscribe from our newsletter !!</p>
+                                        <form action="unsubscribe.php" class="f_subscribe_two mailchimp" method="post"  _lpchecked="1">
+                                   
+                                    <button class="btn btn_get btn_get_two" type="submit">Unsubscribe</button>
+                                    
+                                </form>
+                                        
+                                        `);
+
+                                        }else{
+
+
+                                            $(".subscription").append(`
+                                            <h3 class="f-title f_600 t_color f_size_18">Get in Touch</h3>
+                                            <p>Please subscribe to our newsletter !!</p>
+                                            <form action="emailNewsletter.php" class="f_subscribe_two mailchimp" method="post"  _lpchecked="1">
                                     <input type="text" name="EMAIL" class="form-control memail" placeholder="Email">
                                     <button class="btn btn_get btn_get_two" type="submit">Subscribe</button>
                                     <p class="mchimp-errmessage" style="display: none;"></p>
                                     <p class="mchimp-sucmessage" style="display: none;"></p>
                                 </form>
+                                        
+                                        `);
+                                        }
+                                        
+                                      
+
+
+
+                                    }else{
+                                        $(".subscription").append(`
+                                        <h3 class="f-title f_600 t_color f_size_18">Get in Touch</h3>
+                                        <p>Please subscribe to our newsletter !!</p>
+                                        <form action="emailNewsletter.php" class="f_subscribe_two mailchimp" method="post"  _lpchecked="1">
+                                <input type="text" name="EMAIL" class="form-control memail" placeholder="Email">
+                                <button class="btn btn_get btn_get_two" type="submit">Subscribe</button>
+                                <p class="mchimp-errmessage" style="display: none;"></p>
+                                <p class="mchimp-sucmessage" style="display: none;"></p>
+                            </form>
+                                    
+                                    `);
+                                    }
+
+                                </script>
+                               
+                                
+
+
+
+
                             </div>
                         </div>
                     

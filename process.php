@@ -21,7 +21,7 @@ $pass = md5($_POST['pass']);
 // $cat = $_POST['category'];
 
 
-  
+//   $_SESSION['EMAIL'];
   $_SESSION['user'] = $user;
   $_SESSION['tracker'] = "true";
 
