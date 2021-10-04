@@ -32,6 +32,14 @@ class Query
         : false);
     return $this->results;
     }
+
+    function checkIfUserExists($username)
+    {
+        $this->results = ($this->connection ?
+        mysqli_query($this->connection, "select * from users where username ='{$username}'")
+        : false);
+    return $this->results;
+    }
   
 
     function insertEmailIntoSubs($new_img_name)

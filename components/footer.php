@@ -222,36 +222,29 @@ h1, h2, h3, h4, h5, h6 {
 
                                 </div>
                                 <script>
-                                var a = String(<?php session_start(); echo $_SESSION['mbk']; ?>);
+                                var state = String(<?php session_start(); echo $_SESSION['mbk']; ?>);
                                 
 
-                                    if(a.includes('true')){
+                                    if(state.includes('true')){
                                         
                                         <?php
                                       
-                                      $con=mysqli_connect("localhost","root","root","login");
-                                       $sql1="select * from users where username ='{$_SESSION['user']}' ";
 
-                                       $query1=mysqli_query($con,$sql1);
+                                    $qobj = new q\Query(); 
+                                     $query1= $qobj->checkIfUserExists($_SESSION['user']);
                                        
-                                       while ($row = $query1 -> fetch_row()) {
+                                    while ($row = $query1 -> fetch_row()) {
                                         $e = $row[4];
                                       }
                                        
-                                    //   $row = mysql_fetch_array($query1, MYSQL_ASSOC);
-                                     // $e = 'karanvpagare@gmail.com';
-
+                                    
                                     $_SESSION['EMAIL']=$e;
-                                      $sql="select * from subscribers where email ='$e' ";
-                                     
-                                     
-                                      $query=mysqli_query($con,$sql);
-                                         
-                                        
+                                    $result =  $qobj->checkSubscriptionStatus($e); 
+                                           
                                         ?>
-                                        var count = <?php echo mysqli_num_rows($query) ?>;
+                                    var count = <?php echo mysqli_num_rows($result) ?>;
                                         
-                                        if(count>0){
+                                    if(count>0){
                                             
                                             $(".subscription").append(`
                                             <p>Click to unsubscribe from our newsletter !!</p>
@@ -263,7 +256,7 @@ h1, h2, h3, h4, h5, h6 {
                                         
                                         `);
 
-                                        }else{
+                                     }else{
 
 
                                             $(".subscription").append(`
