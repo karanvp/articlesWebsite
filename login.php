@@ -36,11 +36,12 @@
 <br><br>
 <table>
 	<tr>
-		<td><input type="text" name ="user" id="user" placeholder="Enter username"  required/></td>
+		<td><input class="form-control" type="text" name ="user" id="user" placeholder="Enter username"  required/></td>
 		
 	</tr>
+	<tr><td><br></td></tr>
 	<tr>
-		<td><input type="password" name="pass" id="pass" placeholder="Enter password" required/></td>
+		<td><input class="form-control" type="password" name="pass" id="pass" placeholder="Enter password" required/></td>
 		<td><span id="p"></span></td>
 	</tr>
 
@@ -52,9 +53,9 @@
 
 <p></p>
 <p>
-<button class="loginBtn" onclick="submit()">Login</button><br><br>
+<button class="btn btn-danger btn-lg" onclick="submit()">Login</button>&nbsp;&nbsp;&nbsp;
 
-<a href="registration-page" ><button  class="registerBtn">Register</button></a><br><br>
+<a href="registration-page" ><button  class="btn btn-danger btn-lg">Register</button></a><br><br>
 <a href="forgot-password">Forgot Password ?</a>
 
 

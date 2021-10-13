@@ -10,7 +10,43 @@
     
     <title></title>
 
-  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+   
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    
+    
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+
+  <div class="container">
+    <a class="navbar-brand" href="#">ArticlesForU</a>
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarid">
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+    <div class="collapse navbar-collapse" id="navbarid">
+      
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="menunav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="home-page">Home</a>
+        </li>
+        
+       
+        
+      </ul>
+    
+      <input type="text" id="searchUserz" class="" placeholder="Search Article..." >
+       
+    
+    </div>
+  </div>
+</nav>
+
+
 
 
 
@@ -18,41 +54,12 @@
 
 
 
-    <!-- Custom styles for this template -->
- 
-   <!--  <link rel="stylesheet" href=css/style.css> -->
-
-  <!--   <nav class="navbar navbar-expand-md navbar-dark bg-dark ">
-      <a class="navbar-brand" href="homePage.php">Home</a>
-  <a class="navbar-brand" href="formCreateArticle.php">Create Article</a>
-  
-
-<input type="text" id="searchUser" class="form-control" placeholder="Search Article..." >
-   
-  <a class="navbar-brand" href="mainPage.php" style="margin-left: 1000px">Signout</a>
- 
-
-  
-</nav> -->
-
 <header>
     
-<div id="menu-barb">
-<div id="menu" onclick="onClickMenu()">
-    
-    <div id="bar1" class="bar"></div>
-     <div id="bar2" class="bar"></div>
- <div id="bar3" class="bar"></div>
-  </div>
 
- <ul class="nav" id="nav">
-  <div id="td">
-   
-</div>
-  </ul>
 </div>
 
-<input type="text" id="searchUser" class="form-control" placeholder="Search Article..." >
+
 
         <nav class="navDesktop">    
           <div id="tdRight">
@@ -71,92 +78,59 @@
 var a = String(<?php session_start(); echo $_SESSION['mbk']; ?>);
 
 if(a.includes('true')){
-  //alert("true");
-$('#td').append(`
 
 
- <li><a href="home-page">Home</a></li>
-    <li><a href="form-create-article">Create Articles</a></li>
-    <li><a href="my-profile">My Profile</a></li>
-    <li><a href="carousels">Create Carousel</a></li>
-   
-<li><a onclick="signOut()">Sign out</a><li>
-  `);
-
-$('#tdRight').append(`
-
-<a href="home-page" style="margin-left: 650px;">Home</a>
-            <a href="form-create-article">Create Article</a>
-            <a href="my-profile">My Profile</a>
-            <a href="carousels">Create Carousel</a>
-            <a onclick="signOut()">Sign out</a>
-  `);
+  $('#menunav').append(`
+        <li class="nav-item">
+        <a class="nav-link" href="form-create-article">Create Articles</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="my-profile">My Profile</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="carousels">Create Carousel</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" onclick="signOut()">Sign out</a>
+        </li>
+        `);
 
 
 }
 
 else{
-  $('#td').append(` <li><a href="login">Login</a></li>
-    <li><a href="registration">Register</a></li>`);
-
-
-$('#tdRight').append(`
-
-<a href="login-page" style="margin-left: 800px;">Login</a>
-            <a href="registration-page">Register</a>
-             
-            
+   
       
-  `);
+//   `);
+  $('#menunav').append(`<li class="nav-item">
+          <a class="nav-link" href="login-page">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="registration-page">Sign Up</a>
+        </li>`);
+
 }
 
 
 
 </script>
+
 <script type="text/javascript">
 
-
-  
-
-  function onClickMenu(){
-    document.getElementById("nav").classList.toggle("change");
-    document.getElementById("menu").classList.toggle("change");
-
-    // document.getElementById("nav").style.display = "block";
-  }
-
-
   function signOut(){
-
-
-
-   // $('#td').empty();
+  
 $("#td").empty();
 $('#td').append(` <li><a href="login-page">Login</a></li>
     <li><a href="registration">Register</a></li>`);
 
-
-
 $.ajax( "logout.php" )
   .done(function() {
-    //alert( "success" );
+   
   })
 
 document.location.href = 'home-page';
 
 }
 
-
 </script>
-
-
-<!-- <div id="dialogoverlay"></div>
-<div id="dialogbox">
-  <div>
-    <div id="dialogboxhead"></div>
-    <div id="dialogboxbody"></div>
-    <div id="dialogboxfoot"></div>
-  </div>
-</div> -->
-
   </head>

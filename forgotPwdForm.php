@@ -20,7 +20,7 @@
 <div class='textContainer'>
 <input type="text" name="email" placeholder="Enter Email ID">
 <br><br>
-<input class="buttonHome" name="password-reset-token" type="submit" value="submit" style="margin-left: 50px">
+<input class="btn btn-danger btn-md" name="password-reset-token" type="submit" value="submit" style="margin-left: 50px">
 
  </div>
  </form>

@@ -35,6 +35,7 @@ else{
 <head></head>
 
 <body>
+<div id="notify"></div>
 <div id="info"></div>
 <div class="desc"></div>
 
@@ -59,9 +60,9 @@ $(".desc").append(`
       <h4 style="margin-left:20px;"><b>ARTICLE SHORT DESCRIPTION</b> :- ${repo.shortdescription}</h4>
       <h4 style="margin-left:20px;"><b>ARTICLE  DESCRIPTION</b> :- ${repo.description}</h4>
       <br><br>
-      <button class="buttonHome" type="button" id=${repo.ID} >DELETE</button>
-      <a  href="update-article" style="color:white"><button class="buttonHome" id=${b} value="UPDATE">Update Article</button></a>
-      <a  class="buttonHome" href="home-page" >Back</a>
+      <button class="btn btn-danger btn-lg" type="button" id=${repo.ID} >DELETE</button>
+      <a  href="update-article" style="color:white"><button class="btn btn-danger btn-lg" id=${b} value="UPDATE">Update Article</button></a>
+      <a  class="btn btn-danger btn-lg" href="home-page" >Back</a>
 </div>
 
        `)}
@@ -78,7 +79,7 @@ $(".desc").append(`
 
        <table style="margin-left:20px">
        
-       <td><a  class="buttonHome" href="home-page" >Back</a></td></tr>
+       <td><a  class="btn btn-danger btn-lg" href="home-page" >Back</a></td></tr>
        
         </table>
 
@@ -101,17 +102,25 @@ $(".desc").append(`
          //Alert.render(response);
        //  window.location.replace('homePage.php');
 
-       $("#info").empty();
- $("#info").append(`
-      <b style="color:green;">**Success!</b>
+       // $("#info").empty();
+//  $("#info").append(`
+//       <b style="color:green;">**Success!</b>
     
-       `)
+//        `)
+
+       $("#notify").append(`<div class="alert alert-primary" role="alert">
+  Article Successfully deleted !!
+</div>`);
      setTimeout(function(){window.location.replace('home-page');}, 2000);
        }      
 if(data.includes("Failed")){
- $("#info").empty();
- $("#info").append(`<b style="color:red;">**failed</b>`);
- document.getElementById('userr').style.borderColor = "red";
+//  $("#info").empty();
+//  $("#info").append(`<b style="color:red;">**failed</b>`);
+//  document.getElementById('userr').style.borderColor = "red";
+ $("#notify").append(`<div class="alert alert-danger" role="alert">
+  Article failed to delete !!
+</div>`);
+
 }
    //alert(data); // apple
        }

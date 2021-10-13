@@ -33,6 +33,22 @@
 
    <body>
   
+   <div class="jumbotron text-center">
+    
+    <div class="container">
+      
+      <h1>Welcome to my Website</h1>
+      <p>It has survived not only five centuries, but also the leap into electronic typesetting,</p>
+
+      <a href="info.php" class="btn btn-primary">Read More</a>
+    </div>      
+
+
+    </div>
+
+
+
+
  <div id="logs"></div>
   <br>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -77,9 +93,9 @@ $('.owl-carousel').owlCarousel({
 
 <br><br>
 <div class="pagination" id="pag">
-	<button id="prev"> PREV</button><span class="t"></span>
+	<button id="prev" class="btn btn-danger btn-sm"> PREV</button>&nbsp;&nbsp;<span class="t"></span>&nbsp;&nbsp;
 
-<button id="next">NEXT</button>
+<button id="next" class="btn btn-danger btn-sm">NEXT</button>
 </div>
 <br>
 <div class="profile" id="prof"></div><!-- /.container -->
@@ -96,7 +112,7 @@ var a = <?php include "./classes/Query.php"; $query = new q\Query(); echo mysqli
  var tpages = Math.ceil(parseInt(a)/total);
 
 for(var i=0;i<tpages;i++){
- $(".t").append(`<button onclick="ay(${i+1})" id=${i}>${i+1}</button>`);
+ $(".t").append(`<button class="btn btn-danger btn-sm" onclick="ay(${i+1})" id=${i}>${i+1}</button>&nbsp;`);
 }
 
 function ay(i){
@@ -146,7 +162,7 @@ refresh();
 });
 
 
-$('#searchUser').on('keypress', function(e){
+$('#searchUserz').on('keypress', function(e){
    
    if(e.which == 13) {
 
@@ -169,6 +185,8 @@ $.each(obj, function(index, repo){
 
 
 $(".profile").append(`
+
+ 
        <div class="card">
        <br>
        <br>
@@ -177,7 +195,7 @@ $(".profile").append(`
       <h4 style="margin-left:20px"><b>ARTICLE TITLE</b> :- ${repo.name}</h4>
       <h4 style="margin-left:20px;"><b>ARTICLE SHORT DESCRIPTION</b> :- ${repo.shortdescription}</h4>
       <br><br>
-      <a  href="retreiveDesc.php?q=${repo.ID}" style="color:white"><button class="buttonHome"  type="button" id=${repo.ID} value="VIEW DETAILS">VIEW DETAILS</button></a>
+      <a  href="retreiveDesc.php?q=${repo.ID}" style="color:white"><button class="btn btn-danger btn-lg"  type="button" id=${repo.ID} value="VIEW DETAILS">VIEW DETAILS</button></a>
 
 </div>
 
@@ -220,6 +238,8 @@ $.each(obj, function(index, repo){
 
 
 $(".profile").append(`
+
+
        <div class="card">
        <br>
        <br>
@@ -228,7 +248,7 @@ $(".profile").append(`
       <h4 style="margin-left:20px"><b>ARTICLE TITLE</b> :- ${repo.name}</h4>
       <h4 style="margin-left:20px;"><b>ARTICLE SHORT DESCRIPTION</b> :- ${repo.shortdescription}</h4>
       <br><br>
-      <a  href="retreiveDesc.php?q=${repo.ID}" style="color:white"><button class="buttonHome"  type="button" id=${repo.ID} value="VIEW DETAILS">VIEW DETAILS</button></a>
+      <a  href="retreiveDesc.php?q=${repo.ID}" style="color:white"><button class="btn btn-danger btn-lg"  type="button" id=${repo.ID} value="VIEW DETAILS">VIEW DETAILS</button></a>
 
 </div>
 
