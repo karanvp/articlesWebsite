@@ -22,7 +22,9 @@
 <div id="dDiv"></div>
  	
 <br><br>
-<input class = "button" type="submit" value="submit">
+<input class="btn btn-danger btn-lg" type="submit" value="submit">
+
+
 
 
  </form>

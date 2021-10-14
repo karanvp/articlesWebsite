@@ -9,10 +9,10 @@
 
 </style>
 <main >
-
+<div id="notify"></div>
 <div class="textContainer">
   
- 
+
    <span id="info"></span><br><br>
 
    <div class="sub">
@@ -23,7 +23,7 @@
 <br><br>
 
 
-<button style="margin-left: 60px;padding-left: 180px;padding-right: 180px;padding-top: 10px;padding-bottom: 10px; background-color: red;border-radius: 40px;color: white;" class="button" id="s">Submit</button>
+<button class="btn btn-danger btn-lg"  id="s">Submit</button>
 
 </div>
 
@@ -75,6 +75,9 @@ var sdesc = document.getElementById("upArticleDesc").value;
        <b style="color:green;">**Success!</b>
      
         `)
+        $("#notify").append(`<div class="alert alert-primary" role="alert">
+ Article is successfully updated !!
+</div>`);
       setTimeout(rep, 2000);
         }else{
       //Alert.render(response);
@@ -89,6 +92,10 @@ if(response.includes("Failed")){
        <b style="color:red;">**Failed to Update!</b>
      
         `)
+
+        $("#notify").append(`<div class="alert alert-danger" role="alert">
+ Article is failed to be updated !!
+</div>`);
 
 
 }

@@ -50,10 +50,10 @@
 
 		   <input type="text" name="title" id="title" placeholder="Enter Title"><br><br>
 
-           <input type="file" 
+           <input  class="btn btn-danger btn-sm" type="file" 
                   name="my_image">
 
-           <input type="submit" 
+           <input class="btn btn-danger btn-sm" type="submit" 
                   name="submit"
                   value="Upload">
        
@@ -85,8 +85,8 @@ $q = new q\Query();
           	while ($images = mysqli_fetch_assoc($res)) {  ?>
              
              <div class="alb"> 
-				 <button id=<?=$images['image_url']?> onclick="myfunction(id)">DELETE</button>
-				 <button  id= <?=$images['image_url']?> onclick="myfun(id)">UPDATE</button>
+				 <button class="btn btn-danger btn-sm" id=<?=$images['image_url']?> onclick="myfunction(id)">DELETE</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				 <button class="btn btn-info btn-sm" id= <?=$images['image_url']?> onclick="myfun(id)">UPDATE</button>
 				
 				 <div class="md">
 				 <div class="centeredThumbnail" ><?=$images['image_title']?></div>

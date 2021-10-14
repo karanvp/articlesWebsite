@@ -13,7 +13,7 @@ include('config.php');
     
 $q = new Login();
 
-$_SESSION['mbk'] = 'true';
+
 
 $user = $_POST["user"];
 
@@ -50,7 +50,7 @@ $selected =  $row1[0];
 
 // mysql_num_rows($result)
 if(mysqli_num_rows($result1)>0){
-
+	$_SESSION['mbk'] = 'true';
 	echo "Success ";
 	// echo $user;
 	// echo $cat;

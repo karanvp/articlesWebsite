@@ -18,6 +18,13 @@ include "./classes/Register.php";
 		echo "userexists ";
 
 	}else{
+
+        if($pass!=$cpass){
+            echo "failed";
+        }else{
+
+        
+
 	$register->insertNewUserDetails($user,$pass,$email);
 	$result = $register->findUserDetails($user);
 
@@ -32,6 +39,8 @@ include "./classes/Register.php";
     echo "failed";
 
     }
+        }
+
         }
 
 

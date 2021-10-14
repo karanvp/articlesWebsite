@@ -93,19 +93,19 @@ var Alert = new CustomAlert();
 <br><br>
 <table>
 	<tr>
-		<td><input type="text" name ="userr" id="userr" placeholder="Enter username"  required/></td>
+		<td><input class="form-control" type="text" name ="userr" id="userr" placeholder="Enter username"  required/></td>
 		<td></td>
 	</tr>
 	<tr>
-		<td><input  type="password" name="passr" id="passr" placeholder="Enter password" required/></td>
+		<td><input  class="form-control" type="password" name="passr" id="passr" placeholder="Enter password" required/></td>
 		<td></td>
 	</tr>
 	<tr>
-		<td><input type="password" name="cpassr" id="cpassr" placeholder="Confirm password" required/></td>
+		<td><input class="form-control" type="password" name="cpassr" id="cpassr" placeholder="Confirm password" required/></td>
 		<td></td>
 	</tr>
 	<tr>
-		<td><input type="text" name ="email" id="email" placeholder="Enter Email ID" required/></td>
+		<td><input class="form-control" type="text" name ="email" id="email" placeholder="Enter Email ID" required/></td>
 		<td></td>
 	</tr>
 	
@@ -116,9 +116,9 @@ var Alert = new CustomAlert();
 
 <p></p>
 <p>
-<button class="registerBtn" onclick="submit()">Register</button><br><br>
+<button class="btn btn-danger btn-lg" onclick="submit()">Register</button>&nbsp;&nbsp;&nbsp;
 
-<button  class="loginBtn"><a href="login-page" >Login</a></button>
+<a href="login-page" ><button  class="btn btn-danger btn-lg">Login</button></a>
 
 </main>
 

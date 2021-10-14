@@ -9,9 +9,9 @@
 <style type="text/css">
 
 </style>
- 
+<div id="notify"></div>
 <div class="textContainer">
-  
+
    
 
    
@@ -26,7 +26,7 @@
 <br><br>
 
 
-<button style="margin-left: 60px;padding-left: 180px;padding-right: 180px;padding-top: 10px;padding-bottom: 10px; background-color: red;border-radius: 40px;color: white;" onclick="submit()">Submit</button>
+<button style="margin-left: 60px;" class="btn btn-danger btn-lg" onclick="submit()">Submit</button>
 
 </div>
 
@@ -53,10 +53,16 @@ var desc = document.getElementById('desc').value;
         //  window.location.replace('homePage.php');
 
         $("#info").empty();
-  $("#info").append(`
-       <b style="color:green;">**Success!</b>
+  // $("#info").append(`
+  //      <b style="color:green;">**Success!</b>
      
-        `)
+  //       `)
+
+        $("#notify").append(`<div class="alert alert-primary" role="alert">
+ Article is successfully created !!
+</div>`);
+
+
       setTimeout(rep, 2000);
         }else{
         	$("#info").empty();
