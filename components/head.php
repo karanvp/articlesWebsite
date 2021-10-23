@@ -16,14 +16,27 @@
    
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
+    <style>
+
+.navbar a:hover{
+  border-bottom:4px solid white;
+}
+
+.active {
+  text-decoration-line: underline !important;
+  text-decoration-thickness: 2px !important;
+  color: rgb(20, 19, 19);
+}
+ 
+    </style>
     
-    
-    
+  
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
 
   <div class="container">
-    <a class="navbar-brand" href="#">ArticlesForU</a>
+ 
+    <a class="navbar-brand" href="http://localhost:8888/articlesWebsite/home-page">ArticlesForU</a>
     <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarid">
   <span class="navbar-toggler-icon"></span>
 </button>
@@ -31,9 +44,7 @@
     <div class="collapse navbar-collapse" id="navbarid">
       
     <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="menunav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="home-page">Home</a>
-        </li>
+        
         
        
         
@@ -81,14 +92,15 @@ if(a.includes('true')){
 
 
   $('#menunav').append(`
+ 
         <li class="nav-item">
-        <a class="nav-link" href="form-create-article">Create Articles</a>
+        <a class="nav-link" href="http://localhost:8888/articlesWebsite/form-create-article">Create Articles</a>
         </li>
         <li class="nav-item">
-        <a class="nav-link" href="my-profile">My Profile</a>
+        <a class="nav-link" href="http://localhost:8888/articlesWebsite/my-profile">My Profile</a>
         </li>
         <li class="nav-item">
-        <a class="nav-link" href="carousels">Create Carousel</a>
+        <a class="nav-link" href="http://localhost:8888/articlesWebsite/carousels">Create Carousel</a>
         </li>
         <li class="nav-item">
         <a class="nav-link" onclick="signOut()">Sign out</a>
@@ -102,11 +114,13 @@ else{
    
       
 //   `);
-  $('#menunav').append(`<li class="nav-item">
-          <a class="nav-link" href="login-page">Login</a>
+  $('#menunav').append(`
+
+  <li class="nav-item">
+          <a class="nav-link" href="http://localhost:8888/articlesWebsite/login-page">Login</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="registration-page">Sign Up</a>
+          <a class="nav-link" href="http://localhost:8888/articlesWebsite/registration-page">Sign Up</a>
         </li>`);
 
 }
@@ -120,17 +134,29 @@ else{
   function signOut(){
   
 $("#td").empty();
-$('#td').append(` <li><a href="login-page">Login</a></li>
-    <li><a href="registration">Register</a></li>`);
+$('#td').append(` <li><a href="http://localhost:8888/articlesWebsite/login-page">Login</a></li>
+    <li><a href="http://localhost:8888/articlesWebsite/registration">Register</a></li>`);
 
 $.ajax( "logout.php" )
   .done(function() {
    
   })
 
-document.location.href = 'home-page';
+document.location.href = 'http://localhost:8888/articlesWebsite/home-page';
 
 }
+
+$(document).ready(function () {
+        // Underline to remain in navbar after click using URL
+        jQuery(function ($) {
+          var path = window.location.href; // because the 'href' property of the DOM element is the absolute path
+          $('.nav-link').each(function () {
+            if (this.href === path) {
+              $(this).addClass('active');
+            }
+          });
+        });
+      });
 
 </script>
   </head>

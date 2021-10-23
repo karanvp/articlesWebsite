@@ -32,9 +32,10 @@
  
 .centeredThumbnail{
 	position: absolute;
-	bottom:620px;
+	
 	font-weight:bold;
 	margin-left:60px;
+	margin-top:30px;
 }
 
 

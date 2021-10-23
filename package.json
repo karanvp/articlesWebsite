@@ -22,5 +22,8 @@
     "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^5.0.0",
     "sass": "^1.39.0"
+  },
+  "dependencies": {
+    "@ciar4n/izmir": "^1.0.1"
   }
 }
