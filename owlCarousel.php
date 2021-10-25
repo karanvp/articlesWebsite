@@ -265,7 +265,7 @@ $(".profile").append(`
       <h4 style="margin-left:20px"><b>ARTICLE TITLE</b> :- ${repo.name}</h4>
       <h4 style="margin-left:20px;"><b>ARTICLE SHORT DESCRIPTION</b> :- ${repo.shortdescription}</h4>
       <br><br>
-      <a  href="retreiveDesc.php?q=${repo.ID}" style="color:white"><button class="btn btn-danger btn-lg"  type="button" id=${repo.ID} value="VIEW DETAILS">VIEW DETAILS</button></a>
+      <a  href="retreiveDesc/${repo.ID}" style="color:white"><button class="btn btn-danger btn-lg"  type="button" id=${repo.ID} value="VIEW DETAILS">VIEW DETAILS</button></a>
 
 </div>
 
@@ -316,7 +316,7 @@ $(".profile").append(`
       <h4 style="margin-left:20px"><b>ARTICLE TITLE</b> :- ${repo.name}</h4>
       <h4 style="margin-left:20px;"><b>ARTICLE SHORT DESCRIPTION</b> :- ${repo.shortdescription}</h4>
       <br><br>
-      <a  href="retreiveDesc.php?q=${repo.ID}" style="color:white"><button class="btn btn-danger btn-lg"  type="button" id=${repo.ID} value="VIEW DETAILS">VIEW DETAILS</button></a>
+      <a  href="retreiveDesc/${repo.ID}" style="color:white"><button class="btn btn-danger btn-lg"  type="button" id=${repo.ID} value="VIEW DETAILS">VIEW DETAILS</button></a>
 
 </div>
 
@@ -373,7 +373,7 @@ $(".profile").append(`
        <table style="margin-left:20px">
        <tr><td><button class="btn btn-danger btn-lg" type="button" id=${repo.ID} >DELETE</button></td>
        <td><a  href="formUpdateArticles.php" style="color:white"><button class="btn btn-danger btn-lg" id=${b} value="UPDATE">Update Article</button></a></td>
-       <td><a  class="btn btn-danger btn-lg" href="homePage.php" >Back</a></td></tr>
+       <td><a  class="btn btn-danger btn-lg" href="http://localhost:8888/articlesWebsite/homePage.php" >Back</a></td></tr>
        
         </table>
 
@@ -394,7 +394,7 @@ $(".profile").append(`
 
        <table style="margin-left:20px">
        
-       <td><a  class="btn btn-danger btn-lg" href="homePage.php" >Back</a></td></tr>
+       <td><a  class="btn btn-danger btn-lg" href="http://localhost:8888/articlesWebsite/homePage.php" >Back</a></td></tr>
        
         </table>
 
@@ -410,7 +410,7 @@ $(res).click(function(){
 // alert(document.getElementById(repo.ID).value);
 //alert("."+repo.ID);
  $.ajax({
-       url:"darticles.php?q="+repo.ID,
+       url:"http://localhost:8888/articlesWebsite/darticles.php?q="+repo.ID,
        
        success: function(data) {
     if(data.includes("Success")){
@@ -440,7 +440,7 @@ $("#"+b).click(function(){
 //alert("inside update");
 var c = b-100000000000;
 $.ajax({
-       url:"sessionSetter.php?q="+c,
+       url:"http://localhost:8888/articlesWebsite/sessionSetter.php?q="+c,
        
      
      })
