@@ -22,7 +22,7 @@ if($password==$cpassword){
 	$_SESSION['mbk'] = 'true';
 //  mysqli_query($conn,"UPDATE users set  password='" . $password . "' WHERE email='" . $email . "'");
  echo '<p>Congratulations! Your password has been updated successfully.</p>';
-header("Location: http://localhost:8888/articlesWebsite/homePage.php");
+header("Location: http://localhost/articlesWebsite/home-page");
 }
 else{
 	echo "Password dosen't match!";

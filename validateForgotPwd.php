@@ -26,7 +26,7 @@ if(isset($_POST['password-reset-token']) && $_POST['email'])
  
    // $update = mysqli_query($conn,"UPDATE users set  password='" . $password . "', reset_link_token='" . $token . "' ,exp_date='" . $expDate . "' WHERE email='" . $emailId . "'");
  
-    $link = "<a href='http://localhost:8888/articlesWebsite/reset-password.php?email=".$email."&token=".$token."'>Click To Reset password</a>";
+    $link = "<a href='http://localhost/articlesWebsite/reset-password.php?email=".$email."&token=".$token."'>Click To Reset password</a>";
  
     require_once('vendor/autoload.php');
  
