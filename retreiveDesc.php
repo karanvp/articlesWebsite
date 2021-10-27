@@ -62,8 +62,8 @@ $(".desc").append(`
       <br><br>
       <table style="margin-left:50px">
       <td><button class="btn btn-danger btn-lg" type="button" id=${repo.ID} >DELETE</button></td>
-      <td><a  href="http://localhost/articlesWebsite/update-article" style="color:white"><button class="btn btn-danger btn-lg" id=${b} value="UPDATE">Update Article</button></a></td>
-      <td><a  class="btn btn-danger btn-lg" href="http://localhost/articlesWebsite/home-page" >Back</a></td>
+      <td><a  href="http://localhost:8888/articlesWebsite/update-article" style="color:white"><button class="btn btn-danger btn-lg" id=${b} value="UPDATE">Update Article</button></a></td>
+      <td><a  class="btn btn-danger btn-lg" href="http://localhost:8888/articlesWebsite/home-page" >Back</a></td>
       </table>
 </div>
 
@@ -81,7 +81,7 @@ $(".desc").append(`
 
        <table style="margin-left:50px">
        
-       <td><a  class="btn btn-danger btn-lg" href="http://localhost/articlesWebsite/home-page" >Back</a></td></tr>
+       <td><a  class="btn btn-danger btn-lg" href="http://localhost:8888/articlesWebsite/home-page" >Back</a></td></tr>
        
         </table>
 
@@ -97,7 +97,7 @@ $(".desc").append(`
 // alert(document.getElementById(repo.ID).value);
 //alert("."+repo.ID);
  $.ajax({
-       url:"http://localhost/articlesWebsite/darticles.php?q="+repo.ID,
+       url:"http://localhost:8888/articlesWebsite/darticles.php?q="+repo.ID,
        
        success: function(data) {
     if(data.includes("Success")){
@@ -113,7 +113,7 @@ $(".desc").append(`
        $("#notify").append(`<div class="alert alert-primary" role="alert">
   Article Successfully deleted !!
 </div>`);
-     setTimeout(function(){window.location.replace('http://localhost/articlesWebsite/home-page');}, 2000);
+     setTimeout(function(){window.location.replace('http://localhost:8888/articlesWebsite/home-page');}, 2000);
        }      
 if(data.includes("Failed")){
 //  $("#info").empty();
@@ -135,7 +135,7 @@ $("#"+b).click(function(){
 //alert("inside update");
 var c = b-100000000000;
 $.ajax({
-       url:"http://localhost/articlesWebsite/sessionSetter.php?q="+c,
+       url:"http://localhost:8888/articlesWebsite/sessionSetter.php?q="+c,
        
      
      })

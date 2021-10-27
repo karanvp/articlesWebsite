@@ -32,7 +32,7 @@ include "./classes/Register.php";
     if(mysqli_num_rows($result)>0){
     echo "success";
     $_SESSION['mbk'] = 'true';
-        header("Location: http://localhost/articlesWebsite/home-page");
+        header("Location: http://localhost:8888/articlesWebsite/homePage.php");
     }
     else{
 
