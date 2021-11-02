@@ -27,7 +27,7 @@ $result = $q->searchArticleByURL($url);
 
 // echo "addsa";
 
-
+//check sql
 $rows = array();
 
 while($r = mysqli_fetch_assoc($result)) {
