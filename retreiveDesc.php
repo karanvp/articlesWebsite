@@ -9,17 +9,39 @@ session_start();
 
 $pass = $_GET['pass'];
 $id = $_GET['q'];
-$result = $q->searchArticleById($id);
+$url = $_GET['url'];
+$result = $q->searchArticleByURL($url);
+// $rtest = $q->searchArticleByURL($url);
+// $rowtest = mysql_fetch_row($rtest);
+// $id = $rowtest[4];
+
+// $rtest = $q->searchArticleByURL($url);
+// if (!$rtest) {
+//     echo 'Could not run query: ' . mysql_error();
+//     exit;
+// }
+// $row = mysql_fetch_row($rtest);
+
+// echo $row[0]; // 42
+// echo $row[1]; // the email value
+ // $id = $rowtest[4];
+
+// echo "addsa";
+
+
 $rows = array();
 
 while($r = mysqli_fetch_assoc($result)) {
     $rows[] = $r;
+   
+    // $id = $row[0];
 }
 $a =  json_encode($rows);
 
 
-if(mysqli_num_rows($result)>0){
 
+if(mysqli_num_rows($result)>0){
+// echo "success";
 
 }
 else{
@@ -41,7 +63,7 @@ else{
 
 <script>
     var checker = String(<?php session_start(); echo $_SESSION['mbk'] ;?>);
-   
+ 
 var obj = <?php echo $a;?>;
 
 $.each(obj, function(index, repo){
@@ -51,7 +73,7 @@ var b = a + 100000000000;
 
 if(checker.includes('true')){
 $(".desc").append(`
-       <div class="cardz">
+       <div class="container">
        <br>
        <br>
    
@@ -70,7 +92,7 @@ $(".desc").append(`
        `)}
        else{
         $(".desc").append(`
-       <div class="cardz">
+       <div class="container">
        <br>
        <br>
    <span id="info"></span><br><br>

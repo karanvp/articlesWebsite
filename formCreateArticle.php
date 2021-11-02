@@ -24,7 +24,8 @@
 <div class="sub">
 <input type="textarea" name="ArticleDesc" id="desc" placeholder="Enter Details" style="padding-bottom: 400px;"></div>
 <br><br>
-
+<div class="sub">
+ 	<input type="text" name="urlslug" id="url" placeholder="Enter URL Alias" ></div><br><br>
 
 <button style="margin-left: 60px;" class="btn btn-danger btn-lg" onclick="submit()">Submit</button>
 
@@ -39,9 +40,10 @@
 var name= document.getElementById('name').value;
 var sdesc = document.getElementById('sdesc').value;
 var desc = document.getElementById('desc').value;
+var id = document.getElementById('url').value;
 	
 	 $.ajax({
-        url:"carticle.php?ArticleName="+name+"&ArticleShort="+sdesc+"&ArticleDesc="+desc,
+        url:"carticle.php?ArticleName="+name+"&ArticleShort="+sdesc+"&ArticleDesc="+desc+"&url="+id,
         success: function(data) {
 
 // Alert.render(data);

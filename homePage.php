@@ -246,7 +246,7 @@ $.each(obj, function(index, repo){
 $(".profile").append(`
 
  
-       <div class="card">
+       <div class="container">
        <br>
        <br>
    
@@ -254,7 +254,7 @@ $(".profile").append(`
       <h4 style="margin-left:20px"><b>ARTICLE TITLE</b> :- ${repo.name}</h4>
       <h4 style="margin-left:20px;"><b>ARTICLE SHORT DESCRIPTION</b> :- ${repo.shortdescription}</h4>
       <br><br>
-      <a  href="retreiveDesc.php?q=${repo.ID}" style="color:white"><button class="btn btn-danger btn-lg"  type="button" id=${repo.ID} value="VIEW DETAILS">VIEW DETAILS</button></a>
+      <a  href="retreive-description/${repo.url}" style="color:white"><button class="btn btn-danger btn-lg"  type="button" id=${repo.ID} value="VIEW DETAILS">VIEW DETAILS</button></a>
 
 </div>
 
@@ -298,8 +298,8 @@ $.each(obj, function(index, repo){
 
 $(".profile").append(`
 
-
-       <div class="card">
+  
+       <div class="container">
        <br>
        <br>
    
@@ -307,7 +307,7 @@ $(".profile").append(`
       <h4 style="margin-left:20px"><b>ARTICLE TITLE</b> :- ${repo.name}</h4>
       <h4 style="margin-left:20px;"><b>ARTICLE SHORT DESCRIPTION</b> :- ${repo.shortdescription}</h4>
       <br><br>
-      <a  href="retreiveDesc/${repo.ID}" style="color:white"><button class="btn btn-danger btn-lg"  type="button" id=${repo.ID} value="VIEW DETAILS">VIEW DETAILS</button></a>
+      <a  href="retreive-description/${repo.url}" style="color:white"><button class="btn btn-danger btn-lg"  type="button" id=${repo.ID} value="VIEW DETAILS">VIEW DETAILS</button></a>
 
 </div>
 

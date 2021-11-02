@@ -20,14 +20,23 @@ class Article extends q\Query
         return $this->results;
     }
 
-    function createArticles($name,$desc,$shortdesc,$author)
+    function createArticles($name,$desc,$shortdesc,$author,$url)
     {
         $this->results = ($this->connection ?
-            mysqli_query($this->connection, "INSERT INTO `article` (`name`, `description`,`shortdescription`,`author`) VALUES ('$name', '$desc','$shortdesc','$author');")
+            mysqli_query($this->connection, "INSERT INTO `article` (`name`, `description`,`shortdescription`,`author`,`url`) VALUES ('$name', '$desc','$shortdesc','$author','$url');")
             : false);
         return $this->results;
     }
 
+    function validateURL($url){
+        $this->results = strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $url)));
+        return $this->results;
+    }
+
+    function checkIfContainsSpecialChars($url){
+        $this->results = preg_match('/[\'^£$%&*()}{@#~?><>,|=_+¬]/', $url);
+        return $this->results;
+    }
 
     function findArticleById($id)
     {
