@@ -8,10 +8,26 @@ include "./classes/Article.php";
         $name = $_GET["ArticleName"];
         $desc = $_GET['ArticleDesc'];
         $shortdesc= $_GET['ArticleShort'];
+        $url = $_GET['url'];
         $author =$_SESSION['user'];
-
         $query = new Article();
-        $query->createArticles($name,$desc,$shortdesc,$author);
+
+        if(empty($url)){    
+            $url=$name;
+        }
+
+        if ($query->checkIfContainsSpecialChars($url))
+            {
+                
+                echo "Failed";
+            }
+
+        else{
+
+        
+        $url = $query->validateURL($url);
+       
+        $query->createArticles($name,$desc,$shortdesc,$author,$url);
 
         $result = $query->findArticleByName($name);
 
@@ -23,5 +39,6 @@ include "./classes/Article.php";
         else{
             echo "Failed";
         }
+    }
 
 ?>

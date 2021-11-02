@@ -36,7 +36,7 @@
 
   <div class="container">
  
-    <a class="navbar-brand" href="http://localhost/articlesWebsite/home-page">ArticlesForU</a>
+    <a class="navbar-brand" href="http://localhost:8888/article-website/home-page">ArticlesForU</a>
     <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarid">
   <span class="navbar-toggler-icon"></span>
 </button>
@@ -94,13 +94,13 @@ if(a.includes('true')){
   $('#menunav').append(`
  
         <li class="nav-item">
-        <a class="nav-link" href="http://localhost/articlesWebsite/form-create-article">Create Articles</a>
+        <a class="nav-link" href="http://localhost:8888/article-website/form-create-article">Create Articles</a>
         </li>
         <li class="nav-item">
-        <a class="nav-link" href="http://localhost/articlesWebsite/my-profile">My Profile</a>
+        <a class="nav-link" href="http://localhost:8888/article-website/my-profile">My Profile</a>
         </li>
         <li class="nav-item">
-        <a class="nav-link" href="http://localhost/articlesWebsite/carousels">Create Carousel</a>
+        <a class="nav-link" href="http://localhost:8888/article-website/carousels">Create Carousel</a>
         </li>
         <li class="nav-item">
         <a class="nav-link" onclick="signOut()">Sign out</a>
@@ -117,10 +117,10 @@ else{
   $('#menunav').append(`
 
   <li class="nav-item">
-          <a class="nav-link" href="http://localhost/articlesWebsite/login-page">Login</a>
+          <a class="nav-link" href="http://localhost:8888/article-website/login-page">Login</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="http://localhost/articlesWebsite/registration-page">Sign Up</a>
+          <a class="nav-link" href="http://localhost:8888/article-website/registration-page">Sign Up</a>
         </li>`);
 
 }
@@ -134,15 +134,15 @@ else{
   function signOut(){
   
 $("#td").empty();
-$('#td').append(` <li><a href="http://localhost/articlesWebsite/login-page">Login</a></li>
-    <li><a href="http://localhost/articlesWebsite/registration">Register</a></li>`);
+$('#td').append(` <li><a href="http://localhost:8888/article-website/login-page">Login</a></li>
+    <li><a href="http://localhost:8888/article-website/registration">Register</a></li>`);
 
 $.ajax( "logout.php" )
   .done(function() {
    
   })
 
-document.location.href = 'http://localhost/articlesWebsite/home-page';
+document.location.href = 'http://localhost:8888/article-website/home-page';
 
 }
 

@@ -98,6 +98,14 @@ class Query
         return $this->results;
     }
 
+    function searchArticleByURL($url)
+    {
+        $this->results = ($this->connection ?
+            mysqli_query($this->connection, "select * from article where `url` = '$url' ")
+            : false);
+        return $this->results;
+    }
+
     function findArticleByName($name)
     {
         $this->results = ($this->connection ?
