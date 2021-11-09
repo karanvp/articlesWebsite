@@ -37,7 +37,7 @@ session_start();
  
    // $update = mysqli_query($conn,"UPDATE users set  password='" . $password . "', reset_link_token='" . $token . "' ,exp_date='" . $expDate . "' WHERE email='" . $emailId . "'");
  
-    $link = "<a href='http://localhost:8888/articlesWebsite/newsLetter.php'>Click To Visit Newsletter</a>";
+    $link = "<a href='/articlesWebsite/newsLetter.php'>Click To Visit Newsletter</a>";
  
     require_once('vendor/autoload.php');
  

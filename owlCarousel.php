@@ -373,7 +373,7 @@ $(".profile").append(`
        <table style="margin-left:20px">
        <tr><td><button class="btn btn-danger btn-lg" type="button" id=${repo.ID} >DELETE</button></td>
        <td><a  href="formUpdateArticles.php" style="color:white"><button class="btn btn-danger btn-lg" id=${b} value="UPDATE">Update Article</button></a></td>
-       <td><a  class="btn btn-danger btn-lg" href="http://localhost:8888/article-website/home-page" >Back</a></td></tr>
+       <td><a  class="btn btn-danger btn-lg" href="/article-website/home-page" >Back</a></td></tr>
        
         </table>
 
@@ -394,7 +394,7 @@ $(".profile").append(`
 
        <table style="margin-left:20px">
        
-       <td><a  class="btn btn-danger btn-lg" href="http://localhost:8888/article-website/home-page" >Back</a></td></tr>
+       <td><a  class="btn btn-danger btn-lg" href="/article-website/home-page" >Back</a></td></tr>
        
         </table>
 
@@ -410,7 +410,7 @@ $(res).click(function(){
 // alert(document.getElementById(repo.ID).value);
 //alert("."+repo.ID);
  $.ajax({
-       url:"http://localhost:8888/articlesWebsite/darticles.php?q="+repo.ID,
+       url:"/articlesWebsite/darticles.php?q="+repo.ID,
        
        success: function(data) {
     if(data.includes("Success")){
@@ -440,7 +440,7 @@ $("#"+b).click(function(){
 //alert("inside update");
 var c = b-100000000000;
 $.ajax({
-       url:"http://localhost:8888/articlesWebsite/sessionSetter.php?q="+c,
+       url:"/articlesWebsite/sessionSetter.php?q="+c,
        
      
      })
