@@ -32,6 +32,35 @@ class Query
         : false);
     return $this->results;
     }
+    function findArticleByBaseId($id)
+    {
+        $this->results = ($this->connection ?
+            mysqli_query($this->connection, "select * from article where base_post_ID = '$id'")
+            : false);
+        return $this->results;
+    }
+    function fetchLanguages()
+    {
+        $this->results = ($this->connection ?
+        mysqli_query($this->connection, "select * from languages ")
+        : false);
+    return $this->results;
+    }
+    function findArticleByLanguage($lang)
+    {
+        $this->results = ($this->connection ?
+            mysqli_query($this->connection, "select * from article where `lang` = '$lang'")
+            : false);
+        return $this->results;
+    }
+
+    function checkIfRTL($lang)
+    {
+        $this->results = ($this->connection ?
+            mysqli_query($this->connection, "select * from languages where lang_code = '$lang'")
+            : false);
+        return $this->results;
+    }
 
     function checkIfUserExists($username)
     {
@@ -106,6 +135,22 @@ class Query
         return $this->results;
     }
 
+    function searchArticleByURLandLang($url,$lang)
+    {
+        $this->results = ($this->connection ?
+            mysqli_query($this->connection, "select * from article where `url` = '$url' AND `lang`='$lang' ")
+            : false);
+        return $this->results;
+    }
+
+    function checkIfArticleExistsWithBasePost($base)
+    {
+        $this->results = ($this->connection ?
+            mysqli_query($this->connection, "select * from article where base_post_ID = '$base'  ")
+            : false);
+        return $this->results;
+    }
+
     function findArticleByName($name)
     {
         $this->results = ($this->connection ?
@@ -119,6 +164,14 @@ class Query
     {
         $this->results = ($this->connection ?
             mysqli_query($this->connection, "UPDATE users set  password='" . $password . "' WHERE email='" . $email . "'")
+            : false);
+        return $this->results;
+    }
+
+    function updateLangPreference($lang,$user)
+    {
+        $this->results = ($this->connection ?
+            mysqli_query($this->connection, "UPDATE users set `lang_preference`='$lang' where `username`='$user'")
             : false);
         return $this->results;
     }

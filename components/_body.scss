@@ -3,7 +3,20 @@ body{
     font-family:$open-sans;
 }
   
+   .container{
+    direction:ltr;
+   }
+
+  .profile{
+    h4{
+      direction:ltr; 
+    }
+    
+  } 
+  
+ .pagecontainer{
    
+ }
   .navDesktop{
     visibility: visible;
 
@@ -27,7 +40,12 @@ body{
   margin-left: 100px;
 }
   
-
+.col-md-6{
+  a{
+    text-decoration: none;
+    color: $anchorColor;
+  }
+}
   
   // #searchUser{
   //   padding-right: 200px;
@@ -42,6 +60,7 @@ body{
   
       }
   
+     
   
       .bar{
         height: 5px;
@@ -239,21 +258,7 @@ body{
   }
   
   }
-  @media (min-width: 900px){
-    .profile{
-      .card{
-        margin-left: 200px;
-        margin-right: 200px;
-      }
-    }
-    // #searchUser{
-    //   margin-left: 1350px;
-    // }
 
-    .form{
-        margin-left: 650px;
-    }
-  }
   
   
 	/* body{
@@ -296,6 +301,13 @@ body{
 
   
   @media(min-width: 900px){
+
+    .profile{
+      .card{
+        margin-left: 200px;
+        margin-right: 200px;
+      }
+    }
   .frm{
     margin-left: 400px;
     padding-bottom: 250px;
@@ -309,6 +321,10 @@ body{
   
   
     }
+
+    .form{
+      margin-left: 650px;
+  }
   
   
   }

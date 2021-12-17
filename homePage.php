@@ -1,5 +1,22 @@
 <!doctype html>
-<html lang="en">
+<html>
+
+
+  <?php   session_start();?>
+
+<?php 
+
+//  if($_SESSION['language_preference']!=NULL){
+//   $_SESSION['lang']= $_SESSION['language_preference'];
+  
+//  }else{
+  $_SESSION['lang']= $_GET['lan'];
+//  }
+    
+ 
+  ?>
+
+ 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -86,8 +103,47 @@
 }
 }
 </style>
- <?php require_once("components/head.php") ?>
 
+
+ <?php require_once("components/head.php") ?>
+ <script>
+
+
+//   window.onload = function() {
+//     if(window.location!=document.referer) {
+//       window.location.href = window.location.href;
+//       //  window.location = window.location + '#';
+//        // window.location.reload();
+//     }
+// }
+
+(function()
+{
+  if( window.localStorage )
+  {
+    if( !localStorage.getItem('firstLoad') )
+    {
+      localStorage['firstLoad'] = true;
+      window.location.reload();
+    }  
+    else
+      localStorage.removeItem('firstLoad');
+  }
+})();
+
+</script>
+ <script>
+  // $.ajax({
+  //      url:"defaultLanguageSetter.php",
+  //      data:{
+        
+  //      },
+  //      success: function(data) {
+  //      // location.reload();
+  //      }})
+
+ 
+</script>
 
    <body>
 
@@ -151,22 +207,98 @@ $('.owl-carousel').owlCarousel({
 </script>
 
 <br><br>
-<div class="pagination" id="pag">
+
+<div class="pagecontainer" style="margin-left:800px;">
+<div class="paginationz" id="pag" >
 	<button id="prev" class="btn btn-danger btn-sm"> PREV</button>&nbsp;&nbsp;<span class="t"></span>&nbsp;&nbsp;
 
 <button id="next" class="btn btn-danger btn-sm">NEXT</button>
 </div>
+</div>
 <br>
-<div class="profile" id="prof"></div><!-- /.container -->
+
+
+<div class="language-selector" style=" position: absolute; margin-left:1600px;">
+
+<span>Choose a language:</span><br><br>
+  <!-- <a class="btn btn-success btn-md"  href="en/home-page">English</a><br><br>
+  <a class="btn btn-success btn-md"  href="hi/home-page">Hindi</a><br><br> -->
+  <!-- <input class="btn btn-success btn-md" type="button" onclick="checklang()" value="Check lang"/> -->
+  <?php
+
+include "./classes/Query.php";
+
+  $queryz =  new q\Query();
+  $resultz=$queryz->fetchLanguages();
+// $query->findArticleByName($name);
+// $row = mysqli_fetch_array($result);
+// echo $row['name'];
+if(mysqli_num_rows($resultz)>0){
+    while ($row = $resultz -> fetch_row()) {?>
+   
+     <a class="btn btn-success" href="<?php echo $row[2]?>/home-page" onclick="abc('<?php echo $row[2]?>')"  ><?php echo $row[1];?></a><br><br>
+     <?php
+      }
+    } else{
+        echo "Failed";
+    }
+
+
+
+
+?>
+</div>
+
+
+<div class="profile" id="prof">
+
+
+
+</div><!-- /.container -->
+
+
+
+
 <script>
 
+  
+ function d(){
+  setTimeout(function(){location.reload(true); }, 3000);
+}
 
-    
+function abc(a){
+  // window.location.reload();
+  // $.ajax({
+  //      url:"refreshChecker.php",
+  //      success: function(data) {
+
+  //      }})
+  // window.location.hash =a;
+  //window.location.href += a;
+// alert('sa');
+
+$.ajax({
+       url:"langPrefSetter.php",
+       data:{
+        'lang':a,
+        'user':'<?php echo $_SESSION['user']?>',
+        
+       },
+       success: function(data) {
+      location.reload(true); 
+       }})
+
+}
+
+var refr ='<?php echo $_SESSION['refchk']?>';
+if(refr=='true'){
+  d();
+}
 
 var offset = 0;
 var total =6;
 var pageNo=1;
-var a = <?php include "./classes/Query.php"; $query = new q\Query(); echo mysqli_num_rows($query->findArticles()); ?>;
+var a = <?php  $query = new q\Query(); echo mysqli_num_rows($query->findArticleByLanguage($_SESSION['lang'])); ?>;
 
  var tpages = Math.ceil(parseInt(a)/total);
 
@@ -250,11 +382,11 @@ $(".profile").append(`
        <br>
        <br>
    
-   <h4 style="margin-left:20px" ><b>AUTHOR</b> :- ${repo.author}</h4>
+   <h4 style="margin-left:20px;"  ><b>AUTHOR</b> :- ${repo.author}</h4>
       <h4 style="margin-left:20px"><b>ARTICLE TITLE</b> :- ${repo.name}</h4>
       <h4 style="margin-left:20px;"><b>ARTICLE SHORT DESCRIPTION</b> :- ${repo.shortdescription}</h4>
       <br><br>
-      <a  href="retreive-description/${repo.url}" style="color:white"><button class="btn btn-danger btn-lg"  type="button" id=${repo.ID} value="VIEW DETAILS">VIEW DETAILS</button></a>
+      <a  href="<?php echo $_SESSION['lang']?>/retreive-description/${repo.url}" style="color:white"><button class="btn btn-danger btn-lg"  type="button" id=${repo.ID} value="VIEW DETAILS">VIEW DETAILS</button></a>
 
 </div>
 
@@ -275,20 +407,26 @@ $(".profile").append(`
 
 
  })
-function refresh(){
 
 
+  $(".profile").empty();
 
   $.ajax({
        url:"hPage.php",
        data:{
         'offset':offset,
-        'total':total
+        'total':total,
+        'lang':'<?php echo $_SESSION['lang']?>'
        },
        success: function(data) {
          var obj =JSON.parse(data)
          const myJSON = JSON.stringify(obj);
 
+         if (data.includes('failed')){
+          $(".profile").append(`No articles created for the selected language!`);
+         }else{
+
+         
 
 
    //alert(myJSON); // apple
@@ -299,15 +437,15 @@ $.each(obj, function(index, repo){
 $(".profile").append(`
 
   
-       <div class="container">
+       <div class="container" >
        <br>
        <br>
    
-   <h4 style="margin-left:20px" ><b>AUTHOR</b> :- ${repo.author}</h4>
+   <h4  style="margin-left:20px" ><b>AUTHOR</b> :- ${repo.author}</h4>
       <h4 style="margin-left:20px"><b>ARTICLE TITLE</b> :- ${repo.name}</h4>
       <h4 style="margin-left:20px;"><b>ARTICLE SHORT DESCRIPTION</b> :- ${repo.shortdescription}</h4>
       <br><br>
-      <a  href="retreive-description/${repo.url}" style="color:white"><button class="btn btn-danger btn-lg"  type="button" id=${repo.ID} value="VIEW DETAILS">VIEW DETAILS</button></a>
+      <a  href="<?php echo $_SESSION['lang']?>/retreive-description/${repo.url}" style="color:white"><button class="btn btn-danger btn-lg"  type="button" id=${repo.ID} value="VIEW DETAILS">VIEW DETAILS</button></a>
 
 </div>
 
@@ -318,15 +456,47 @@ $(".profile").append(`
 
 
 
- 
+}
 
 } // success ends here
 
 
    })
 
-}
-refresh();
+
+//  refresh();
+
+//  function hin(){
+//   language ="hi";
+//   $.ajax({
+//        url:"languageSetter.php",
+//        data:{
+//         'lang':language,
+        
+//        },
+//        success: function(data) {
+//         location.reload();
+//         // refresh();
+//        }
+//        })
+  
+// }
+// function eng(){
+//   language="en";
+//   $.ajax({
+//        url:"languageSetter.php",
+//        data:{
+//         'lang':language,
+        
+//        },
+//        success: function(data) {
+//         location.reload();
+        
+//         // refresh();
+//        }
+//        })
+  
+// }
 
 
 
@@ -364,6 +534,8 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 </script>
+
+
 <?php require_once("components/footer.php") ?>
 </body>
 </html>

@@ -38,7 +38,9 @@
 	margin-top:30px;
 }
 
-
+ .form{
+        margin-left: 650px;
+    }
 
 	</style>
 </head>
