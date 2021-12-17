@@ -40,9 +40,11 @@ $selected =  $row1[0];
 
   //$result = mysqli_query($conn,"select * from users where username = '$user' && password = '$pass' && category='$selected' ");
   
+  //$_SESSION['refchk'] = 'false';
   
-  
-
+  $res=$q->findLangPreferenceofUser($user);
+  $rowpref = mysqli_fetch_array($res);
+  $_SESSION['language_preference'] = $rowpref['lang_preference'];
 //   $p = md5("Winner2022");
  $result1 = $q->validateUser($user,$pass,$selected);
 // $row = mysqli_fetch_array($result);

@@ -12,7 +12,9 @@
 
 
 </style>
-
+<?php
+session_start();
+?>
 <script>
 
 
@@ -67,7 +69,23 @@
 <Script>
   
 	function rep(){
-		 window.location.replace('home-page');
+		
+	<?php
+			
+			include "./classes/Login.php";
+		   
+			$q = new Login();
+		   
+					   $res=$q->findLangPreferenceofUser('Kesha911');
+					   $rowpref = mysqli_fetch_array($res);
+					   
+					   $_SESSION['language_preference']= $rowpref['lang_preference'];
+					   if( $_SESSION['language_preference']==NULL){
+						$_SESSION['language_preference'] = 'en';
+					   }
+					   
+		?>
+		 window.location.replace('<?php echo $_SESSION['language_preference']?>/home-page');
 	}
 	function submit(){
 

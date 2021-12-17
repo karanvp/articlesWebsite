@@ -1,0 +1,312 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
+header {
+  padding: 1em;
+  background-color: #fbfbfd;
+}
+
+body {
+  background-color: #fbfbfd;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  direction: rtl;
+}
+
+.profile h4 {
+  direction: rtl;
+}
+
+.navDesktop {
+  visibility: visible;
+}
+
+.navDesktop a {
+  text-decoration: none;
+  color: black;
+  margin-left: 10px;
+  margin-bottom: 30px;
+}
+
+.navDesktop a:hover {
+  color: crimson;
+  padding: 10px;
+}
+
+.cardz {
+  margin-right: 100px;
+}
+
+.col-md-6 a {
+  text-decoration: none;
+  color: black;
+}
+
+#menu {
+  width: 35px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.bar {
+  height: 5px;
+  width: 100%;
+  background-color: #b81568;
+  -webkit-transition: 0.7s ease;
+  transition: 0.7s ease;
+}
+
+#bar1 {
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
+}
+
+#bar3 {
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
+}
+
+.change .bar {
+  background-color: #b81568;
+}
+
+.change #bar1 {
+  -webkit-transform: translateY(4px) rotateZ(45deg);
+          transform: translateY(4px) rotateZ(45deg);
+}
+
+.change #bar3 {
+  -webkit-transform: translateY(-6px) rotateZ(-45deg);
+          transform: translateY(-6px) rotateZ(-45deg);
+}
+
+.change #bar2 {
+  opacity: 0;
+}
+
+.nav {
+  padding: 0;
+  margin: 0 20px;
+  -webkit-transition: 0.7s ease;
+  transition: 0.7s ease;
+  display: none;
+}
+
+.nav li {
+  list-style: none;
+  padding: 16px 0px;
+}
+
+.nav li a:hover {
+  font-weight: bold;
+}
+
+.nav li a {
+  color: black;
+  text-decoration: none;
+}
+
+.change {
+  display: block;
+}
+
+.buttonHome {
+  background-color: red;
+  padding: 15px 32px;
+  /*margin-left: 50px;*/
+  color: white;
+  margin-right: 30px;
+}
+
+.loginBtn {
+  background-color: red;
+  padding: 15px 32px;
+  /*margin-left: 50px;*/
+  color: white;
+  padding-left: 157px;
+  padding-right: 157px;
+  margin-right: 40px;
+}
+
+.registerBtn {
+  background-color: red;
+  padding: 15px 32px;
+  /*margin-left: 50px;*/
+  color: white;
+  padding-left: 150px;
+  padding-right: 150px;
+  margin-right: 40px;
+}
+
+.pagination {
+  margin-right: 800px;
+}
+
+.profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.profile .card {
+  background-color: white;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.textContainer {
+  margin-right: 600px;
+}
+
+.textContainer input {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 200px;
+  padding-left: 200px;
+  margin-left: 500px;
+  margin-right: 10px;
+}
+
+#menu {
+  display: none;
+}
+
+@media (max-width: 650px) {
+  .navDesktop {
+    visibility: hidden;
+  }
+  #menu {
+    display: block;
+  }
+  .textContainer {
+    margin-right: 0px;
+  }
+  .profile .card {
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  #searchUserz {
+    margin-right: 0px;
+  }
+  .pagination {
+    margin-right: 200px;
+  }
+}
+
+@media (min-width: 651px) and (max-width: 899px) {
+  .pagination {
+    margin-right: 400px;
+  }
+  .profile .card {
+    width: 45%;
+  }
+  .textContainer {
+    margin-right: 160px;
+  }
+  #menu {
+    display: none;
+  }
+}
+
+/* body{
+	background: white;
+} */
+.frm {
+  width: 50%;
+  border-radius: 5px;
+  margin-top: 50px;
+  /* background-color: #eee; */
+  padding: 30px;
+  text-align: center;
+}
+
+/*.frm input{
+    
+      padding-left: 90px;
+      padding-right: 90px;
+      margin-left: 280px;
+  
+  
+    }*/
+.loginBtn a {
+  text-decoration: none;
+  color: white;
+}
+
+@media (min-width: 900px) {
+  .profile .card {
+    margin-right: 200px;
+    margin-left: 200px;
+  }
+  .frm {
+    margin-right: 400px;
+    padding-bottom: 250px;
+    padding-top: 250px;
+  }
+  .frm input {
+    padding-right: 90px;
+    padding-left: 90px;
+    margin-right: 180px;
+  }
+  .form {
+    margin-right: 650px;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 899px) {
+  .frm input {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-right: 90px;
+    padding-left: 90px;
+    margin-right: 50px;
+  }
+  .frm {
+    padding-top: 30px;
+    margin-right: 200px;
+    padding-bottom: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .frm {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-right: 75px;
+    padding-top: 160px;
+    padding-left: 400px;
+    padding-bottom: 110px;
+    margin-right: 0px !important;
+    width: 30%;
+  }
+  .frm label {
+    margin-right: 200px;
+  }
+  .frm input {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 140px;
+    padding-left: 140px;
+    margin-left: 300px;
+  }
+  .frm table {
+    margin-right: 0px;
+  }
+  .frm button a {
+    text-align: center;
+  }
+}

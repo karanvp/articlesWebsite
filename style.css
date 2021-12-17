@@ -9,6 +9,14 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+.container {
+  direction: ltr;
+}
+
+.profile h4 {
+  direction: ltr;
+}
+
 .navDesktop {
   visibility: visible;
 }
@@ -27,6 +35,11 @@ body {
 
 .cardz {
   margin-left: 100px;
+}
+
+.col-md-6 a {
+  text-decoration: none;
+  color: black;
 }
 
 #menu {
@@ -202,16 +215,6 @@ body {
   }
 }
 
-@media (min-width: 900px) {
-  .profile .card {
-    margin-left: 200px;
-    margin-right: 200px;
-  }
-  .form {
-    margin-left: 650px;
-  }
-}
-
 /* body{
 	background: white;
 } */
@@ -238,6 +241,10 @@ body {
 }
 
 @media (min-width: 900px) {
+  .profile .card {
+    margin-left: 200px;
+    margin-right: 200px;
+  }
   .frm {
     margin-left: 400px;
     padding-bottom: 250px;
@@ -247,6 +254,9 @@ body {
     padding-left: 90px;
     padding-right: 90px;
     margin-left: 180px;
+  }
+  .form {
+    margin-left: 650px;
   }
 }
 

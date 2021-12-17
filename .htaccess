@@ -1,4 +1,4 @@
-DirectoryIndex homePage.php
+DirectoryIndex homePage.php?lan=en
 
 ErrorDocument 404 /articlesWebsite/error_404.html
 
@@ -15,19 +15,28 @@ RewriteCond %{REQUEST_FILENAME} !-f
 
 RewriteRule ^login-page$ login.php [NC,L]
 RewriteRule ^registration-page$ registration.php [NC,L]
-RewriteRule ^form-create-article$ formCreateArticle.php [NC,L]
-RewriteRule ^update-article$ formUpdateArticles.php [NC,L]
-RewriteRule ^my-profile$ owlCarousel.php [NC,L]
-RewriteRule ^carousels$ carousels.php [NC,L]
+#RewriteRule ^form-create-article formCreateArticle.php [NC,L]
+RewriteRule ^(.*)/form-create-article formCreateArticle.php?lang=$1 [NC,L]
+RewriteRule ^(.*)/update-article$ formUpdateArticles.php?lang=$1 [NC,L]
+RewriteRule ^(.*)/my-profile$ owlCarousel.php?lan=$1 [NC,L]
+RewriteRule ^(.*)/carousels$ carousels.php?lan=$1 [NC,L]
 RewriteRule ^forgot-password$ forgotPwdForm.php [NC,L]
 
 #modified retreive desc
 #RewriteRule ^retreive-description/([0-9]+)/([0-9a-zA-Z_-]+) retreiveDesc.php?q=$1&url=$2 [L]
-RewriteRule ^retreive-description/([0-9a-zA-Z_-]+) retreiveDesc.php?url=$1 [L]
+RewriteRule ^(.*)/retreive-description/([0-9a-zA-Z_-]+) retreiveDesc.php?lang=$1&url=$2 [L]
+RewriteRule ^(.*)/retreive-description-ID retreiveDescByID.php?q=$1 [L]
 #retreivedesc.php?url=/test-url
 
 #RewriteRule ^retreiveDesc/([0-9]+) retreiveDesc.php?q=$1 [L]
-RewriteRule ^home-page$ homePage.php [NC,L]
+RewriteRule ^(.*)/home-page$ homePage.php?lan=$1 [NC,L]
+RewriteRule ^(.*)/test-file$ testfile.php?lan=$1 [NC,L]
+RewriteRule ^(.*)/jquery.js$ jquery.js?n=$1 [NC,L]
+RewriteRule ^(.*)/form-language$ formlanguages.php?lan=$1 [NC,L]
+RewriteRule ^(.*)/form-edit-language$ formEditLanguage.php?la=$1 [NC,L]
+RewriteRule ^(.*)/add-keyword$ createKeyword.php?lan=$1 [NC,L]
+
+
 #RewriteRule ^retreiveDesc/([a-zA-z]+) http://localhost:8888/articlesWebsite/$1 [L]
 #RewriteRule ^retreiveDesc/([a-zA-z]+) http://localhost:8888/articlesWebsite/$1 [NC,L]
 

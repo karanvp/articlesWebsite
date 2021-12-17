@@ -30,6 +30,14 @@ class Login extends q\Query{
         return $this->results;
     }
 
+    function findLangPreferenceofUser($user)
+    {
+        $this->results = ($this->connection ?
+            mysqli_query($this->connection, "select * from users where username = '$user'")
+            : false);
+        return $this->results;
+    }
+
 	function validateUser($user,$pass,$selected)
     {
         $this->results = ($this->connection ?

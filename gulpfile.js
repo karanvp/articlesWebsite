@@ -2,9 +2,15 @@ var gulp = require('gulp');
 
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
+const sass = require('gulp-sass')(require('sass'));;
+var rtlcss = require('gulp-rtlcss');
 
+  gulp.task('rtl', function () {
+      return gulp.src('style.css')
+          .pipe(rtlcss())
+          .pipe(gulp.dest('./rtstyle.css'));
+  });
 
-  const sass = require('gulp-sass')(require('sass'));;
 
 function prefixify() {
     gulp.src('./style.css')
